@@ -10,7 +10,7 @@ export default function Home() {
           <div className="col-11 text-center py-5">
             <img src="https://www.asset.uiuxindo.id/src/assets/main/logogram.svg" alt="" style={{ height: "53px" }} className="mb-5" />
             <h2 className="mb-3">🚧 Coming Soon 🚧</h2>
-            <p>We're working hard to bring you a new experience. Stay tuned!</p>
+            <p>We are working hard to bring you a new experience. Stay tuned!</p>
             <a href="https://www.instagram.com/uiuxindo" target="_blank" style={{ display: "block", width: "fit-content", margin: "30px auto", color: "#4c2073", border: "solid 1px #4c2073", padding: "10px 20px", borderRadius: "14px" }}>
               <div className="d-flex align-items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-instagram" viewBox="0 0 16 16">
