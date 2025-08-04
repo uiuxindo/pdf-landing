@@ -26,7 +26,7 @@ export default function Home() {
                   </a>
                 </div>
                 <div className="col-12 col-sm-12 col-md-6 text-md-start">
-                  <a href="https://www.instagram.com/uiuxindo" target="_blank">
+                  <a href="https://www.instagram.com/productdesignfestival/" target="_blank">
                     <button type="button" className="btn btn-outline-primary pill">
                       <div className="d-flex align-items-center gap-2">
                         <img src="https://www.asset.uiuxindo.id/src/assets/main/ant-design_instagram-filled.svg" />
