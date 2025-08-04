@@ -1,0 +1,17 @@
+.btn {
+  font-size: 16px;
+  padding: 12px 24px;
+  &.btn-primary {
+    background-color: #FFB929;
+    color: #101010;
+    border-color: #FFB929;
+  }
+  &.btn-outline-primary {
+    background: transparent;
+    color: #FFB929;
+    border-color: #FFB929;
+  }
+  &.pill {
+    border-radius: 99px;
+  }
+}
