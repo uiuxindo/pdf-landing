@@ -27,6 +27,7 @@ body {
   color: #000000;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding-top: 80px !important;
 }
 
 * {
