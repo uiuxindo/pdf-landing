@@ -6,7 +6,7 @@ import Image from "next/image";
 import { useEffect, useState } from 'react';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import './landing/landing.css';
-import { Accordion } from 'react-bootstrap';
+
 import { Card } from "react-bootstrap";
 import CardFeature from "./landing/CardFeature";
 import CardSpeaker from "./landing/CardSpeaker";
@@ -14,6 +14,7 @@ import CardTestimoni from "./landing/CardTestimoni";
 import AccordionGallerySection from "./landing/AccordionGallery";
 import LogoCarousel from "./landing/LogoCarousel";
 import EventSchedule from "./landing/Schedule";
+import AccordionFAQ from "./landing/AccordionFAQ";
 
 export default function Home() {
 
@@ -53,33 +54,30 @@ export default function Home() {
         <div className="row">
 
           {/* Hero */}
-          <div className="col-12 px-0 py-4 py-md-0 hero" 
-               style={{
-                backgroundImage: 'url("/Assets/hero-section.png")',
-                backgroundSize:'cover',
-                minHeight:'425px'
-              }}>
-            <div className="hero-content text-center mt-md-5 my-5">
-                <h1 className="title-hero fw-700 mb-4 mb-md-0">From Beyond to <span className="text-pink">Worldwide</span></h1>
-                <p className="desc-hero" style={{fontSize: '32px'}}>Unlocking the Path to A Global Career from Wherever You Stand</p>
+          <div className="col-12 px-0 py-md-5 py-md-3 py-5 hero">
+            <div className="hero-content text-center">
+                <p className="title-hero fw-700 mb-4 mb-md-2" style={{fontSize:'40px'}}>
+                  From <span className="text-pink curved-underline">Beyond</span> to <span className="text-blue curved-underline">Worldwide</span>
+                </p>
+                <p className="desc-hero fs-xl mt-md-3 mt-0">Unlocking the Path to A Global Career from Wherever You Stand</p>
                 
                 {/* Countdown */}
-                <div className="row justify-content-center mt-4">
-                  <div className="col-3 me-3 bg-white py-3 text-center border rounded-4" style={{width:'100px'}}>
+                <div className="row justify-content-center" style={{marginTop:'32px'}}>
+                  <div className="col-3 me-3 bg-white pt-md-2 pt-3 text-center border rounded-4" style={{width:'88px', height:'84px'}}>
                     <h2 className="fw-700 mb-0">{String(timeLeft.hours).padStart(2, '0')}</h2>            
-                    <p className="mb-0 text-grey">Hours</p>
+                    <p className="mb-0 text-grey fs-500">Hours</p>
                   </div>
-                  <div className="col-3 me-3 bg-white py-3 text-center border rounded-4" style={{width:'100px'}}>
+                  <div className="col-3 me-3 bg-white pt-md-2 pt-3 text-center border rounded-4" style={{width:'88px', height:'84px'}}>
                     <h2 className="fw-700 mb-0">{String(timeLeft.minutes).padStart(2, '0')}</h2>
-                    <p className="mb-0 text-grey">Minutes</p>
+                    <p className="mb-0 text-grey fs-500">Minutes</p>
                   </div>
-                  <div className="col-3 bg-white py-3 text-center border rounded-4" style={{width:'100px'}}>
+                  <div className="col-3 bg-white pt-md-2 pt-3 text-center border rounded-4" style={{width:'88px', height:'84px'}}>
                     <h2 className="fw-700 mb-0">{String(timeLeft.seconds).padStart(2, '0')}</h2>
-                    <p className="mb-0 text-grey">Second</p>
+                    <p className="mb-0 text-grey fs-500">Second</p>
                   </div>
                 </div>
 
-                <Link href="#register" className="btn btn-hero rounded-pill mt-3 py-3 fw-500" style={{background:'#FFB929', width:'180px'}}>
+                <Link href="#register" className="btn btn-hero rounded-pill py-3 fw-500" style={{background:'#FFB929', width:'180px', marginTop:'32px'}}>
                   Daftar Sekarang
                 </Link>
             </div>
@@ -89,12 +87,12 @@ export default function Home() {
 
       <div className="container">
         {/* Scorecard */}
-        <div className="row scorecard" style={{margin:'50px 0 50px 0'}}>
-          <div className="col-12 col-md-4 text-center" style={{borderRight: 'solid 1px #E0E0E0'}}>
+        <div className="row scorecard-container" style={{margin:'50px 0 0 0'}}>
+          <div className="col-12 col-md-4 text-center scorecard" style={{borderRight:'solid 1px #E0E0E0'}}>
             <h2 className="text-pink mb-1 fw-700">100.000+</h2>
             <p className="text-grey fs-md-lg fs-xl">Total Participants</p>
           </div>
-          <div className="col-12 col-md-4 text-center" style={{borderRight: 'solid 1px #E0E0E0'}}>
+          <div className="col-12 col-md-4 text-center scorecard" style={{borderRight:'solid 1px #E0E0E0'}}>
             <h2 className="text-pink mb-1 fw-700">200+</h2>
             <p className="text-grey fs-md-lg fs-xl">Total Speakers</p>
           </div>
@@ -110,10 +108,10 @@ export default function Home() {
             <Image className="mb-0 img-fluid" src="/Assets/Laptop 2.png" width={450} height={450} alt=""/>
           </div>
           <div className="col-12 col-md-7">
-            <h2 className="fw-700">Apa Saja Yang Bisa Kamu <span className="text-main fw-700">Temukan di Festival ini?</span></h2>
-            <p className="text-grey fs-lg">
+            <h2 className="fw-700 text-md-start">Apa Saja Yang Bisa Kamu <span className="text-main fw-700">Temukan di Festival ini?</span></h2>
+            <p className="text-grey text-md-start fs-lg">
               Temukan berbagai kegiatan seru dan penuh manfaat dalam Product Design Festival yang dirangkum lengkap di file PDF kami. 
-              Berikut beberapa highlight yang bisa kamu ikuti
+              Berikut beberapa highlight yang bisa kamu ikuti:
             </p>
             <CardFeature />
           </div>
@@ -121,7 +119,7 @@ export default function Home() {
 
         {/* Benefits */}
         <div id="Benefit" className="row justify-content-center" style={{marginBottom:'100px'}}>
-          <div className="col-md-5 col-12" style={{borderRight: 'solid 1px #E0E0E0'}}>
+          <div className="col-md-5 col-12 ps-3 border-end">
             <h1 className="text-main fw-700" style={{fontSize:'32px'}}>Mengapa Anda Harus Hadir?</h1>
           </div>
           <div className="col-md-7 col-12">
@@ -132,12 +130,7 @@ export default function Home() {
           
           <div className="row mt-4">
             <div className="col-md-6 col-12 px-0">
-              <Card className="card border-0 rounded-4 card-benefit" style={{
-                  backgroundImage:'url(/Assets/bg-benefit-1.png)',
-                  backgroundSize:'cover',
-                  backgroundPosition:'bottom',
-                  height:'488px'
-                  }}>
+              <Card className="card border-0 rounded-4 card-benefit">
                 <Card.Body className="px-0">
                   <div className="mt-2 py-1 px-3 fw-700" 
                     style={{
@@ -161,12 +154,7 @@ export default function Home() {
               </Card>
             </div>
             <div className="col-md-6 col-12 mt-4 mt-md-0 px-0 px-md-3 py-0">
-              <Card className="card border-0 rounded-4 card-benefit-2 mb-3" style={{
-                  backgroundImage:'url(/Assets/bg-benefit-2.png)',
-                  backgroundSize:'cover',
-                  backgroundPosition:'bottom',
-                  height:'336px'
-                  }}>
+              <Card className="card border-0 rounded-4 card-benefit-2 mb-3">
                 <Card.Body className="px-0">
                   <div className="mt-2 py-1 px-3 fw-700" 
                     style={{
@@ -186,12 +174,7 @@ export default function Home() {
                   </ul>
                 </Card.Body>
               </Card>
-              <Card className="card border-0 rounded-4 card-benefit-3" style={{
-                  backgroundImage:'url(/Assets/bg-benefit-3.png)',
-                  backgroundSize:'cover',
-                  backgroundPosition:'bottom',
-                  height:'136px'
-                  }}>
+              <Card className="card border-0 rounded-4 card-benefit-3">
                 <Card.Body className="px-0">
                   <div className="mt-2 py-1 px-3 fw-700" 
                     style={{
@@ -227,16 +210,10 @@ export default function Home() {
       {/* CTA */}
       <div className="container-fluid CTA" style={{marginTop:'100px', marginBottom:'100px'}}>
         <div className="row">
-          <div className="col-12 px-md-0 px-1 py-5 text-center cta-section" 
-              style={{
-              backgroundImage:'url(/Assets/cta-pdf-updated.png)',
-              backgroundSize:'cover',
-              minHeight:'340px'
-            }}>
-              <h1 className="fw-700" style={{fontSize:'32px'}}>UIUXINDO</h1>
-              <h1 className="fw-700" style={{fontSize:'32px'}}>PRODUCT DESIGN CHALLENGE</h1>
-              <Link href="#register" className="btn bg-white rounded-pill mt-3 py-3 fw-700 text-main" style={{background:'#FFB929' , width:'180px'}}>
-                  Daftar Sekarang
+          <div className="col-12 px-md-0 px-1 py-5 text-center cta-section">
+              <h1 className="fw-700 mt-4" style={{fontSize:'40px'}}>UIUXINDO<br/>PRODUCT DESIGN CHALLENGE</h1>
+              <Link href="#register" className="btn btn-cta bg-white rounded-pill mt-3 py-3 fw-700 text-main" style={{background:'#FFB929'}}>
+                  Lihat Info Selengkapnya
               </Link>
           </div>
         </div>
@@ -252,13 +229,13 @@ export default function Home() {
 
             <div className="d-flex justify-content-center my-5">
               <div className="border p-2 rounded-pill">
-                <Link href="#register" className="btn me-1 rounded-pill px-4 fw-500" style={{background:'#FFB929', paddingTop:'12px', paddingBottom:'12px'}}>
+                <Link href="#register" className="btn me-1 rounded-pill px-4 fw-500 tab-price-active">
                     Presale 1
                 </Link>
-                <Link href="#register" className="btn me-1 rounded-pill px-4" style={{paddingTop:'12px', paddingBottom:'12px'}}>
+                <Link href="#register" className="btn me-1 rounded-pill px-4 tab-price">
                     Presale 2
                 </Link>
-                <Link href="#register" className="btn rounded-pill px-4" style={{paddingTop:'12px', paddingBottom:'12px'}}>
+                <Link href="#register" className="btn rounded-pill px-4 tab-price">
                     Normal
                 </Link>
               </div>
@@ -273,16 +250,16 @@ export default function Home() {
                        style={{left:'-1px', marginTop:'12px'}}
                        alt=""
                 />
-                <Card className="card-price px-4 py-4 mb-0 rounded-4" style={{height:'210px'}}>
+                <Card className="card-price-individu px-4 py-4 mb-0 rounded-4" style={{height:'210px'}}>
                   <Card.Body className="d-flex flex-md-row flex-column align-items-center justify-content-center p-0">
-                    <Card.Title className="individu-price h-100 border-end text-center pe-md-5 pb-3 pb-md-0">
-                      <h1 className="text-main mt-md-5 mt-4" style={{fontSize:'32px'}}>109k</h1>
-                      <p className="text-grey mb-0 fs-lg">1 Ticket for 1 Email</p>
+                    <Card.Title className="individu-price h-100 border-end text-center pe-md-5 pb-4 pb-md-0">
+                      <h1 className="text-main mt-md-5 mt-4" style={{fontSize:'32px'}}>Rp 69.000</h1>
+                      <p className="text-grey mb-0 fs-lg">1 Sept 2025 - 31 Des 2025</p>
                     </Card.Title>
-                      <ul className="ps-0 ps-md-5 pe-4 pe-md-0" style={{listStyleType:'none'}}>
-                        <li className="mt-3"><i className="bi bi-check-circle-fill me-2" style={{color:'#22C55E'}}></i>1 Registered Email</li>
-                        <li className="mt-3"><i className="bi bi-check-circle-fill me-2" style={{color:'#22C55E'}}></i>Access live workshop</li>
-                        <li className="mt-3"><i className="bi bi-check-circle-fill me-2" style={{color:'#22C55E'}}></i>Access UPDC</li>
+                      <ul className="ps-0 ps-md-5 pe-4 pe-md-0 text-start" style={{listStyleType:'none'}}>
+                        <li className="mt-2"><i className="bi bi-check-circle-fill me-2" style={{color:'#22C55E'}}></i>1 Registered Email</li>
+                        <li className="mt-2"><i className="bi bi-check-circle-fill me-2" style={{color:'#22C55E'}}></i>Access live workshop</li>
+                        <li className="mt-2"><i className="bi bi-check-circle-fill me-2" style={{color:'#22C55E'}}></i>Access UPDC</li>
                       </ul>
                   </Card.Body>
                 </Card>
@@ -295,16 +272,16 @@ export default function Home() {
                        style={{left:'-1px', marginTop:'12px'}} 
                        alt=""
                 />
-                 <Card className="card-price px-4 py-4 mb-0 rounded-4" style={{height:'210px'}}>
+                 <Card className="card-price-group px-4 py-0 py-md-4 mb-0 rounded-4" style={{height:'210px'}}>
                   <Card.Body className="d-flex flex-md-row flex-column align-items-center justify-content-center p-0">
-                    <Card.Title className="group-price h-100 border-end text-center pe-md-3 pb-3 pb-md-0">
+                    <Card.Title className="group-price h-100 w-50 border-end text-center pe-md-3 pb-4 pb-md-0">
                       <h1 className="text-main mt-md-5 mt-4" style={{fontSize:'32px'}}>Start From 103k/person</h1>
                       <p className="text-grey mb-0 fs-lg">Minimum purchase 5</p>
                     </Card.Title>
-                    <ul className="ps-0 ps-md-3" style={{listStyleType:'none'}}>
-                      <li className="mt-3"><i className="bi bi-check-circle-fill me-2" style={{color:'#22C55E'}}></i>5-9 Registered Email</li>
-                      <li className="mt-3"><i className="bi bi-check-circle-fill me-2" style={{color:'#22C55E'}}></i>Can access all events</li>
-                      <li className="mt-3"><i className="bi bi-check-circle-fill me-2" style={{color:'#22C55E'}}></i>Get all video PDF 2024 & 2025</li>
+                    <ul className="ps-0 ps-md-5 pb-4 pb-md-0 text-start w-50 group-price-point" style={{listStyleType:'none'}}>
+                      <li className="mt-md-3 mt-2"><i className="bi bi-check-circle-fill me-2" style={{color:'#22C55E'}}></i>5-9 Registered Email</li>
+                      <li className="mt-md-3 mt-2"><i className="bi bi-check-circle-fill me-2" style={{color:'#22C55E'}}></i>Can access all events</li>
+                      <li className="mt-md-3 mt-2"><i className="bi bi-check-circle-fill me-2" style={{color:'#22C55E'}}></i>Get all video PDF 2024 & 2025</li>
                     </ul>
                   </Card.Body>
                 </Card>
@@ -353,72 +330,18 @@ export default function Home() {
         {/* FAQ Accordion */}
         <div className="row" style={{marginBottom:'100px'}}>
           <h1 className="text-center text-main mb-4 fw-700" style={{fontSize:'32px'}}>Frequently Asked Questions</h1>
-          <div className="col-12">
-            <Accordion defaultActiveKey="0">
-              <div className="row">
-                <div className="col-md-6 col-12">
-                  <Accordion.Item className="mb-4 rounded-4 overflow-hidden" eventKey="0">
-                    <Accordion.Header>Bagaimana Cara Mengikuti PDF 2026 ini?</Accordion.Header>
-                    <Accordion.Body className="border-top">
-                      Silahkan klik tombol “Join Now” dan lakukan pengisian formulir serta pembayaran melalui e-wallet/bank kesayanganmu~
-                    </Accordion.Body>
-                  </Accordion.Item>
-                  <Accordion.Item className="border mb-4 rounded-4 overflow-hidden" eventKey="1">
-                    <Accordion.Header>Apakah acara ini diselenggarakan secara online atau offline?</Accordion.Header>
-                    <Accordion.Body className="border-top">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                      eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </Accordion.Body>
-                  </Accordion.Item>
-                  <Accordion.Item className="border rounded-4 overflow-hidden mb-3" eventKey="2">
-                    <Accordion.Header>Saya sudah bayar, langkah apa yang harus saya lakukan?</Accordion.Header>
-                    <Accordion.Body className="border-top">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                      eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </Accordion.Body>
-                  </Accordion.Item>
-                </div>
-                <div className="col-md-6 col-12">
-                  <Accordion.Item className="mb-4 rounded-4 overflow-hidden" eventKey="3">
-                    <Accordion.Header>Jika tidak hadir, apakah mendapatkan rekaman video?</Accordion.Header>
-                    <Accordion.Body className="border-top">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                      eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </Accordion.Body>
-                  </Accordion.Item>
-                  <Accordion.Item className="border mb-4 rounded-4 overflow-hidden" eventKey="4">
-                    <Accordion.Header>Apakah pengambilan sertifikat memerlukan syarat?</Accordion.Header>
-                    <Accordion.Body className="border-top">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                      eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </Accordion.Body>
-                  </Accordion.Item>
-                  <Accordion.Item className="border rounded-4 overflow-hidden" eventKey="5">
-                    <Accordion.Header>Bagaimana prosedur jika ingin membeli harga paket?</Accordion.Header>
-                    <Accordion.Body className="border-top">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                      eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </Accordion.Body>
-                  </Accordion.Item>
-                </div>
-              </div>
-            </Accordion>
-          </div>
+          <AccordionFAQ />
         </div>
 
       {/* CTA Contact Us */}
         <div className="row">
-          <div className="col-12 px-0 py-5 rounded-4 contact" 
-              style={{
-              backgroundImage:'url(/Assets/bg-contact-us.png)',
-              backgroundSize:'cover',
-            }}>
-              <div className="d-flex flex-md-row flex-column justify-content-between align-items-center contact-cta" style={{paddingLeft:'100px', paddingRight:'100px'}}>
+          <div className="col-12 px-0 pt-md-2 py-5 rounded-4 contact">
+              <div className="d-flex flex-md-row flex-column justify-content-between align-items-center contact-cta">
                 <div className="p-4 rounded-4" style={{background:'#FFF1C6'}}>
                   <h1 className="fw-700" style={{fontSize:'32px'}}>Tidak menemukan <span className="text-pink">jawabannya?</span></h1>
                   <p className="">Jika kamu belum menemukan pertanyaan dan jawaban yang sesuai, jangan ragu untuk menghubungi kami melalui email atau WhatsApp. Kami akan berusaha membalas pesan Anda secepat mungkin.</p>
                   <div className="d-flex flex-md-row flex-column align-items-center">
-                    <Link href="#register" className="btn rounded-pill mt-3 me-3 py-2 px-3 bg-white d-flex flex-row align-items-center" style={{width:'fit-content', fontSize:'18px'}}>
+                    <Link href="#register" className="btn rounded-pill mt-3 me-3 ps-2 pe-3 bg-white d-flex flex-row align-items-center" style={{width:'fit-content'}}>
                       <Image className="me-2" 
                         src="/Assets/mail.png" 
                         width={40} 
@@ -427,7 +350,7 @@ export default function Home() {
                       />
                       hello@uiuxindo.id
                     </Link>
-                    <Link href="#register" className="btn rounded-pill mt-3 me-3 py-2 px-3 bg-white d-flex flex-row align-items-center" style={{width:'fit-content', fontSize:'18px'}}>
+                    <Link href="#register" className="btn rounded-pill mt-3 me-3 py-2 ps-2 pe-3 bg-white d-flex flex-row align-items-center" style={{width:'fit-content'}}>
                       <Image className="me-2" 
                         src="/Assets/phone.png" 
                         width={40} 
@@ -446,8 +369,8 @@ export default function Home() {
 
 
       {/* Footer */}
-      <footer className="mt-md-5" style={{borderTop:'solid 3px #E7E7E7'}}>
-        <div className="row row-footer" style={{margin:'50px 100px 50px 100px'}}>
+      <footer className="mt-md-5">
+        <div className="row row-footer">
           <div className="col-md-3 col-12 mb-4 mb-md-0">
             <h5 className="mb-3">Explore UIUXINDO</h5>
             <p className="text-grey mb-1 mb-md-2">About Us</p>
@@ -472,7 +395,7 @@ export default function Home() {
       </footer>
 
       {/* Copyright */}
-      <div className="container-fluid copyright bg-black d-flex flex-md-row flex-column justify-content-between align-items-center" style={{padding:'20px 100px 20px 100px'}}>
+      <div className="container-fluid copyright bg-black d-flex flex-md-row flex-column justify-content-between align-items-center">
         <p className="text-white text-center mb-md-0 mb-4">Copyright Ⓒ 2020-2023 All Rights Reserved, PT Garis Piksel Teknologi</p>
         <div className="d-flex flex-row justify-content-center align-items-center">
           <i className="bi bi-instagram text-white px-2 fs-xl"></i>

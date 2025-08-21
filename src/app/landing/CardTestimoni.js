@@ -36,8 +36,15 @@ const CardTestimoni = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrows: false
+    arrows: false,
+    adaptiveHeight: true,
+    appendDots: dots => (
+      <div>
+        <ul className='ps-0 pe-4 mb-0 mt-4'> {dots} </ul>
+      </div>
+    ),
   };
+
 
   const renderCard = (item, index) => (
     <Card key={index} className="card rounded-4 mb-4">
