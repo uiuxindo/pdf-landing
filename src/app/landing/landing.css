@@ -66,6 +66,23 @@ a {
   text-decoration: none;
 }
 
+.btn-warning{
+  padding: 12px 24px;
+  width: 150px;
+}
+
+.btn-hero,
+.btn-cta{
+  padding: 12px 24px !important;
+}
+
+/* NAVBAR */
+.glass-navbar {
+  background: rgba(255, 255, 255, 0.7) !important;
+  backdrop-filter: blur(3px);
+  transition: background 0.3s ease, backdrop-filter 0.3s ease;
+}
+
 .nav-link.active{
   font-family: 'Fredoka', sans-serif;
   font-weight: 600;
@@ -83,6 +100,89 @@ a {
   }
 }
 
+/* HERO */
+.hero{
+  background-image: url("/Assets/Hero Section.png");
+  background-size: cover;
+  background-position: bottom;
+  height: 400px;
+}
+
+.curved-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.curved-underline::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -36px;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 40px;
+  border-radius: 50%; /* ujung bulat maksimal */
+  border-top: 4px solid currentColor;
+}
+
+/* BENEFIT */
+.card-benefit{
+  background-image: url('/Assets/bg-benefit-1.png');
+  background-size: cover;
+  background-position: bottom;
+  height: 490px;
+}
+
+.card-benefit-2{
+  background-image: url('/Assets/bg-benefit-2.png');
+  background-size: cover;
+  background-position: bottom;
+  height: auto;
+}
+
+.card-benefit-3{
+  background-image: url('/Assets/bg-benefit-3.png');
+  background-size: cover;
+  background-position: bottom;
+  height: auto;
+}
+
+/* CTA */
+.cta-section{
+  background-image: url('/Assets/CTA-PDF.jpg');
+  background-size: cover;
+  background-position: bottom;
+  height: 350px;
+}
+
+/* PRICING */
+.tab-price{
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.tab-price-active{
+  background: #FFB929;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+/* TESTIMONI */
+.masonry-container {
+  display: block;
+  column-count: 3;
+  column-gap: 24px;
+}
+
+.masonry-item {
+  break-inside: avoid;
+}
+
+.slick-slide {
+  padding: 0 12px;
+}
+
+/* ACCORDION GALLERY */
 .accordion-gallery {
   display: flex;
   justify-content: center;
@@ -129,6 +229,7 @@ a {
   font-size: 0.9rem;
 }
 
+/* PARTNER LOGO CAROUSEL */
 .logo-carousel-wrapper {
   overflow: hidden;
   position: relative;
@@ -137,13 +238,24 @@ a {
 .logo-carousel-track {
   display: flex;
   width: max-content;
-  animation: scrollLeft 15s linear infinite;
+  animation: scrollLeft 8s linear infinite;
 }
 
 .logo-carousel-item {
   flex: 0 0 auto;
   margin: 0 1rem;
 }
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-30%);
+  }
+}
+
+/* FAQ */
 
 .accordion-button:not(.collapsed) {
   --bs-accordion-active-bg: white;
@@ -157,39 +269,44 @@ a {
   box-shadow: none;
 }
 
-.masonry-container {
-  display: block;
-  column-count: 3;
-  column-gap: 24px;
+/* CONTACT CTA */
+.contact{
+  background-image: url('/Assets/bg-contact-us.png');
+  background-size: cover;
+  background-position: center;
+  height: 470px;
 }
 
-.masonry-item {
-  break-inside: avoid;
+.contact-cta{
+  padding: 0px 100px;
 }
 
-.slick-slide {
-  padding: 0 12px;
+/* FOOTER */
+.row-footer{
+  margin:50px 100px 50px 100px;
 }
 
-@keyframes scrollLeft {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+footer{
+  border-top: solid 3px #E7E7E7;
+}
+
+/* COPYRIGHT */
+.copyright{
+  padding: 20px 100px 20px 100px;
 }
 
 @media (max-width: 767px) {
 
+  /* HERO */
   .hero{
-    background-position: -360px;
+    background-position: center;
     background-repeat: no-repeat;
+    height: 550px !important;
   }
 
   .hero-content{
-    padding-left: 36px !important;
-    padding-right: 36px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
   }
 
   .title-hero{
@@ -201,27 +318,32 @@ a {
   }
 
   .btn-hero{
-    width: 360px !important;
+    width: 240px !important;
   }
 
-  .scorecard{
+  /* SCORECARD */
+  .scorecard-container{
     padding-bottom: 0px !important;
   }
 
+  .scorecard{
+    border-right: none !important;
+  }
+
+  /* FEATURE */
   .feature{
     margin-bottom: 50px !important;
   }
 
+  /* BENEFIT */
   .card-benefit,
   .card-benefit-2,
   .card-benefit-3{
     background-position: right !important;
+    /* height: auto !important; */
   }
 
-  .card-benefit-2{
-    height: 415px !important;
-  }
-
+  /* SPEAKER */
   .card-speaker{
     height: 400px !important;
   }
@@ -234,11 +356,23 @@ a {
     font-size: 16px !important;
   }
 
+  /* CTA */
   .cta-section{
     background-position: center;
   }
 
-  .card-price{
+  .cta-section h1{
+    font-size: 32px !important;
+  }
+
+  /* PRICING */
+  .tab-price ,
+  .tab-price-active{
+    font-size: 14px;
+  }
+
+  .card-price-individu,
+  .card-price-group{
     height: 280px !important;
   }
 
@@ -252,14 +386,32 @@ a {
     width: 100%;
   }
 
+  .group-price{
+    width: 100% !important;
+  }
+
+  .group-price-point{
+    width: 100% !important;
+    text-align: center !important;
+  }
+
   .tag-price{
     width:90px;
     height: 50px;
     left: 4px !important;
   }
 
-  /* Accordion Gallery */
+  /* TESTIMONI */
+  .masonry-container {
+    column-count: 1;
+  }
 
+  #Testimoni{
+    margin-bottom: 50px !important;
+  }
+
+
+  /* ACCORDION GALLERY */
   .accordion-gallery {
     display: flex;
     flex-direction: column;
@@ -283,15 +435,21 @@ a {
     padding: 20px 12px;
   }
 
-  .CTA{
-    margin-top: 50px !important;
+  .container-momen{
+    margin-top: 100px !important;
   }
 
-  /* Partner */
-
+  /* PARTNER LOGO CAROUSEL */
   .carousel-item {
     margin-left: 1rem;
     margin-right: 1rem;
+  }
+
+  /* CONTACT CTA */
+  .contact{
+    background-position: center;
+    border-radius: 0 !important;
+    height: auto;
   }
 
   .contact-cta{
@@ -299,34 +457,19 @@ a {
     padding-right: 24px !important;
   }
 
+  /* FOOTER */
   .row-footer{
-    margin: 36px 24px 36px 24px !important;
+    margin: 36px 20px 36px 20px !important;
   }
 
+  /* COPYRIGHT */
   .copyright{
-    padding: 24 24px 24px 24px !important;
+    padding: 24px 24px 24px 24px !important;
   }
 
   .text-momen{
     padding-left: 24px !important;
     padding-right: 24px !important;
-  }
-
-  .masonry-container {
-    column-count: 1;
-  }
-
-  .contact{
-    background-position: center;
-    border-radius: 0 !important;
-  }
-
-  #Testimoni{
-    margin-bottom: 50px !important;
-  }
-
-  .container-momen{
-    margin-top: 50px !important;
   }
  
 }

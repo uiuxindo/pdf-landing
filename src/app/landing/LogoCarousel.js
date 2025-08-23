@@ -1,24 +1,30 @@
-'use client';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
-
-const logos = [
-  '/Assets/Logo-Carousel/Logo-1.png',
-  '/Assets/Logo-Carousel/Logo-2.png',
-  '/Assets/Logo-Carousel/Logo-3.png',
-  '/Assets/Logo-Carousel/Logo-4.png',
-  '/Assets/Logo-Carousel/Logo-5.png',
-];
+import axios from 'axios';
 
 export default function LogoCarousel() {
-  const carouselItems = [...logos, ...logos];
+  const [logos, setLogos] = useState([]);
+
+  useEffect(() => {
+    axios.get('https://sheetdb.io/api/v1/brtsk23nmm0r3')
+      .then((response) => {
+        console.log(response.data);
+        setLogos(response.data);
+      })
+      .catch((err) => {
+        console.error('Error fetching logos:', err);
+      });
+  }, []);
+
+  const carouselItems = [...logos, ...logos, ...logos];
 
   return (
     <div className="logo-carousel-wrapper py-4">
       <div className="logo-carousel-track">
-        {carouselItems.map((logo, index) => (
+        {carouselItems.map((item, index) => (
           <div className="logo-carousel-item" key={index}>
             <Image
-              src={logo}
+              src={item["logo"]}
               alt={`Logo ${index}`}
               width={180}
               height={80}
