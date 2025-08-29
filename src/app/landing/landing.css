@@ -244,6 +244,8 @@ a {
 .logo-carousel-item {
   flex: 0 0 auto;
   margin: 0 1rem;
+  width: 180px;
+  height: 80px;
 }
 
 @keyframes scrollLeft {

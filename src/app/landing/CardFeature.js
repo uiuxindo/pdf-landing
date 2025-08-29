@@ -11,7 +11,7 @@ const cardData = [
   { icon: '/Assets/Icon-Benefit/Portofolio Review.png', title: 'LIVE Portofolio Review' },
   { icon: '/Assets/Icon-Benefit/Virtual Games.png', title: 'Virtual Games' },
   { icon: '/Assets/Icon-Benefit/Battle Show.png', title: 'LIVE Design Battle Show' },
-  { icon: '/Assets/Icon-Benefit/Many more.png', title: 'Many More' },
+  { icon: '/Assets/Icon-Benefit/more-logo.png', title: 'Many More' },
 ];
 
 const CardRow = [

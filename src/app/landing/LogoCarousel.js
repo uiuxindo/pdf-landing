@@ -16,21 +16,14 @@ export default function LogoCarousel() {
       });
   }, []);
 
-  const carouselItems = [...logos, ...logos, ...logos];
+  const carouselItems = [...logos];
+  // const carouselItems = [...logos, ...logos, ...logos];
 
   return (
     <div className="logo-carousel-wrapper py-4">
       <div className="logo-carousel-track">
         {carouselItems.map((item, index) => (
-          <div className="logo-carousel-item" key={index}>
-            <Image
-              src={item["logo"]}
-              alt={`Logo ${index}`}
-              width={180}
-              height={80}
-              className="img-fluid"
-            />
-          </div>
+          <div className="logo-carousel-item" key={index} style={{backgroundImage: `url(${item["logo"]})`, backgroundSize: "contain", backgroundRepeat: "no-repeat", backgroundPosition: "center"}}></div>
         ))}
       </div>
     </div>
