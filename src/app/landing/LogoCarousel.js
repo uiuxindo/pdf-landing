@@ -19,8 +19,10 @@ export default function LogoCarousel() {
   const carouselItems = [...logos];
   // const carouselItems = [...logos, ...logos, ...logos];
 
+  const customSizeLogos = ["Coptera", "Haifilo", "Koda Academy", "UIXPerience", "FKOM UNIKU"];
+
   return (
-    <div className="logo-carousel-wrapper py-4">
+    <div className="logo-carousel-wrapper py-5">
       <div className="logo-carousel-track">
         {carouselItems.map((item, index) => (
           <div className="logo-carousel-item" key={index} style={{backgroundImage: `url(${item["logo"]})`, backgroundSize: "contain", backgroundRepeat: "no-repeat", backgroundPosition: "center"}}></div>

@@ -14,7 +14,7 @@ const imageData = [
   },
   { 
     src: "/Assets/Image-accordion/Accordion-3.png", 
-    title: "Product Design Fest", 
+    title: "Product Design Festival", 
     description: "Peserta dan mentor dari seluruh Indonesia berkumpul!" 
   },
   { 

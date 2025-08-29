@@ -3,15 +3,15 @@ import React from 'react';
 import { Card } from 'react-bootstrap';
 
 const cardData = [
-  { icon: '/Assets/Icon-Benefit/Workshop.png', title: '7x LIVE Workshop UI/UX & Software Engineering' },
-  { icon: '/Assets/Icon-Benefit/Remote.png', title: 'Remote Working Session' },
-  { icon: '/Assets/Icon-Benefit/Speaking.png', title: 'English Profesional & Public Speaking' },
-  { icon: '/Assets/Icon-Benefit/Mental Health.png', title: 'Mental Health Session' },
-  { icon: '/Assets/Icon-Benefit/Workshop-1.png', title: 'Exclusive Job Info' },
-  { icon: '/Assets/Icon-Benefit/Portofolio Review.png', title: 'LIVE Portofolio Review' },
-  { icon: '/Assets/Icon-Benefit/Virtual Games.png', title: 'Virtual Games' },
-  { icon: '/Assets/Icon-Benefit/Battle Show.png', title: 'LIVE Design Battle Show' },
-  { icon: '/Assets/Icon-Benefit/more-logo.png', title: 'Many More' },
+  { icon: '/Assets/Icon-Benefit/Live-workshop.png', title: '7x LIVE Workshop UI/UX & Software Engineering' },
+  { icon: '/Assets/Icon-Benefit/Remote-work.png', title: 'Remote Working Session' },
+  { icon: '/Assets/Icon-Benefit/Public-speaking.png', title: 'English Profesional & Public Speaking' },
+  { icon: '/Assets/Icon-Benefit/Mental-health.png', title: 'Mental Health Session' },
+  { icon: '/Assets/Icon-Benefit/Job.png', title: 'Exclusive Job Info' },
+  { icon: '/Assets/Icon-Benefit/Portofolio.png', title: 'LIVE Portofolio Review' },
+  { icon: '/Assets/Icon-Benefit/Games.png', title: 'Virtual Games' },
+  { icon: '/Assets/Icon-Benefit/Design-battle.png', title: 'LIVE Design Battle Show' },
+  { icon: '/Assets/Icon-Benefit/ETC.png', title: 'Many More' },
 ];
 
 const CardRow = [
