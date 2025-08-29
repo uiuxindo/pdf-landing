@@ -16,28 +16,17 @@ export default function LogoCarousel() {
       });
   }, []);
 
-  const carouselItems = [...logos, ...logos, ...logos];
+  const carouselItems = [...logos];
+  // const carouselItems = [...logos, ...logos, ...logos];
 
   const customSizeLogos = ["Coptera", "Haifilo", "Koda Academy", "UIXPerience", "FKOM UNIKU"];
 
   return (
     <div className="logo-carousel-wrapper py-5">
       <div className="logo-carousel-track">
-        {carouselItems.map((item, index) => {
-          const isCustom = customSizeLogos.includes(item.name);
-          return (
-            <div className="logo-carousel-item" key={index}>
-              <div className={`logo-box ${isCustom ? "logo-box-large" : ""}`}>
-                <Image
-                  src={item["logo"]}
-                  alt={item.name || `Logo ${index}`}
-                  fill
-                  className="logo-img"
-                />
-              </div>
-            </div>
-          );
-        })}
+        {carouselItems.map((item, index) => (
+          <div className="logo-carousel-item" key={index} style={{backgroundImage: `url(${item["logo"]})`, backgroundSize: "contain", backgroundRepeat: "no-repeat", backgroundPosition: "center"}}></div>
+        ))}
       </div>
     </div>
   );
