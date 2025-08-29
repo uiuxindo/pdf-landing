@@ -5,7 +5,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Image from 'next/image';
 import Link from 'next/link';
 
-function MainNavbar() {
+function MainNavbar({ menus = [], buttonText = "Button", buttonHref = "#", logo = "/Assets/Logo PDF 2026.png" }) {
   const [scrolled, setScrolled] = useState(false);
   const [expanded, setExpanded] = useState(false);
 
@@ -30,21 +30,25 @@ function MainNavbar() {
       className={`border-bottom transition-all ${scrolled ? "glass-navbar" : "bg-body-tertiary"}`}
     >
       <Container>
-        <Navbar.Brand href="#home">
-          <Image src="/Assets/Logo PDF 2026.png" alt="Logo" width={136} height={56} className="me-2" />
+        <Navbar.Brand href="/">
+          <Image src={logo} alt="Logo" width={136} height={56} className="me-2" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mx-auto">
-            <Nav.Link className='me-4' href="#Home" onClick={handleNavClick}>Home</Nav.Link>
-            <Nav.Link className='me-4' href="#Benefit" onClick={handleNavClick}>Benefit</Nav.Link>
-            <Nav.Link className='me-4' href="#Speaker" onClick={handleNavClick}>Speaker</Nav.Link>
-            <Nav.Link className='me-4' href="#Schedule" onClick={handleNavClick}>Schedule</Nav.Link>
-            <Nav.Link className='me-4' href="#Testimoni" onClick={handleNavClick}>Testimony</Nav.Link>
-            <Nav.Link className='me-4' href="#Partner" onClick={handleNavClick}>Partner</Nav.Link>
+            {menus.map((menu, index) => (
+              <Nav.Link
+                key={index}
+                className="me-4"
+                href={menu.href}
+                onClick={handleNavClick}
+              >
+                {menu.label}
+              </Nav.Link>
+            ))}
           </Nav>
-          <Link href="#contact" className="btn btn-warning px-3 py-2 rounded-pill fs-md" onClick={handleNavClick}>
-            UPDC
+          <Link href={buttonHref} className="btn btn-warning px-3 py-2 rounded-pill fs-md" onClick={handleNavClick}>
+            {buttonText}
           </Link>
         </Navbar.Collapse>
       </Container>

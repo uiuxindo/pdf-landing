@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import Link from "next/link";
 import MainNavbar from "./landing/Navbar/navbar-lp";
@@ -46,9 +46,22 @@ export default function Home() {
     return () => clearInterval(interval);
   }, []);
 
+  const homeMenus = [
+    { label: "Home", href: "#Home" },
+    { label: "Benefit", href: "#Benefit" },
+    { label: "Speaker", href: "#Speaker" },
+    { label: "Schedule", href: "#Schedule" },
+    { label: "Testimony", href: "#Testimoni" },
+    { label: "Partner", href: "#Partner" },
+  ];
+
   return (
     <>
-      <MainNavbar/>
+      <MainNavbar 
+        menus={homeMenus}
+        buttonText="UPDC"
+        buttonHref="/UPDC-2026"
+      />
 
       <div className="container-fluid" id="Home">
         <div className="row">
@@ -87,7 +100,7 @@ export default function Home() {
 
       <div className="container">
         {/* Scorecard */}
-        <div className="row scorecard-container" style={{margin:'50px 0 0 0'}}>
+        <div className="row scorecard-container" style={{margin:'50px 0 50px 0'}}>
           <div className="col-12 col-md-4 text-center scorecard" style={{borderRight:'solid 1px #E0E0E0'}}>
             <h2 className="text-pink mb-1 fw-700">100.000+</h2>
             <p className="text-grey fs-md-lg fs-xl">Total Participants</p>
@@ -210,8 +223,8 @@ export default function Home() {
       {/* CTA */}
       <div className="container-fluid CTA" style={{marginTop:'100px', marginBottom:'100px'}}>
         <div className="row">
-          <div className="col-12 px-md-0 px-1 py-5 text-center cta-section">
-              <h1 className="fw-700 mt-4" style={{fontSize:'40px'}}>UIUXINDO<br/>PRODUCT DESIGN CHALLENGE</h1>
+          <div className="col-12 px-md-0 px-1 text-center cta-section">
+              <h1 className="fw-700" style={{fontSize:'40px'}}>UIUXINDO<br/>PRODUCT DESIGN CHALLENGE</h1>
               <Link href="#register" className="btn btn-cta bg-white rounded-pill mt-3 py-3 fw-700 text-main" style={{background:'#FFB929'}}>
                   Lihat Info Selengkapnya
               </Link>
@@ -343,7 +356,7 @@ export default function Home() {
                   <div className="d-flex flex-md-row flex-column align-items-center">
                     <Link href="#register" className="btn rounded-pill mt-3 me-3 ps-2 pe-3 bg-white d-flex flex-row align-items-center" style={{width:'fit-content'}}>
                       <Image className="me-2" 
-                        src="/Assets/mail.png" 
+                        src="/Assets/Email.png" 
                         width={40} 
                         height={40}
                         alt=""
@@ -352,7 +365,7 @@ export default function Home() {
                     </Link>
                     <Link href="#register" className="btn rounded-pill mt-3 me-3 py-2 ps-2 pe-3 bg-white d-flex flex-row align-items-center" style={{width:'fit-content'}}>
                       <Image className="me-2" 
-                        src="/Assets/phone.png" 
+                        src="/Assets/Telephone.png" 
                         width={40} 
                         height={40}
                         alt=""
@@ -361,7 +374,7 @@ export default function Home() {
                     </Link>
                   </div>
                 </div>
-                <Image className="mb-md-0 img-fluid" src="/Assets/contact-us.png" width={450} height={450} alt=""/>
+                <Image className="mb-md-0 img-fluid" src="/Assets/Contact us.png" width={450} height={450} alt=""/>
               </div>
           </div>
         </div>
@@ -396,7 +409,7 @@ export default function Home() {
 
       {/* Copyright */}
       <div className="container-fluid copyright bg-black d-flex flex-md-row flex-column justify-content-between align-items-center">
-        <p className="text-white text-center mb-md-0 mb-4">Copyright Ⓒ 2020-2023 All Rights Reserved, PT Garis Piksel Teknologi</p>
+        <p className="text-white text-center mb-md-0 mb-4">Copyright Ⓒ 2025 All Rights Reserved, PT Garis Piksel Teknologi</p>
         <div className="d-flex flex-row justify-content-center align-items-center">
           <i className="bi bi-instagram text-white px-2 fs-xl"></i>
           <i className="bi bi-linkedin text-white px-2 fs-xl"></i>
