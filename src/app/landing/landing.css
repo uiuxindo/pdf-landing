@@ -127,24 +127,13 @@
 .logo-carousel-track {
   display: flex;
   width: max-content;
-  animation: scrollLeft 18s linear infinite;
+  animation: scrollLeft 14s linear infinite;
 }
 
 .logo-carousel-item {
   flex: 0 0 auto;
-  margin: 0 1rem;
-  width: 180px;
-  height: 80px;
-}
-
-.logo-box-large {
-  width: 180px;  
-  height: 180px;
-  margin-bottom: 24px;
-}
-
-.logo-img {
-  object-fit: contain;
+  width: 184px;
+  height: 100px;
 }
 
 
@@ -180,7 +169,7 @@
 }
 
 .contact-cta{
-  padding: 0px 100px;
+  padding: 0px 50px;
 }
 
 /* FOOTER */

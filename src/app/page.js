@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import MainNavbar from "./landing/Navbar/navbar-lp";
+import MainNavbar from "./Navbar/navbar-lp";
 import Image from "next/image";
 import { useEffect, useState } from 'react';
 import 'bootstrap-icons/font/bootstrap-icons.css';
@@ -15,6 +15,8 @@ import AccordionGallerySection from "./landing/AccordionGallery";
 import LogoCarousel from "./landing/LogoCarousel";
 import EventSchedule from "./landing/Schedule";
 import AccordionFAQ from "./landing/AccordionFAQ";
+import Footer from "./Footer/Footer";
+import FloatingWhatsapp from "./landing/WidgetWhatsapp";
 
 export default function Home() {
 
@@ -57,10 +59,15 @@ export default function Home() {
 
   return (
     <>
+
+      <FloatingWhatsapp/>
+
       <MainNavbar 
         menus={homeMenus}
-        buttonText="UPDC"
+        buttonText="Lihat UPDC"
         buttonHref="/UPDC-2026"
+        buttonVariant="outline"
+        chevron="right"
       />
 
       <div className="container-fluid" id="Home">
@@ -90,7 +97,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                <Link href="#register" className="btn btn-hero rounded-pill py-3 fw-500" style={{background:'#FFB929', width:'180px', marginTop:'32px'}}>
+                <Link href="https://uiuxindo.myr.id/event/pdf2026" className="btn btn-hero rounded-pill py-3 fw-500" style={{background:'#FFB929', width:'180px', marginTop:'32px'}}>
                   Daftar Sekarang
                 </Link>
             </div>
@@ -154,7 +161,7 @@ export default function Home() {
                       }}>
                     Benefit Eksklusif Peserta
                   </div>
-                  <ul className="ps-4 pt-3" style={{listStyleType:'none'}}>
+                  <ul className="px-4 pt-3" style={{listStyleType:'none'}}>
                     <li className="mt-3"><i className="bi bi-check-circle-fill me-2" style={{color:'#317EFF'}}></i>Sertifikat Digital</li>
                     <li className="mt-3"><i className="bi bi-check-circle-fill me-2" style={{color:'#317EFF'}}></i>Hadiah uang tunai hingga 1 juta rupiah</li>
                     <li className="mt-3"><i className="bi bi-check-circle-fill me-2" style={{color:'#317EFF'}}></i>Gratis Ebook UI/UX untuk Pemula dari UIUXINDO</li>
@@ -178,7 +185,7 @@ export default function Home() {
                       }}>
                     Upgrade Skill & Karir
                   </div>
-                  <ul className="ps-4 pt-md-2" style={{listStyleType:'none'}}>
+                  <ul className="px-4 pt-md-2" style={{listStyleType:'none'}}>
                     <li className="mt-3"><i className="bi bi-check-circle-fill me-2" style={{color:'#FF4DA2'}}></i>Dapatkan strategi berkarir sebagai UI/UX Designer & Software Engineer profesional di perusahaan global</li>
                     <li className="mt-3"><i className="bi bi-check-circle-fill me-2" style={{color:'#FF4DA2'}}></i>Ambil kesempatan untuk sesi mentoring bersama mentor profesional</li>
                     <li className="mt-3"><i className="bi bi-check-circle-fill me-2" style={{color:'#FF4DA2'}}></i>Tingkatkan skill bahasa inggris & public speakingmu di dunia profesional</li>
@@ -198,7 +205,7 @@ export default function Home() {
                       }}>
                     Fleksibel & Online
                   </div>
-                  <ul className="ps-4 pt-md-2" style={{listStyleType:'none'}}>
+                  <ul className="px-4 pt-md-2" style={{listStyleType:'none'}}>
                     <li className="mt-3"><i className="bi bi-check-circle-fill me-2" style={{color:'#4DFFB9'}}></i>Full online via Zoom, kamu dapat akses dimana saja</li>
                   </ul>
                 </Card.Body>
@@ -225,7 +232,7 @@ export default function Home() {
         <div className="row">
           <div className="col-12 px-md-0 px-1 text-center cta-section">
               <h1 className="fw-700" style={{fontSize:'40px'}}>UIUXINDO<br/>PRODUCT DESIGN CHALLENGE</h1>
-              <Link href="#register" className="btn btn-cta bg-white rounded-pill mt-3 py-3 fw-700 text-main" style={{background:'#FFB929'}}>
+              <Link href="/UPDC-2026" className="btn btn-cta bg-white rounded-pill mt-3 py-3 fw-700 text-main" style={{background:'#FFB929'}}>
                   Lihat Info Selengkapnya
               </Link>
           </div>
@@ -350,7 +357,7 @@ export default function Home() {
         <div className="row">
           <div className="col-12 px-0 pt-md-2 py-5 rounded-4 contact">
               <div className="d-flex flex-md-row flex-column justify-content-between align-items-center contact-cta">
-                <div className="p-4 rounded-4" style={{background:'#FFF1C6'}}>
+                <div className="p-4 rounded-4 me-4" style={{background:'#FFF1C6'}}>
                   <h1 className="fw-700" style={{fontSize:'32px'}}>Tidak menemukan <span className="text-pink">jawabannya?</span></h1>
                   <p className="">Jika kamu belum menemukan pertanyaan dan jawaban yang sesuai, jangan ragu untuk menghubungi kami melalui email atau WhatsApp. Kami akan berusaha membalas pesan Anda secepat mungkin.</p>
                   <div className="d-flex flex-md-row flex-column align-items-center">
@@ -382,42 +389,7 @@ export default function Home() {
 
 
       {/* Footer */}
-      <footer className="mt-md-5">
-        <div className="row row-footer">
-          <div className="col-md-3 col-12 mb-4 mb-md-0">
-            <h5 className="mb-3">Explore UIUXINDO</h5>
-            <p className="text-grey mb-1 mb-md-2">About Us</p>
-            <p className="text-grey mb-1 mb-md-2">Contact</p>
-            <p className="text-grey mb-1 mb-md-2">FAQ</p>
-          </div>
-          <div className="col-md-3 col-12 mb-4 mb-md-0">
-            <h5 className="mb-3">UIUXINDO Info</h5>
-            <p className="text-grey mb-1 mb-md-2">Event</p>
-            <p className="text-grey mb-1 mb-md-2">Article</p>
-          </div>
-          <div className="col-md-3 col-12 mb-4 mb-md-0">
-            <h5 className="mb-3">Services</h5>
-            <p className="text-grey mb-1 mb-md-2">Academy</p>
-          </div>
-          <div className="col-md-3 col-12 mb-4 mb-md-0">
-            <h5 className="mb-3">Explore UIUXINDO</h5>
-            <p className="text-grey mb-1 mb-md-2">(+62) 823 1010 1118</p>
-            <p className="text-grey mb-1 mb-md-2">hello@uiuxindo.id</p>
-          </div>
-        </div>
-      </footer>
-
-      {/* Copyright */}
-      <div className="container-fluid copyright bg-black d-flex flex-md-row flex-column justify-content-between align-items-center">
-        <p className="text-white text-center mb-md-0 mb-4">Copyright Ⓒ 2025 All Rights Reserved, PT Garis Piksel Teknologi</p>
-        <div className="d-flex flex-row justify-content-center align-items-center">
-          <i className="bi bi-instagram text-white px-2 fs-xl"></i>
-          <i className="bi bi-linkedin text-white px-2 fs-xl"></i>
-          <i className="bi bi-youtube text-white px-2 fs-xl"></i>
-          <i className="bi bi-facebook text-white px-2 fs-xl"></i>
-          <i className="bi bi-whatsapp text-white px-2 fs-xl"></i>
-        </div>
-      </div>
+      <Footer/>
 
     </>
   );

@@ -19,8 +19,8 @@ export default function EventSchedule() {
           <div className="col-12 text-center">
             <Image
               className="mb-md-0 img-fluid"
-              src="/Assets/timeline-schedule.png"
-              width={1100}
+              src="/Assets/Timeline.png"
+              width={1200}
               height={900}
               alt="Timeline Schedule"
             />
