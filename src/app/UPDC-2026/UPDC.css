@@ -48,11 +48,6 @@ ul{
 .slick-slide{
   padding-left: 0 !important;
 }
-
-/* .card{
-  --bs-card-border-color:none;
-} */
-
 /* Hadiah */
 
 .juara-2{
@@ -83,7 +78,7 @@ ul{
   border-bottom: solid 4px #FFB929;
 }
 
-/* UPDC */
+/* Ketentuan UPDC */
 
 .header-updc {
   background-image: url("/Assets/UPDC/UPDC.png");
@@ -110,6 +105,7 @@ ul{
   height: 100%;
   border-right: solid 1px #E0E0E0;
 }
+
 
 @media (max-width: 767px) {
  

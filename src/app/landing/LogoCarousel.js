@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import Image from 'next/image';
 import axios from 'axios';
 
 export default function LogoCarousel() {
@@ -16,16 +15,21 @@ export default function LogoCarousel() {
       });
   }, []);
 
-  const carouselItems = [...logos];
-  // const carouselItems = [...logos, ...logos, ...logos];
-
-  const customSizeLogos = ["Coptera", "Haifilo", "Koda Academy", "UIXPerience", "FKOM UNIKU"];
+  // const carouselItems = [...logos];
+  const carouselItems = [...logos, ...logos];
 
   return (
     <div className="logo-carousel-wrapper py-5">
       <div className="logo-carousel-track">
         {carouselItems.map((item, index) => (
-          <div className="logo-carousel-item" key={index} style={{backgroundImage: `url(${item["logo"]})`, backgroundSize: "contain", backgroundRepeat: "no-repeat", backgroundPosition: "center"}}></div>
+          <div className="logo-carousel-item border me-4 radius-16" 
+                key={index} 
+                style={{backgroundImage: `url(${item["logo"]})`, 
+                        backgroundSize: "contain", 
+                        backgroundRepeat: "no-repeat", 
+                        backgroundPosition: "center",
+            }}>
+          </div>
         ))}
       </div>
     </div>
