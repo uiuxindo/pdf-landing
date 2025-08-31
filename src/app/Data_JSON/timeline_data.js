@@ -1,0 +1,60 @@
+const timelineData = [
+  {
+    id: 1,
+    number: "01",
+    date: "Sabtu, 02 Mei 2026",
+    tasks: ["Pembukaan UPDC", "Brief at Landing Page Website"],
+    boxColor: "#EEF7FF",
+    numberColor: "#007BFF",
+  },
+  {
+    id: 2,
+    number: "02",
+    date: "Minggu, 17 Mei 2026",
+    tasks: ["Submit PDC di Instagram Post"],
+    boxColor: "#FEF1F8",
+    numberColor: "#E83E8C",
+  },
+  {
+    id: 3,
+    number: "03",
+    date: "Jumat, 22 Mei 2026",
+    tasks: ["Pengumuman Finalist UPDC"],
+    boxColor: "#EDFFF7",
+    numberColor: "#4DFFB9",
+  },
+  {
+    id: 4,
+    number: "04",
+    date: "Senin, 25 Mei 2026",
+    tasks: ["Technical Meeting Finalist UPDC"],
+    boxColor: "#FFFAEB",
+    numberColor: "#FFB929",
+  },
+  {
+    id: 5,
+    number: "05",
+    date: "Jumat, 29 Mei 2026",
+    tasks: ["Submit Presentation & Design Figma File"],
+    boxColor: "#EEF7FF",
+    numberColor: "#007BFF",
+  },
+  {
+    id: 6,
+    number: "06",
+    date: "Sabtu, 30 Mei 2026",
+    tasks: ["Pitching Session"],
+    boxColor: "#FEF1F8",
+    numberColor: "#E83E8C",
+  },
+  {
+    id: 7,
+    number: "07",
+    date: "Sabtu, 06 Juni 2026",
+    tasks: ["UPDC Announcement"],
+    boxColor: "#EDFFF7",
+    numberColor: "#4DFFB9",
+  },
+];
+
+export default timelineData;

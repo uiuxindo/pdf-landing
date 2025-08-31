@@ -6,7 +6,7 @@
 
 /* HERO */
 .hero-updc{
-  background-image: url("/Assets/UPDC/Hero-BG.png");
+  background-image: url("/Assets/UPDC/Hero-Section.png");
   background-size: cover;
   background-position: top;
   height: 480px;
@@ -14,40 +14,27 @@
 }
 
 /* Timeline */
+.timeline-bg{
+  background-image: url("/Assets/UPDC/Timeline.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .card-timeline{
-  border: 0 !important;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
   --bs-card-border-color:none;
 }
 
-.timeline{
-  background-image: url("/Assets/UPDC/Timeline.png");
-  background-size: cover;
-  background-position: bottom;
-  height: 450px;
+.timeline-row {
+  gap: 32px;
 }
 
-.timeline-container{
-  width: 248px;
-  background-color: #FFF;
-  padding: 32px 8px 8px 8px;
-  box-shadow: 0 11px 15px rgba(0, 0, 0, 0.1);
+.timeline-col {
+  flex: 0 0 auto;
 }
 
-.box{
-  /* width: 232px; */
-  padding: 20px;
-  height: 186px;
-  background-color: #EEF7FF;
-  border: 0 !important;
-} 
 
-ul{
-  padding-left: 24px;
-}
-
-.slick-slide{
-  padding-left: 0 !important;
-}
 /* Hadiah */
 
 .juara-2{
@@ -109,28 +96,36 @@ ul{
 
 @media (max-width: 767px) {
  
-  .timeline {
-    height: 280px;
+  /* Timeline */
+
+  .timeline-bg{
     background-size: cover;
-    background-position: left;
     background-repeat: no-repeat;
-    margin-top: 20px !important;
+    background-position: left;
   }
 
-  .timeline-container {
-    padding-top: 50px;
+  .timeline-col{
+    height: 100%;
   }
 
-  .slick-list {
-    padding: 0 !important;
-  }
-  
-  .slick-slide {
-    padding: 0px 12px 32px 12px;
+  .card-timeline{
+    border-color:none;
+    border-radius: 12px;
+    padding:50px 8px 8px 8px;
+    height:100%;
+    width:248px;
+    min-height: 280px !important;
   }
 
-  .slick-slider{
-    margin-top: 120px;
+  .slick-list{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .slick-slide{
+    width: fit-content !important;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
   }
 
   /* Hadiah & Benefit */

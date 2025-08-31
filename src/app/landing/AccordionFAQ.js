@@ -13,7 +13,7 @@ const AccordionFAQ = () => {
 
   return (
     <div className="col-12">
-      <Accordion defaultActiveKey="0">
+      <Accordion>
         <div className="row">
 
           <div className="col-md-6 col-12">

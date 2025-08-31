@@ -1,5 +1,6 @@
 "use client";
 
+import dynamic from 'next/dynamic';
 import Link from "next/link";
 import MainNavbar from "../Navbar/navbar-lp";
 import Image from "next/image";
@@ -43,7 +44,7 @@ export default function Home() {
                 <p className="mb-0">Diikuti oleh <span className="text-pink fw-700">100+</span> peserta</p>
               </div>
             </div>
-           <Link href="https://uiuxindo.myr.id/event/pdf2026" className="btn btn-cta bg-white rounded-pill mt-md-4 mt-3 py-3 fw-700 text-main" style={{background:'#FFB929'}}>
+           <Link href="https://uiuxindo.myr.id/pl/pdf2026" className="btn btn-cta bg-white rounded-pill mt-md-4 mt-3 py-3 fw-700 text-main" style={{background:'#FFB929'}}>
               Daftar Sekarang
             </Link>
           </div>
@@ -52,7 +53,7 @@ export default function Home() {
 
     {/* Timeline */}
     <div className="container">
-      <div id="Timeline" className="row px-4" style={{marginTop:'50px', marginBottom:'100px'}}>
+      <div id="Timeline" className="row" style={{marginTop:'50px', padding:'0 20px'}}>
         <div className="col-12 px-0 text-center">
           <h1 className="text-main fw-700">Timeline</h1>
           <p className="text-grey">Dengan berpartisipasi dalam acara ini, kamu akan mendapatkan pengalaman belajar yang menarik tentang 
@@ -140,7 +141,7 @@ export default function Home() {
                   <Card className="h-100">
                     <Card.Body className="d-flex flex-md-row flex-column align-items-center p-3">
                       <h2 className="text-pink fw-700 mb-md-0 pb-2 pb-md-0 me-md-4 pe-4 d-flex align-items-center title-ketentuan">03</h2>
-                      <p className="mb-0 text-grey">Lomba UI/UX ini dilakukan oleh individu</p>
+                      <p className="align-self-start align-self-md-center text-start mb-0 text-grey">Lomba UI/UX ini dilakukan oleh individu</p>
                     </Card.Body>
                   </Card>
                 </div>

@@ -22,9 +22,9 @@ import FloatingWhatsapp from "./landing/WidgetWhatsapp";
 export default function Home() {
 
   const [timeLeft, setTimeLeft] = useState({
+    months: 0,
+    days: 0,
     hours: 0,
-    minutes: 0,
-    seconds: 0,
   });
 
   useEffect(() => {
@@ -40,9 +40,7 @@ export default function Home() {
         return;
       }
 
-      // Total sisa hari
       const totalDays = Math.floor(distance / (1000 * 60 * 60 * 24));
-      // Hitung bulan kasar (anggap 30 hari = 1 bulan biar gampang)
       const months = Math.floor(totalDays / 30);
       const days = totalDays % 30;
       const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -102,7 +100,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                <Link href="https://uiuxindo.myr.id/event/pdf2026" className="btn btn-hero rounded-pill py-3 fw-500" style={{background:'#FFB929', width:'180px', marginTop:'32px'}}>
+                <Link href="https://uiuxindo.myr.id/pl/pdf2026" className="btn btn-hero rounded-pill py-3 fw-500" style={{background:'#FFB929', width:'180px', marginTop:'32px'}}>
                   Daftar Sekarang
                 </Link>
             </div>
@@ -166,14 +164,35 @@ export default function Home() {
                       }}>
                     Benefit Eksklusif Peserta
                   </div>
-                  <ul className="px-4 pt-3" style={{listStyleType:'none'}}>
-                    <li className="mt-3"><i className="bi bi-check-circle-fill me-2" style={{color:'#317EFF'}}></i>Sertifikat Digital</li>
-                    <li className="mt-3"><i className="bi bi-check-circle-fill me-2" style={{color:'#317EFF'}}></i>Hadiah uang tunai hingga 1 juta rupiah</li>
-                    <li className="mt-3"><i className="bi bi-check-circle-fill me-2" style={{color:'#317EFF'}}></i>Gratis Ebook UI/UX untuk Pemula dari UIUXINDO</li>
-                    <li className="mt-3"><i className="bi bi-check-circle-fill me-2" style={{color:'#317EFF'}}></i>Gratis Handbook & Video Recording PDF 2026</li>
-                    <li className="mt-3"><i className="bi bi-check-circle-fill me-2" style={{color:'#317EFF'}}></i>Diskon hingga 30% untuk semua e-book & video premium UIUXINDO</li>
-                    <li className="mt-3"><i className="bi bi-check-circle-fill me-2" style={{color:'#317EFF'}}></i>Diskon Bootcamp Fullstack UI/UX Design dari UIUXINDO Academy</li>
-                    <li className="mt-3"><i className="bi bi-check-circle-fill me-2" style={{color:'#317EFF'}}></i>Akses gratis ke semua acara rutin dari UIUXINDO & Partners</li>
+                  <ul className="px-md-4 px-3 pt-md-2 text-start" style={{listStyleType:'none'}}>
+                    <div className="d-flex flex-row mt-3">
+                      <i className="bi bi-check-circle-fill me-2" style={{color:'#4DA2FF'}}></i>
+                      <li className="">Sertifikat Digital</li>
+                    </div>
+                    <div className="d-flex flex-row mt-3">
+                      <i className="bi bi-check-circle-fill me-2" style={{color:'#4DA2FF'}}></i>
+                      <li className="">Hadiah uang tunai hingga 1 Juta Rupiah</li>
+                    </div>
+                    <div className="d-flex flex-row mt-3">
+                      <i className="bi bi-check-circle-fill me-2" style={{color:'#4DA2FF'}}></i>
+                      <li className="">Gratis Ebook UI/UX untuk pemula dari UIUXINDO</li>
+                    </div>
+                    <div className="d-flex flex-row mt-3">
+                      <i className="bi bi-check-circle-fill me-2" style={{color:'#4DA2FF'}}></i>
+                      <li className="">Gratis Handbook & Video Recording PDF 2026</li>
+                    </div>
+                    <div className="d-flex flex-row mt-3">
+                      <i className="bi bi-check-circle-fill me-2" style={{color:'#4DA2FF'}}></i>
+                      <li className="">Diskon hingga 30% untuk semua e-book & video premium UIUXINDO</li>
+                    </div>
+                    <div className="d-flex flex-row mt-3">
+                      <i className="bi bi-check-circle-fill me-2" style={{color:'#4DA2FF'}}></i>
+                      <li className="">Diskon Bootcamp Fullstack UI/UX Design dari UIUXINDO Academy</li>
+                    </div>
+                    <div className="d-flex flex-row mt-3">
+                      <i className="bi bi-check-circle-fill me-2" style={{color:'#4DA2FF'}}></i>
+                      <li className="">Akses gratis ke semua acara rutin dari UIUXINDO & Partners</li>
+                    </div>
                   </ul>
                 </Card.Body>
               </Card>
@@ -190,12 +209,27 @@ export default function Home() {
                       }}>
                     Upgrade Skill & Karir
                   </div>
-                  <ul className="px-4 pt-md-2" style={{listStyleType:'none'}}>
-                    <li className="mt-3"><i className="bi bi-check-circle-fill me-2" style={{color:'#FF4DA2'}}></i>Dapatkan strategi berkarir sebagai UI/UX Designer & Software Engineer profesional di perusahaan global</li>
-                    <li className="mt-3"><i className="bi bi-check-circle-fill me-2" style={{color:'#FF4DA2'}}></i>Ambil kesempatan untuk sesi mentoring bersama mentor profesional</li>
-                    <li className="mt-3"><i className="bi bi-check-circle-fill me-2" style={{color:'#FF4DA2'}}></i>Tingkatkan skill bahasa inggris & public speakingmu di dunia profesional</li>
-                    <li className="mt-3"><i className="bi bi-check-circle-fill me-2" style={{color:'#FF4DA2'}}></i>Seimbangkan kehidupanmu dengan sesi mental health agar lebih mindfull dalam berkarir</li>
-                    <li className="mt-3"><i className="bi bi-check-circle-fill me-2" style={{color:'#FF4DA2'}}></i>Tingkatkan portofolio berkualitas & menarik di mata perusahaan global</li>
+                  <ul className="px-md-4 px-3 pt-md-2 text-start" style={{listStyleType:'none'}}>
+                    <div className="d-flex flex-row mt-3">
+                      <i className="bi bi-check-circle-fill me-2" style={{color:'#FF4DA2'}}></i>
+                      <li className="">Dapatkan strategi berkarir sebagai UI/UX Designer & Software Engineer profesional di perusahaan global</li>
+                    </div>
+                    <div className="d-flex flex-row mt-3">
+                      <i className="bi bi-check-circle-fill me-2" style={{color:'#FF4DA2'}}></i>
+                      <li className="">Ambil kesempatan untuk sesi mentoring bersama mentor profesional</li>
+                    </div>
+                    <div className="d-flex flex-row mt-3">
+                      <i className="bi bi-check-circle-fill me-2" style={{color:'#FF4DA2'}}></i>
+                      <li className="">Tingkatkan skill bahasa inggris & public speakingmu di dunia profesional</li>
+                    </div>
+                    <div className="d-flex flex-row mt-3">
+                      <i className="bi bi-check-circle-fill me-2" style={{color:'#FF4DA2'}}></i>
+                      <li className="">Seimbangkan kehidupanmu dengan sesi mental health agar lebih mindfull dalam berkarir</li>
+                    </div>
+                    <div className="d-flex flex-row mt-3">
+                      <i className="bi bi-check-circle-fill me-2" style={{color:'#FF4DA2'}}></i>
+                      <li className="">Tingkatkan portofolio berkualitas & menarik di mata perusahaan global</li>
+                    </div>
                   </ul>
                 </Card.Body>
               </Card>
@@ -210,8 +244,11 @@ export default function Home() {
                       }}>
                     Fleksibel & Online
                   </div>
-                  <ul className="px-4 pt-md-2" style={{listStyleType:'none'}}>
-                    <li className="mt-3"><i className="bi bi-check-circle-fill me-2" style={{color:'#4DFFB9'}}></i>Full online via Zoom, kamu dapat akses dimana saja</li>
+                  <ul className="px-md-4 px-3 pt-md-2 text-start" style={{listStyleType:'none'}}>
+                    <div className="d-flex flex-row mt-3">
+                      <i className="bi bi-check-circle-fill me-2" style={{color:'#4DFFB9'}}></i>
+                      <li className="">Full online via Zoom, kamu dapat akses dimana saja</li>
+                    </div>
                   </ul>
                 </Card.Body>
               </Card>
@@ -258,13 +295,13 @@ export default function Home() {
 
             <div className="d-flex justify-content-center my-5">
               <div className="border p-2 rounded-pill">
-                <Link href="#register" className="btn me-1 rounded-pill px-4 fw-500 tab-price-active">
+                <Link href="" className="btn me-1 rounded-pill px-4 fw-500 tab-price-active">
                     Presale 1
                 </Link>
-                <Link href="#register" className="btn me-1 rounded-pill px-4 tab-price">
+                <Link href="" className="btn me-1 rounded-pill px-4 tab-price">
                     Presale 2
                 </Link>
-                <Link href="#register" className="btn rounded-pill px-4 tab-price">
+                <Link href="" className="btn rounded-pill px-4 tab-price">
                     Normal
                 </Link>
               </div>
@@ -293,7 +330,7 @@ export default function Home() {
                           </ul>
                       </div>
                       <Link 
-                        href="https://uiuxindo.myr.id/event/pdf2026" 
+                        href="https://uiuxindo.myr.id/pl/pdf2026" 
                         className="btn btn-price rounded-pill w-100 fw-600" 
                         style={{width:'fit-content'}}
                       >
@@ -324,7 +361,7 @@ export default function Home() {
                       </ul>
                     </div>
                       <Link 
-                        href="https://uiuxindo.myr.id/event/pdf2026" 
+                        href="https://uiuxindo.myr.id/pl/pdf2026" 
                         className="btn btn-price rounded-pill w-100 fw-600" 
                         style={{width:'fit-content'}}
                       >
