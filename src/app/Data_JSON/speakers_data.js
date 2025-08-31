@@ -30,7 +30,7 @@ const speakers_data = [
 	{
 		id: 202605,
 		speaker_name: "Nieza Ayurisma",
-		current_job: "TOEFL ITP & IBT Tutor",
+		current_job: "TOEFL ITP, IBT & ESP Tutor",
 		current_office: "",
 		photo_source: "https://cloud.uiuxindo.id/src/speakers/Mareda_Fenty-1.png"
 	},
@@ -38,13 +38,13 @@ const speakers_data = [
 		id: 202606,
 		speaker_name: "Desi Purnamasari ",
 		current_job: "Product Director",
-		current_office: "StraitX Fazz Group ",
+		current_office: "StraitsX Fazz Group ",
 		photo_source: "https://cloud.uiuxindo.id/src/speakers/Desi_Purnamasari.png"
 	},
 	{
 		id: 202607,
 		speaker_name: "Purna Anantha",
-		current_job: "Head Of UX Writer Hub",
+		current_job: "Lead UX Writer",
 		current_office: "Telkom Indonesia",
 		photo_source: "https://cloud.uiuxindo.id/src/speakers/Purna_Anantha.png"
 	},
