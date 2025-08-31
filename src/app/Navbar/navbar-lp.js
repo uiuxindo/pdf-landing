@@ -1,18 +1,17 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react'; 
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Image from 'next/image';
 import Link from 'next/link';
-import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 function MainNavbar({ 
   menus = [], 
   buttonText = "Button", 
   buttonHref = "#", 
   logo = "/Assets/Logo PDF 2026.png",
-  buttonVariant = "outline",
-  chevron="right"
+  icon = "palette2"
 }) {
   const [scrolled, setScrolled] = useState(false);
   const [expanded, setExpanded] = useState(false);
@@ -30,16 +29,15 @@ function MainNavbar({
   };
 
   const buttonClass =
-    buttonVariant === "fill"
-      ? "btn-navbar d-flex align-items-center gap-2 px-3 py-2 rounded-pill fs-md fw-600"
-      : "btn-navbar d-flex align-items-center gap-2 px-3 py-2 rounded-pill fs-md fw-600";
+    "btn-navbar d-flex align-items-center px-4 py-2 rounded-pill fs-md fw-600";
 
-  const buttonStyle =
-    buttonVariant === "fill"
-      ? { backgroundColor: "#FFB929", borderColor: "#FFB929" }
-      : { border: "2px solid #FFB929", color: "#FFB929" };
-      
-const ChevronIcon = chevron === "left" ? BsChevronLeft : BsChevronRight;
+  const buttonStyle = { border: "2px solid #FFB929", color: "#FFB929" };
+
+  const getIcon = () => {
+    if (icon === "arrow-left") return <i className="bi bi-arrow-left me-2 fs-lg"></i>;
+    if (icon === "palette2") return <i className="bi bi-palette2 me-2 fs-lg"></i>;
+    return null;
+  };
 
   return (
     <Navbar
@@ -67,10 +65,14 @@ const ChevronIcon = chevron === "left" ? BsChevronLeft : BsChevronRight;
               </Nav.Link>
             ))}
           </Nav>
-          <Link href={buttonHref} className={buttonClass} style={buttonStyle} onClick={handleNavClick}>
-            {chevron === "left" && <ChevronIcon size={16} className="me-1" />}
+          <Link 
+            href={buttonHref} 
+            className={buttonClass} 
+            style={buttonStyle} 
+            onClick={handleNavClick}
+          >
+            {getIcon()}
             {buttonText}
-            {chevron === "right" && <ChevronIcon size={16} className="ms-1" />}
           </Link>
         </Navbar.Collapse>
       </Container>

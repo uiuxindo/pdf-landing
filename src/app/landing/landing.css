@@ -56,6 +56,20 @@
   padding-bottom: 12px;
 }
 
+.btn-price{
+  background-color: #FFB929;
+  padding: 12px 24px !important;
+}
+
+.btn-price:hover {
+  background-color: #fff !important;
+  color: #ffb929 !important;
+  border-color: #ffb929 !important;
+  /* background-color: #FFB929 !important; */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 185, 41, 0.3);
+}
+
 /* TESTIMONI */
 .masonry-container {
   display: block;
@@ -127,24 +141,37 @@
 .logo-carousel-track {
   display: flex;
   width: max-content;
-  animation: scrollLeft 14s linear infinite;
 }
 
 .logo-carousel-item {
   flex: 0 0 auto;
   width: 184px;
   height: 100px;
+  padding: 12px; 
+  background-origin: content-box;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
+.scroll-left {
+  animation: scrollLeft 24s linear infinite;
+}
 
 @keyframes scrollLeft {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-30%);
-  }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } 
 }
+
+.scroll-right {
+  animation: scrollRight 24s linear infinite;
+}
+
+@keyframes scrollRight {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
 
 /* FAQ */
 
@@ -186,7 +213,147 @@ footer{
   padding: 20px 100px 20px 100px;
 }
 
+/* Schedule Updated */
+.schedule-section {
+  position: relative;
+  padding: 50px 20px;
+}
+
+.schedule-title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #e91e63;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1000px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  background: #f9c900;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 20px;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  top: 25px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #f9c900;
+  border: 3px solid white;
+  z-index: 1;
+}
+
+.timeline-item.left {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-item.left::before {
+  right: -10px;
+}
+
+.timeline-item.right {
+  left: 50%;
+  text-align: left;
+}
+
+.timeline-item.right::before {
+  left: -10px;
+}
+
+.timeline-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.timeline-content .date {
+  font-weight: bold;
+  color: #f9a825;
+}
+
+.timeline-content h3 {
+  margin: 10px 0 5px;
+  font-size: 18px;
+  color: #e91e63;
+}
+
+.timeline-content .subtitle {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.timeline-content .speaker {
+  font-size: 13px;
+  color: #777;
+}
+
+.timeline-btn {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.timeline-btn button {
+  background: #e91e63;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 14px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.timeline-btn button:hover {
+  background: #c2185b;
+}
+
 @media (max-width: 767px) {
+
+  /* Schedule Updated */
+  .timeline::before {
+    left: 20px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 25px;
+    margin-bottom: 30px;
+  }
+
+  .timeline-item.left,
+  .timeline-item.right {
+    left: 0;
+    text-align: left;
+  }
+
+  .timeline-item::before {
+    left: 10px;
+  }
 
   /* HERO */
   .hero{
@@ -264,32 +431,28 @@ footer{
 
   .card-price-individu,
   .card-price-group{
-    height: 280px !important;
+    height: auto !important;
+  }
+
+  .card-content{
+    width: 100% !important;
   }
 
   .individu-price,
   .group-price{
+    width: 100%;
     border-right: none !important;
     border-bottom: solid 1px #dee2e6;
-  }
-
-  .individu-price{
-    width: 100%;
-  }
-
-  .group-price{
-    width: 100% !important;
-  }
-
-  .group-price-point{
-    width: 100% !important;
-    text-align: center !important;
   }
 
   .tag-price{
     width:90px;
     height: 50px;
     left: 4px !important;
+  }
+
+  .btn-price{
+    width: 100% !important;
   }
 
   /* TESTIMONI */

@@ -1,37 +1,45 @@
 import { useEffect, useState } from 'react';
-import axios from 'axios';
+import partners_data from '../Data_JSON/partners_data';
 
 export default function LogoCarousel() {
   const [logos, setLogos] = useState([]);
 
   useEffect(() => {
-    axios.get('https://sheetdb.io/api/v1/brtsk23nmm0r3')
-      .then((response) => {
-        console.log(response.data);
-        setLogos(response.data);
-      })
-      .catch((err) => {
-        console.error('Error fetching logos:', err);
-      });
+    setLogos(partners_data);
   }, []);
 
-  // const carouselItems = [...logos];
   const carouselItems = [...logos, ...logos];
 
   return (
     <div className="logo-carousel-wrapper py-5">
-      <div className="logo-carousel-track">
+      
+      <div className="logo-carousel-track scroll-left">
         {carouselItems.map((item, index) => (
-          <div className="logo-carousel-item border me-4 radius-16" 
-                key={index} 
-                style={{backgroundImage: `url(${item["logo"]})`, 
-                        backgroundSize: "contain", 
-                        backgroundRepeat: "no-repeat", 
-                        backgroundPosition: "center",
-            }}>
-          </div>
+          <div 
+            className="logo-carousel-item border me-4 radius-16" 
+            key={`left-${index}`} 
+            style={{
+              backgroundImage: `url(${item["logo"]})`,
+              backgroundSize: "contain",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "center",
+            }}
+          ></div>
         ))}
       </div>
+
+      <div className="logo-carousel-track scroll-right mt-4">
+        {carouselItems.map((item, index) => (
+          <div 
+            className="logo-carousel-item border me-4 radius-16" 
+            key={`right-${index}`} 
+            style={{
+              backgroundImage: `url(${item["logo"]})`
+            }}
+          ></div>
+        ))}
+      </div>
+
     </div>
   );
 }

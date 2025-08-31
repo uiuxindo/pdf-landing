@@ -11,7 +11,7 @@ const Footer = () => {
             <h5 className="mb-4">Explore UIUXINDO</h5>
             <Link href="https://www.uiuxindo.id/" className="text-grey mb-1 mb-md-3">About Us</Link>
             <Link href="https://www.uiuxindo.id/contact" className="text-grey mb-1 mb-md-3">Contact</Link>
-            <Link href="https://www.uiuxindo.id/faq" className="text-grey mb-1 mb-md-3">FAQ</Link>
+            <Link href="#FAQ" className="text-grey mb-1 mb-md-3">FAQ</Link>
           </div>
 
           <div className="col-md-3 col-12 mb-4 mb-md-0 d-flex flex-column">
@@ -48,7 +48,7 @@ const Footer = () => {
             <i className="bi bi-instagram text-white px-2 fs-xl"></i>
           </Link>
           <Link href="https://medium.com/@uiuxindo">
-            <i class="bi bi-medium text-white px-2 fs-xl"></i>
+            <i className="bi bi-medium text-white px-2 fs-xl"></i>
           </Link>
           <Link href="https://www.youtube.com/@uiuxindo">
             <i className="bi bi-youtube text-white px-2 fs-xl"></i>

@@ -93,12 +93,11 @@ a {
   color: #777777;
 }
 
-.btn-warning{
-  padding: 12px 24px;
-  width: 150px;
+.btn-hero{
+  background-color: #FFB929;
+  padding: 12px 24px !important;
 }
 
-.btn-hero,
 .btn-cta{
   padding: 12px 24px !important;
 }

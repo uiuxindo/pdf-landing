@@ -17,6 +17,7 @@ import EventSchedule from "./landing/Schedule";
 import AccordionFAQ from "./landing/AccordionFAQ";
 import Footer from "./Footer/Footer";
 import FloatingWhatsapp from "./landing/WidgetWhatsapp";
+// import Schedule from "./landing/SchedulePDF";
 
 export default function Home() {
 
@@ -27,22 +28,26 @@ export default function Home() {
   });
 
   useEffect(() => {
-    const countdownDate = new Date("2026-01-01T00:00:00").getTime();
+    const countdownDate = new Date("2026-05-01T00:00:00").getTime();
 
     const interval = setInterval(() => {
       const now = new Date().getTime();
       const distance = countdownDate - now;
 
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
       if (distance < 0) {
         clearInterval(interval);
-        setTimeLeft({ hours: 0, minutes: 0, seconds: 0 });
-      } else {
-        setTimeLeft({ hours, minutes, seconds });
+        setTimeLeft({ months: 0, days: 0, hours: 0 });
+        return;
       }
+
+      // Total sisa hari
+      const totalDays = Math.floor(distance / (1000 * 60 * 60 * 24));
+      // Hitung bulan kasar (anggap 30 hari = 1 bulan biar gampang)
+      const months = Math.floor(totalDays / 30);
+      const days = totalDays % 30;
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+
+      setTimeLeft({ months, days, hours });
     }, 1000);
 
     return () => clearInterval(interval);
@@ -64,10 +69,10 @@ export default function Home() {
 
       <MainNavbar 
         menus={homeMenus}
-        buttonText="Lihat UPDC"
+        buttonText="Design Challenge"
         buttonHref="/UPDC-2026"
         buttonVariant="outline"
-        chevron="right"
+        icon="palette2"
       />
 
       <div className="container-fluid" id="Home">
@@ -84,16 +89,16 @@ export default function Home() {
                 {/* Countdown */}
                 <div className="row justify-content-center" style={{marginTop:'32px'}}>
                   <div className="col-3 me-3 bg-white pt-md-2 pt-3 text-center border rounded-4" style={{width:'88px', height:'84px'}}>
-                    <h2 className="fw-700 mb-0">{String(timeLeft.hours).padStart(2, '0')}</h2>            
-                    <p className="mb-0 text-grey fs-500">Hours</p>
+                    <h2 className="fw-700 mb-0">{String(timeLeft.months).padStart(2, '0')}</h2>            
+                    <p className="mb-0 text-grey fs-500">Months</p>
                   </div>
                   <div className="col-3 me-3 bg-white pt-md-2 pt-3 text-center border rounded-4" style={{width:'88px', height:'84px'}}>
-                    <h2 className="fw-700 mb-0">{String(timeLeft.minutes).padStart(2, '0')}</h2>
-                    <p className="mb-0 text-grey fs-500">Minutes</p>
+                    <h2 className="fw-700 mb-0">{String(timeLeft.days).padStart(2, '0')}</h2>
+                    <p className="mb-0 text-grey fs-500">Days</p>
                   </div>
                   <div className="col-3 bg-white pt-md-2 pt-3 text-center border rounded-4" style={{width:'88px', height:'84px'}}>
-                    <h2 className="fw-700 mb-0">{String(timeLeft.seconds).padStart(2, '0')}</h2>
-                    <p className="mb-0 text-grey fs-500">Second</p>
+                    <h2 className="fw-700 mb-0">{String(timeLeft.hours).padStart(2, '0')}</h2>
+                    <p className="mb-0 text-grey fs-500">Hours</p>
                   </div>
                 </div>
 
@@ -127,7 +132,7 @@ export default function Home() {
           <div className="col-12 col-md-5">
             <Image className="mb-0 img-fluid" src="/Assets/Laptop 2.png" width={450} height={450} alt=""/>
           </div>
-          <div className="col-12 col-md-7">
+          <div className="col-12 col-md-7 text-md-start text-center">
             <h2 className="fw-700 text-md-start">Apa Saja Yang Bisa Kamu <span className="text-main fw-700">Temukan di Festival ini?</span></h2>
             <p className="text-grey text-md-start fs-lg">
               Temukan berbagai kegiatan seru dan penuh manfaat dalam Product Design Festival yang dirangkum lengkap di file PDF kami. 
@@ -139,10 +144,10 @@ export default function Home() {
 
         {/* Benefits */}
         <div id="Benefit" className="row justify-content-center" style={{marginBottom:'100px'}}>
-          <div className="col-md-5 col-12 ps-3 border-end">
+          <div className="col-md-5 col-12 ps-3 border-end text-md-start text-center">
             <h1 className="text-main fw-700" style={{fontSize:'32px'}}>Mengapa Anda Harus Hadir?</h1>
           </div>
-          <div className="col-md-7 col-12">
+          <div className="col-md-7 col-12 text-md-start text-center">
             <p className="ms-md-5 mb-0 text-grey">Dengan berpartisipasi dalam acara ini, kamu akan mendapatkan pengalaman 
               belajar yang menarik tentang desain produk dan hubungan profesional yang membawa energi positif
             </p>
@@ -225,6 +230,10 @@ export default function Home() {
         {/* Timeline */}
         <h1 className="text-pink fw-700 text-center" style={{fontSize:'32px'}}>Event Schedule</h1>
         <EventSchedule />
+
+        {/* Timeline */}
+        {/* <h1 className="text-pink fw-700 text-center" style={{fontSize:'32px'}}>Event Schedule</h1> */}
+        {/* <Schedule /> */}
       </div>
 
       {/* CTA */}
@@ -233,7 +242,7 @@ export default function Home() {
           <div className="col-12 px-md-0 px-1 text-center cta-section">
               <h1 className="fw-700" style={{fontSize:'40px'}}>UIUXINDO<br/>PRODUCT DESIGN CHALLENGE</h1>
               <Link href="/UPDC-2026" className="btn btn-cta bg-white rounded-pill mt-3 py-3 fw-700 text-main" style={{background:'#FFB929'}}>
-                  Lihat Info Selengkapnya
+                  Selengkapnya
               </Link>
           </div>
         </div>
@@ -270,17 +279,26 @@ export default function Home() {
                        style={{left:'-1px', marginTop:'12px'}}
                        alt=""
                 />
-                <Card className="card-price-individu px-4 py-4 mb-0 rounded-4" style={{height:'210px'}}>
-                  <Card.Body className="d-flex flex-md-row flex-column align-items-center justify-content-center p-0">
-                    <Card.Title className="individu-price h-100 border-end text-center pe-md-5 pb-4 pb-md-0">
-                      <h1 className="text-main mt-md-5 mt-4" style={{fontSize:'32px'}}>Rp 69.000</h1>
-                      <p className="text-grey mb-0 fs-lg">1 Sept 2025 - 31 Des 2025</p>
-                    </Card.Title>
-                      <ul className="ps-0 ps-md-5 pe-4 pe-md-0 text-start" style={{listStyleType:'none'}}>
-                        <li className="mt-2"><i className="bi bi-check-circle-fill me-2" style={{color:'#22C55E'}}></i>1 Registered Email</li>
-                        <li className="mt-2"><i className="bi bi-check-circle-fill me-2" style={{color:'#22C55E'}}></i>Access live workshop</li>
-                        <li className="mt-2"><i className="bi bi-check-circle-fill me-2" style={{color:'#22C55E'}}></i>Access UPDC</li>
-                      </ul>
+                <Card className="card-price-individu px-md-4 px-3 py-4 mb-0 rounded-4" style={{height:'auto'}}>
+                  <Card.Body className="d-flex flex-column align-items-center justify-content-center p-0">
+                      <div className="d-flex flex-md-row flex-column align-items-center justify-content-center mb-4 card-content">
+                        <Card.Title className="individu-price pb-4 pb-md-0 h-100 border-end text-center pe-md-5">
+                          <h2 className="text-main mt-md-5 mt-4 fw-700" style={{fontSize:'32px'}}>Rp69.000</h2>
+                          <p className="text-grey mb-0 fs-lg">1 Sept 2025 - 31 Des 2025</p>
+                        </Card.Title>
+                          <ul className="ps-0 ps-md-5 pe-4 pe-md-0 mb-0 text-start" style={{listStyleType:'none'}}>
+                            <li className="mt-2"><i className="bi bi-check-circle-fill me-2" style={{color:'#22C55E'}}></i>1 Registered Email</li>
+                            <li className="mt-2"><i className="bi bi-check-circle-fill me-2" style={{color:'#22C55E'}}></i>Access live workshop</li>
+                            <li className="mt-2"><i className="bi bi-check-circle-fill me-2" style={{color:'#22C55E'}}></i>Access UPDC</li>
+                          </ul>
+                      </div>
+                      <Link 
+                        href="https://uiuxindo.myr.id/event/pdf2026" 
+                        className="btn btn-price rounded-pill w-100 fw-600" 
+                        style={{width:'fit-content'}}
+                      >
+                        Beli Tiket
+                      </Link>
                   </Card.Body>
                 </Card>
               </div>
@@ -292,17 +310,26 @@ export default function Home() {
                        style={{left:'-1px', marginTop:'12px'}} 
                        alt=""
                 />
-                 <Card className="card-price-group px-4 py-0 py-md-4 mb-0 rounded-4" style={{height:'210px'}}>
-                  <Card.Body className="d-flex flex-md-row flex-column align-items-center justify-content-center p-0">
-                    <Card.Title className="group-price h-100 w-50 border-end text-center pe-md-3 pb-4 pb-md-0">
-                      <h1 className="text-main mt-md-5 mt-4" style={{fontSize:'32px'}}>Start From 103k/person</h1>
-                      <p className="text-grey mb-0 fs-lg">Minimum purchase 5</p>
-                    </Card.Title>
-                    <ul className="ps-0 ps-md-5 pb-4 pb-md-0 text-start w-50 group-price-point" style={{listStyleType:'none'}}>
-                      <li className="mt-md-3 mt-2"><i className="bi bi-check-circle-fill me-2" style={{color:'#22C55E'}}></i>5-9 Registered Email</li>
-                      <li className="mt-md-3 mt-2"><i className="bi bi-check-circle-fill me-2" style={{color:'#22C55E'}}></i>Can access all events</li>
-                      <li className="mt-md-3 mt-2"><i className="bi bi-check-circle-fill me-2" style={{color:'#22C55E'}}></i>Get all video PDF 2024 & 2025</li>
-                    </ul>
+                 <Card className="card-price-group px-4 py-4 mb-0 rounded-4" style={{height:'auto'}}>
+                  <Card.Body className="d-flex flex-column align-items-center justify-content-center p-0">
+                    <div className="d-flex flex-md-row flex-column align-items-center justify-content-center w-100 mb-4">
+                      <Card.Title className="group-price pb-4 pb-md-0 h-100 border-end text-center pe-md-5">
+                        <h2 className="text-main mt-md-5 mt-4 fw-700" style={{fontSize:'32px'}}>Rp65.000</h2>
+                        <p className="text-grey mb-0 fs-lg">/org</p>
+                      </Card.Title>
+                      <ul className="ps-0 ps-md-5 pe-4 pe-md-0 mb-0 text-start" style={{listStyleType:'none'}}>
+                        <li className="mt-md-3 mt-2"><i className="bi bi-check-circle-fill me-2" style={{color:'#22C55E'}}></i>3-5 Registered Email</li>
+                        <li className="mt-md-3 mt-2"><i className="bi bi-check-circle-fill me-2" style={{color:'#22C55E'}}></i>Can access all events</li>
+                        <li className="mt-md-3 mt-2"><i className="bi bi-check-circle-fill me-2" style={{color:'#22C55E'}}></i>Get all video PDF 2024 & 2025</li>
+                      </ul>
+                    </div>
+                      <Link 
+                        href="https://uiuxindo.myr.id/event/pdf2026" 
+                        className="btn btn-price rounded-pill w-100 fw-600" 
+                        style={{width:'fit-content'}}
+                      >
+                        Beli Tiket
+                      </Link>
                   </Card.Body>
                 </Card>
               </div>
@@ -348,7 +375,7 @@ export default function Home() {
         </div>
 
         {/* FAQ Accordion */}
-        <div className="row" style={{marginBottom:'100px'}}>
+        <div id="FAQ" className="row" style={{marginBottom:'100px'}}>
           <h1 className="text-center text-main mb-4 fw-700" style={{fontSize:'32px'}}>Frequently Asked Questions</h1>
           <AccordionFAQ />
         </div>
@@ -357,7 +384,7 @@ export default function Home() {
         <div className="row">
           <div className="col-12 px-0 pt-md-2 py-5 rounded-4 contact">
               <div className="d-flex flex-md-row flex-column justify-content-between align-items-center contact-cta">
-                <div className="p-4 rounded-4 me-4" style={{background:'#FFF1C6'}}>
+                <div className="p-4 rounded-4 me-md-4" style={{background:'#FFF1C6'}}>
                   <h1 className="fw-700" style={{fontSize:'32px'}}>Tidak menemukan <span className="text-pink">jawabannya?</span></h1>
                   <p className="">Jika kamu belum menemukan pertanyaan dan jawaban yang sesuai, jangan ragu untuk menghubungi kami melalui email atau WhatsApp. Kami akan berusaha membalas pesan Anda secepat mungkin.</p>
                   <div className="d-flex flex-md-row flex-column align-items-center">
