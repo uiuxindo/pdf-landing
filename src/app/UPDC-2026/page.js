@@ -16,17 +16,17 @@ export default function Home() {
     { label: "Timeline", href: "#Timeline" },
     { label: "Hadiah", href: "#Hadiah" },
     { label: "Keterangan", href: "#Keterangan" },
-    { label: "Hasil Karya", href: "#HasilKarya" },
+    // { label: "Hasil Karya", href: "#HasilKarya" },
   ];
 
   return (
     <>
       <MainNavbar
         menus={menuPageMenus}
-        buttonText="PDF 2026"
+        buttonText="Back"
         buttonHref="/"
         buttonVariant="fill"
-        chevron="left"
+        icon="arrow-left"
       />
 
       <div className="container-fluid" id="Home">

@@ -1,21 +1,13 @@
-import React from 'react';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import { Card } from 'react-bootstrap';
-import axios from 'axios';
+import speakers_data from '../Data_JSON/speakers_data';
 
 const CardSpeaker = () => {
   const [dataSpeaker, setDataSpeaker] = useState([]);
 
   useEffect(() => {
-    axios.get('https://sheetdb.io/api/v1/m8hhle0m1m735')
-      .then((response) => {
-        console.log(response.data);
-        setDataSpeaker(response.data);
-      })
-      .catch((error) => {
-        console.error('Error fetching speakers:', error);
-      });
+    setDataSpeaker(speakers_data);
   }, []);
 
   return (

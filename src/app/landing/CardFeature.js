@@ -24,28 +24,6 @@ const CardRow = [
 const CardFeature = () => {
   return (
     <>
-      {/* {CardRow.map((row, i) => (
-        <div key={i} className="d-flex flex-column flex-lg-row align-items-center">
-          {row.map((card, j) => (
-            <Card
-              key={j}
-              className={`me-3 mb-3 ${j === row.length - 1 ? '' : 'me-3'}`}
-              style={{ borderRadius: '100px', width: 'auto' }}
-            >
-              <Card.Body className="py-md-2 ps-2 pe-3">
-                <div className="d-flex align-items-center">
-                  <Image className="mb-md-0" src={card.icon} width={52} height={52} alt={card.title} />
-                  <div className="d-flex flex-column ms-3">
-                    <Card.Title as="h6" className="mb-0 fw-500" style={{width:'100%'}}>
-                      {card.title}
-                    </Card.Title>
-                  </div>
-                </div>
-              </Card.Body>
-            </Card>
-          ))}
-        </div>
-      ))} */}
     <div className="d-flex flex-wrap justify-content-md-start justify-content-center">
       {cardData.map((card, i) => (
         <Card
@@ -53,7 +31,7 @@ const CardFeature = () => {
           className="me-3 mb-3"
           style={{ borderRadius: '100px', flex: '0 1 auto' }}
         >
-          <Card.Body className="py-md-2 ps-2 pe-3">
+          <Card.Body className="py-2 ps-2 pe-3">
             <div className="d-flex align-items-center">
               <Image src={card.icon} width={52} height={52} alt={card.title} />
               <div className="d-flex flex-column ms-3">

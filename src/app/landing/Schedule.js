@@ -57,7 +57,7 @@ export default function EventSchedule() {
             </li>
             <li className="border-bottom py-4">
               <h4 className="fw-700">Jumat, 22 Mei 2026</h4>
-              <h5 className="mb-0">Portofolio Review & Mentor Work Experience</h5>
+              <h5 className="mb-0">Mentoring & Portofolio Review Session</h5>
               <p className="mb-0 text-grey">Elevate Your Story, Gain Feedback to Enhance Your Readiness</p>
             </li>
             <li className="border-bottom py-4">

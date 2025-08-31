@@ -1,21 +1,14 @@
 import React from "react";
 import { Accordion } from 'react-bootstrap';
 import{ useState, useEffect } from 'react';
-import axios from 'axios';
+import faq_data from "../Data_JSON/faq_data";
 
 const AccordionFAQ = () => {
 
   const [dataFAQ, setFAQ] = useState([]);
 
   useEffect(() => {
-    axios.get('https://sheetdb.io/api/v1/e94ghags7hoft')
-      .then((response) => {
-        console.log(response.data);
-        setFAQ(response.data);
-      })
-      .catch((err) => {
-        console.error('Error fetching logos:', err);
-      });
+    setFAQ(faq_data);
   }, []);
 
   return (
