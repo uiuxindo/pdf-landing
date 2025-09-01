@@ -30,7 +30,7 @@ const speakers_data = [
 	{
 		id: 202605,
 		speaker_name: "Nieza Ayurisma",
-		current_job: "TOEFL ITP, IBT & ESP Tutor",
+		current_job: "TOEFL iBT/ITP & ESP Specialist",
 		current_office: "",
 		photo_source: "https://cloud.uiuxindo.id/src/speakers/Mareda_Fenty-1.png"
 	},
