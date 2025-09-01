@@ -48,7 +48,7 @@ function MainNavbar({
       className={`border-bottom transition-all ${scrolled ? "glass-navbar" : "bg-body-tertiary"}`}
     >
       <Container>
-        <Navbar.Brand href="https://www.uiuxindo.id/">
+        <Navbar.Brand href="/">
           <Image src={logo} alt="Logo" width={136} height={56} className="me-2" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
