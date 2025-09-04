@@ -425,7 +425,9 @@ export default function Home() {
                   <h1 className="fw-700" style={{fontSize:'32px'}}>Tidak menemukan <span className="text-pink">jawabannya?</span></h1>
                   <p className="">Jika kamu belum menemukan pertanyaan dan jawaban yang sesuai, jangan ragu untuk menghubungi kami melalui email atau WhatsApp. Kami akan berusaha membalas pesan Anda secepat mungkin.</p>
                   <div className="d-flex flex-md-row flex-column align-items-center">
-                    <Link href="#register" className="btn rounded-pill mt-3 me-3 ps-2 pe-3 bg-white d-flex flex-row align-items-center" style={{width:'fit-content'}}>
+                    <Link href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJTLpcfBBMDFHFqlbDBnmPJPVXJcDRxJshgSLHhxnfMjLNdzjRbsWRCmzXdwWFhTTTlbQBB" 
+                          className="btn rounded-pill mt-3 me-3 ps-2 pe-3 bg-white d-flex flex-row align-items-center" 
+                          style={{width:'fit-content'}}>
                       <Image className="me-2" 
                         src="/Assets/Email.png" 
                         width={40} 
@@ -434,7 +436,9 @@ export default function Home() {
                       />
                       hello@uiuxindo.id
                     </Link>
-                    <Link href="#register" className="btn rounded-pill mt-3 me-3 py-2 ps-2 pe-3 bg-white d-flex flex-row align-items-center" style={{width:'fit-content'}}>
+                    <Link href="https://api.whatsapp.com/send?phone=6282310101118&text=Halo,%20saya%20mau%20bertanya" 
+                          className="btn rounded-pill mt-3 me-3 py-2 ps-2 pe-3 bg-white d-flex flex-row align-items-center"  
+                          style={{width:'fit-content'}}>
                       <Image className="me-2" 
                         src="/Assets/Telephone.png" 
                         width={40} 
