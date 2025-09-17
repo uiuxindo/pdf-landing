@@ -1,45 +1,38 @@
-import { useEffect, useState } from 'react';
-import partners_data from '../Data_JSON/partners_data';
+import { useEffect, useState } from "react";
+import partners_data from "../Data_JSON/partners_data";
 
 export default function LogoCarousel() {
-  const [logos, setLogos] = useState([]);
+  const [rows, setRows] = useState([[], [], []]);
 
   useEffect(() => {
-    setLogos(partners_data);
-  }, []);
+    const firstRow = partners_data.slice(0, 12);
+    const secondRow = partners_data.slice(12, 23);
+    const thirdRow = partners_data.slice(23, 34);
 
-  const carouselItems = [...logos, ...logos];
+    setRows([firstRow, secondRow, thirdRow]);
+  }, []);
 
   return (
     <div className="logo-carousel-wrapper py-5">
-      
-      <div className="logo-carousel-track scroll-left">
-        {carouselItems.map((item, index) => (
-          <div 
-            className="logo-carousel-item border me-4 radius-16" 
-            key={`left-${index}`} 
-            style={{
-              backgroundImage: `url(${item["logo"]})`,
-              backgroundSize: "contain",
-              backgroundRepeat: "no-repeat",
-              backgroundPosition: "center",
-            }}
-          ></div>
-        ))}
-      </div>
-
-      <div className="logo-carousel-track scroll-right mt-4">
-        {carouselItems.map((item, index) => (
-          <div 
-            className="logo-carousel-item border me-4 radius-16" 
-            key={`right-${index}`} 
-            style={{
-              backgroundImage: `url(${item["logo"]})`
-            }}
-          ></div>
-        ))}
-      </div>
-
+      {rows.map((row, rowIndex) => (
+        <div
+          className={`logo-carousel-track scroll-left speed-${rowIndex + 1} mb-4`}
+          key={rowIndex}
+        >
+          {[...row, ...row].map((item, index) => (
+            <div
+              className="logo-carousel-item border radius-16 me-4"
+              key={`${rowIndex}-${index}`}
+              style={{
+                backgroundImage: `url(${item.logo})`,
+                backgroundSize: "contain",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center",
+              }}
+            ></div>
+          ))}
+        </div>
+      ))}
     </div>
   );
 }
