@@ -88,11 +88,33 @@
   --bs-card-border-radius:16px;
 }
 
+/* .card-ketentuan{
+  min-height: 106px;
+} */
+
 .title-ketentuan{
   height: 100%;
   border-right: solid 1px #E0E0E0;
 }
 
+/* JURI UPDC */
+.juri-desc{
+  background-color: #F99307;
+  padding: 128px 100px 128px 100px;
+  border-bottom-right-radius: 100px;
+}
+
+.card-juri{
+  width: 20%;
+  border-radius: 100px;
+}
+
+.linkedin-juri{
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #1275B1;
+}
 
 @media (max-width: 767px) {
  
@@ -173,10 +195,42 @@
     border-bottom: solid 1px #E0E0E0;
   }
 
+  /* JURI UPDC */
+  .juri-desc{
+    padding: 20px;
+    border-bottom-right-radius: 50px;
+  }
 
-  /* FOOTER */
-  .row-footer{
-    margin: 36px 20px 36px 20px !important;
+  .card-juri{
+    width: 100%;
+    border-radius: 100px;
+    padding: 12px;
+  }
+
+  .card-juri h5{
+    width: 100%;
+  }
+
+  .juri-updc{
+    padding: 20px;
+  }
+
+  .juri-image{
+    width: 72px;
+    height: 72px;
+  }
+
+  .break-word{
+    display: none;
+  }
+
+  .linkedin-juri{
+    width: 36px;
+    height: 36px;
+  }
+
+  .linkedin-icon{
+    font-size: 20px;
   }
 
   /* COPYRIGHT */

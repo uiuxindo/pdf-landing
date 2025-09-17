@@ -9,6 +9,8 @@ import './UPDC.css';
 import Timeline from "./Timeline";
 import { Card } from "react-bootstrap";
 import Footer from "../Footer/Footer";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 
 export default function Home() {
 
@@ -158,7 +160,61 @@ export default function Home() {
           </div>
         </div>
       </div>
+    </div>
 
+    <div className='container-fluid' style={{backgroundColor:'#FFB929'}}>
+      <div className='row'>
+        <div className='col-md-6 col-12 juri-desc'>
+          <h2 className='fw-700 mb-md-4'>Juri UPDC</h2>
+          <p className='mb-0'>Belajar langsung dari ahlinya. Para juri UPDC adalah praktisi berpengalaman di dunia product & design, siap memberikan insight berharga untuk setiap karya yang lahir dari challenge ini</p>
+        </div>
+        <div className='col-md-6 col-12 d-flex align-items-center justify-content-center align-items-center px-0'>
+          <div className='row flex-column flex-md-row justify-content-center align-items-center juri-updc'>
+            <div className='col-12 col-md-4 bg-white me-4 text-center p-md-3 mb-md-0 mb-3 d-flex flex-md-column flex-row align-items-center justify-content-between card-juri'>
+              <div className="d-flex flex-md-column flex-row align-items-center justify-content-center">
+                <Image className="mb-md-4 img-fluid juri-image me-md-0 me-3" src="/Assets/UPDC/Juri-1.png" width={132} height={132} alt=""/>
+                <div className="text-start text-md-center d-flex flex-column align-items-center justify-content-center mb-md-3 mb-0">
+                  <h5 className='mb-md-2 mb-0'>Denny Wirawan</h5>
+                  <p className='text-grey mb-md-2 mb-0'>Sr. Product Designer at Blibli</p>
+                </div>
+              </div>
+              <Link href="https://www.linkedin.com/in/denny-wirawan-b5a576183/">
+                  <div className='d-flex align-items-center justify-content-center linkedin-juri'>
+                  <FontAwesomeIcon icon={faLinkedinIn} className='linkedin-icon' style={{color: "white"}} />
+                </div>
+              </Link>
+            </div>
+            <div className='col-12 col-md-4 bg-white me-4 text-center p-md-3 mb-md-0 mb-3 d-flex flex-md-column flex-row align-items-center justify-content-between card-juri'>
+              <div className="d-flex flex-md-column flex-row align-items-center justify-content-center">
+                <Image className="mb-md-4 img-fluid juri-image me-md-0 me-3" src="/Assets/UPDC/Juri-2.png" width={132} height={132} alt=""/>
+                <div className="text-start text-md-center d-flex flex-column align-items-center justify-content-center mb-md-3 mb-0">
+                  <h5 className='mb-md-2 mb-0'>Faris <br className='break-word'/>Rakha</h5>
+                  <p className='text-grey mb-md-2 mb-0'>Product Designer at Wagely</p>
+                </div>
+              </div>
+              <Link href="https://www.linkedin.com/in/faris-rakha/">
+                  <div className='d-flex align-items-center justify-content-center linkedin-juri'>
+                  <FontAwesomeIcon icon={faLinkedinIn} className='linkedin-icon' style={{color: "white"}} />
+                </div>
+              </Link>
+            </div>
+            <div className='col-12 col-md-4 bg-white me-4 text-center p-md-3 mb-md-0 d-flex flex-md-column flex-row align-items-center justify-content-between card-juri'>
+              <div className="d-flex flex-md-column flex-row align-items-center justify-content-center">
+                <Image className="mb-md-4 img-fluid juri-image me-md-0 me-3" src="/Assets/UPDC/Juri-3.png" width={132} height={132} alt=""/>
+                <div className="text-start text-md-center d-flex flex-column align-items-center justify-content-center mb-md-3 mb-0">
+                  <h5 className='mb-md-2 mb-0'>Rayyan Adwiarto</h5>
+                  <p className='text-grey mb-md-2 mb-0'>Product Designer at AstraPay</p>
+                </div>
+              </div>
+              <Link href="https://www.linkedin.com/in/rayyan-adwiarto/">
+                  <div className='d-flex align-items-center justify-content-center linkedin-juri'>
+                  <FontAwesomeIcon icon={faLinkedinIn} className='linkedin-icon' style={{color: "white"}} />
+                </div>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     {/* Footer */}

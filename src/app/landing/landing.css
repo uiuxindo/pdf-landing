@@ -147,7 +147,7 @@
   flex: 0 0 auto;
   width: 184px;
   height: 100px;
-  padding: 12px; 
+  padding: 18px;
   background-origin: content-box;
   background-position: center;
   background-repeat: no-repeat;
@@ -155,23 +155,29 @@
 }
 
 .scroll-left {
-  animation: scrollLeft 24s linear infinite;
+  animation-name: scrollLeft;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 
 @keyframes scrollLeft {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); } 
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
-.scroll-right {
-  animation: scrollRight 24s linear infinite;
+.speed-1 {
+  animation-duration: 30s;
 }
-
-@keyframes scrollRight {
-  0% { transform: translateX(-50%); }
-  100% { transform: translateX(0); }
+.speed-2 {
+  animation-duration: 30s;
 }
-
+.speed-3 {
+  animation-duration: 40s;
+}
 
 /* FAQ */
 
@@ -200,11 +206,8 @@
 }
 
 /* FOOTER */
-.row-footer{
-  margin:50px 100px 50px 100px;
-}
-
 footer{
+  padding: 50px 100px;
   border-top: solid 3px #E7E7E7;
 }
 
@@ -494,10 +497,10 @@ footer{
   }
 
   /* PARTNER LOGO CAROUSEL */
-  .carousel-item {
+  /* .carousel-item {
     margin-left: 1rem;
     margin-right: 1rem;
-  }
+  } */
 
   /* CONTACT CTA */
   .contact{
@@ -512,9 +515,9 @@ footer{
   }
 
   /* FOOTER */
-  .row-footer{
-    margin: 36px 20px 36px 20px !important;
-  }
+  footer {
+  padding: 36px 20px;
+  } 
 
   /* COPYRIGHT */
   .copyright{
