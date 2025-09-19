@@ -325,8 +325,8 @@ export default function Home() {
                         </Card.Title>
                           <ul className="ps-0 ps-md-5 pe-4 pe-md-0 mb-0 text-start" style={{listStyleType:'none'}}>
                             <li className="mt-2"><i className="bi bi-check-circle-fill me-2" style={{color:'#22C55E'}}></i>1 Registered Email</li>
-                            <li className="mt-2"><i className="bi bi-check-circle-fill me-2" style={{color:'#22C55E'}}></i>Access live workshop</li>
-                            <li className="mt-2"><i className="bi bi-check-circle-fill me-2" style={{color:'#22C55E'}}></i>Access UPDC</li>
+                            <li className="mt-2"><i className="bi bi-check-circle-fill me-2" style={{color:'#22C55E'}}></i>Access UI/UX Challenge</li>
+                            <li className="mt-2"><i className="bi bi-check-circle-fill me-2" style={{color:'#22C55E'}}></i>Access Mindo-Talk Event</li>
                           </ul>
                       </div>
                       <Link 
@@ -356,8 +356,8 @@ export default function Home() {
                       </Card.Title>
                       <ul className="ps-0 ps-md-5 pe-4 pe-md-0 mb-0 text-start" style={{listStyleType:'none'}}>
                         <li className="mt-md-3 mt-2"><i className="bi bi-check-circle-fill me-2" style={{color:'#22C55E'}}></i>3-5 Registered Email</li>
-                        <li className="mt-md-3 mt-2"><i className="bi bi-check-circle-fill me-2" style={{color:'#22C55E'}}></i>Can access all events</li>
-                        <li className="mt-md-3 mt-2"><i className="bi bi-check-circle-fill me-2" style={{color:'#22C55E'}}></i>Get all video PDF 2024 & 2025</li>
+                        <li className="mt-md-3 mt-2"><i className="bi bi-check-circle-fill me-2" style={{color:'#22C55E'}}></i>Access UI/UX Challenge</li>
+                        <li className="mt-md-3 mt-2"><i className="bi bi-check-circle-fill me-2" style={{color:'#22C55E'}}></i>Access Mindo-Talk Event</li>
                       </ul>
                     </div>
                       <Link 
@@ -418,7 +418,7 @@ export default function Home() {
         </div>
 
       {/* CTA Contact Us */}
-        <div className="row">
+        <div className="row mb-md-5">
           <div className="col-12 px-0 pt-md-2 py-5 rounded-4 contact">
               <div className="d-flex flex-md-row flex-column justify-content-between align-items-center contact-cta">
                 <div className="p-4 rounded-4 me-md-4" style={{background:'#FFF1C6'}}>
