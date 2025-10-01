@@ -100,7 +100,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                <Link href="https://uiuxindo.myr.id/pl/pdf2026" className="btn btn-hero rounded-pill py-3 fw-500" style={{background:'#FFB929', width:'180px', marginTop:'32px'}}>
+                <Link href="/payment" className="btn btn-hero rounded-pill py-3 fw-500" style={{background:'#FFB929', width:'180px', marginTop:'32px'}}>
                   Daftar Sekarang
                 </Link>
             </div>
