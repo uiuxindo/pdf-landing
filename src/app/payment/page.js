@@ -19,8 +19,7 @@ export default function Payment() {
           </Link>
         </div>
       </div>
-      <iframe allowfullscreen="" allowpaymentrequest="allowpaymentrequest" scrolling="no" frameborder="0" width="100%" height="100%" src="https://uiuxindo.myr.id/pl/pdf2026" className="payment-frame"></iframe>
-      <script type="text/javascript" src="https://mayarembed.r2.mayar.id/mayarEmbed.min.js"></script>
+      <iframe allowpaymentrequest="allowpaymentrequest" scrolling="no" width="100%" height="100%" src="https://uiuxindo.myr.id/pl/pdf2026" className="payment-frame"></iframe>
     </>
   )
 }
