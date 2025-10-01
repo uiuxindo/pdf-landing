@@ -22,25 +22,6 @@ export default function Payment() {
       </div>
       <iframe allowfullscreen="" allowpaymentrequest="allowpaymentrequest" scrolling="no" frameborder="0" width="100%" height="100%" src="https://uiuxindo.myr.id/pl/pdf2026" className="payment-frame"></iframe>
       <script type="text/javascript" src="https://mayarembed.r2.mayar.id/mayarEmbed.min.js"></script>
-      {/* <div className="payment-content">
-        <div className="container" style={{ height: "100%" }}>
-          <div className="row justify-content-center" style={{ height: "100%" }}>
-            <div className="col-12 col-sm-12 col-md-10">
-              <div className="row" style={{ height: "100%" }}>
-                <div className="col-12 col-sm-12 col-md-6">
-                  <div className="p-3">
-                    <img src={cover} className="w-100" style={{ borderRadius: "12px", border: "solid 1px #dddddd" }} />
-                  </div>
-                </div>
-                <div className="col-12 col-sm-12 col-md-6">
-                  <iframe allowfullscreen="" allowpaymentrequest="allowpaymentrequest" scrolling="no" frameborder="0" width="100%" height="100%" src="https://uiuxindo.myr.id/pl/pdf2026" className="payment-frame"></iframe>
-                  <script type="text/javascript" src="https://mayarembed.r2.mayar.id/mayarEmbed.min.js"></script>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
     </>
   )
 }
