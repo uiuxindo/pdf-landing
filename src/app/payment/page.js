@@ -7,7 +7,6 @@ import "./payment.scss"
 export default function Payment() {
 
   const logo = "/Assets/Logo PDF 2026.png";
-  const cover = "/Assets/pdf-payment.jpeg";
 
   return (
     <>
