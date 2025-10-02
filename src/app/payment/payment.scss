@@ -9,8 +9,12 @@
   background: rgba(255, 255, 255, 0.7) !important;
   backdrop-filter: blur(3px);
   transition: background 0.3s ease, backdrop-filter 0.3s ease;
+  .btn-back {
+    border: 2px solid #FFB929;
+    color: #FFB929;
+    background-color: #FFFFFF;
+  }
 }
 .payment-frame {
-  overflow: hidden;
-  height: 1868px;
+  height: 1600px;
 }
