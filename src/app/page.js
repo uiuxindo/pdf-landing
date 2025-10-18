@@ -330,7 +330,7 @@ export default function Home() {
                           </ul>
                       </div>
                       <Link 
-                        href="https://uiuxindo.myr.id/pl/pdf2026" 
+                        href="/payment" 
                         className="btn btn-price rounded-pill w-100 fw-600" 
                         style={{width:'fit-content'}}
                       >
