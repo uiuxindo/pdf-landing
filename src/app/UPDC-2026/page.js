@@ -46,7 +46,7 @@ export default function Home() {
                 <p className="mb-0">Diikuti oleh <span className="text-pink fw-700">100+</span> peserta</p>
               </div>
             </div>
-           <Link href="https://uiuxindo.myr.id/pl/pdf2026" className="btn btn-cta bg-white rounded-pill mt-md-4 mt-3 py-3 fw-700 text-main" style={{background:'#FFB929'}}>
+           <Link href="/payment" className="btn btn-cta bg-white rounded-pill mt-md-4 mt-3 py-3 fw-700 text-main" style={{background:'#FFB929'}}>
               Daftar Sekarang
             </Link>
           </div>
