@@ -45,16 +45,25 @@
 }
 
 /* PRICING */
-.tab-price{
-  padding-top: 12px;
-  padding-bottom: 12px;
-}
+  .tab-price{
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
 
-.tab-price-active{
-  background: #FFB929;
-  padding-top: 12px;
-  padding-bottom: 12px;
-}
+  .tab-price-active{
+    background: #FFB929;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .price{
+    border-right: solid 1px #E0E0E0;
+  }
+
+  .card-price-individu,
+  .card-price-group{
+      height: 350px !important;
+  }
 
 .btn-price{
   background-color: #FFB929;
@@ -439,6 +448,10 @@ footer{
 
   .card-content{
     width: 100% !important;
+  }
+
+  .price{
+    border-right: none;
   }
 
   .individu-price,
