@@ -56,6 +56,15 @@
   padding-bottom: 12px;
 }
 
+.price{
+  border-right: solid 1px #E0E0E0;
+}
+
+.card-price-individu,
+.card-price-group{
+    height: 324px !important;
+}
+
 .btn-price{
   background-color: #FFB929;
   padding: 12px 24px !important;
@@ -446,6 +455,10 @@ footer{
     width: 100%;
     border-right: none !important;
     border-bottom: solid 1px #dee2e6;
+  }
+
+  .price{
+  border-right: none;
   }
 
   .tag-price{

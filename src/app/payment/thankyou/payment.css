@@ -1,0 +1,28 @@
+.thankyou-page {
+  padding-left: 220px !important;
+  padding-right: 220px !important;
+}
+
+.thankyou-btn {
+  background-color: #FFB929;
+  color: #000;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  /* transition: all 0.3s ease; */
+}
+
+.thankyou-btn:hover {
+  background-color: #FFFFFF;
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  .thankyou-page {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+
+  .thankyou-image{
+    width: fit-content;
+  }
+}

@@ -6,13 +6,14 @@
  .fs-md {font-size: 14px;}
  .fs-lg {font-size: 16px;}
  .fs-xl {font-size: 20px;}
+ .fs-2xl {font-size: 24px;}
  
  /* Font Weight */
  .fw-100 {font-weight: 100;}
  .fw-300 {font-weight: 300;}
  .fw-400 {font-weight: 400;}
  .fw-500 {font-weight: 500;}
-  .fw-600 {font-weight: 600;}
+ .fw-600 {font-weight: 600;}
  .fw-700 {font-weight: 700;}
  .fw-900 {font-weight: 900;}
 
@@ -52,7 +53,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #fff;
-  padding-top: 80px !important;
+  /* padding-top: 80px !important; */
   color: #0A0A0A;
 }
 
@@ -170,3 +171,4 @@ a {
   border-right: solid 1px #E4E4E4;
   border-bottom: solid 1px #E4E4E4;
 }
+
