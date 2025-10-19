@@ -29,7 +29,7 @@ export default function ThankYouPage() {
             bertemu denganmu dan ribuan desainer lainnya yang akan berbagi inspirasi, ide, dan masa depan desain produk di Indonesia.
           </p>
           <p className="mb-4 fs-sm-sm fs-md-lg">
-            💌 E-tiket dan detail acara telah kami kirimkan ke email kamu. <br /> Sampai jumpa di festival, dan bersiaplah untuk design, connect, and grow!
+            Gabung ke komunitas PDF, tautan Whatsapp Group telah kami kirimkan via email.
           </p>
 
           <Link
