@@ -17,6 +17,7 @@ import EventSchedule from "./landing/Schedule";
 import AccordionFAQ from "./landing/AccordionFAQ";
 import Footer from "./Footer/Footer";
 import FloatingWhatsapp from "./landing/WidgetWhatsapp";
+import PricingSection from "./landing/Pricing";
 // import Schedule from "./landing/SchedulePDF";
 
 export default function Home() {
@@ -73,7 +74,7 @@ export default function Home() {
         icon="palette2"
       />
 
-      <div className="container-fluid" id="Home">
+      <div className="container-fluid" id="Home" style={{paddingTop:'80px'}}>
         <div className="row">
 
           {/* Hero */}
@@ -293,84 +294,8 @@ export default function Home() {
             <h1 className="fw-700" style={{fontSize:'32px'}}>Kami punya <span className="fw-700 text-main">harga</span> yang sempurna untuk <span className="text-pink fw-700">kamu</span></h1>
             <p className="text-grey fs-xl">Nggak perlu burn budget buat upgrade skill & koneksi di festival ini</p>
 
-            <div className="d-flex justify-content-center my-5">
-              <div className="border p-2 rounded-pill">
-                <Link href="" className="btn me-1 rounded-pill px-4 fw-500 tab-price-active">
-                    Presale 1
-                </Link>
-                <Link href="" className="btn me-1 rounded-pill px-4 tab-price">
-                    Presale 2
-                </Link>
-                <Link href="" className="btn rounded-pill px-4 tab-price">
-                    Normal
-                </Link>
-              </div>
-            </div>
+            <PricingSection/>
 
-            <div className="row mt-5">
-              <div className="col-md-6 col-12 position-relative mb-3 mb-md-0 px-3">
-                <Image className="img-fluid tag-price position-absolute z-2" 
-                       src="/Assets/Blue Tag.png" 
-                       width={130} 
-                       height={130}
-                       style={{left:'-1px', marginTop:'12px'}}
-                       alt=""
-                />
-                <Card className="card-price-individu px-md-4 px-3 py-4 mb-0 rounded-4" style={{height:'auto'}}>
-                  <Card.Body className="d-flex flex-column align-items-center justify-content-center p-0">
-                      <div className="d-flex flex-md-row flex-column align-items-center justify-content-center mb-4 card-content">
-                        <Card.Title className="individu-price pb-4 pb-md-0 h-100 border-end text-center pe-md-5">
-                          <h2 className="text-main mt-md-5 mt-4 fw-700" style={{fontSize:'32px'}}>Rp69.000</h2>
-                          <p className="text-grey mb-0 fs-lg">1 Sept 2025 - 31 Des 2025</p>
-                        </Card.Title>
-                          <ul className="ps-0 ps-md-5 pe-4 pe-md-0 mb-0 text-start" style={{listStyleType:'none'}}>
-                            <li className="mt-2"><i className="bi bi-check-circle-fill me-2" style={{color:'#22C55E'}}></i>1 Registered Email</li>
-                            <li className="mt-2"><i className="bi bi-check-circle-fill me-2" style={{color:'#22C55E'}}></i>Access UI/UX Challenge</li>
-                            <li className="mt-2"><i className="bi bi-check-circle-fill me-2" style={{color:'#22C55E'}}></i>Access Mindo-Talk Event</li>
-                          </ul>
-                      </div>
-                      <Link 
-                        href="/payment" 
-                        className="btn btn-price rounded-pill w-100 fw-600" 
-                        style={{width:'fit-content'}}
-                      >
-                        Beli Tiket
-                      </Link>
-                  </Card.Body>
-                </Card>
-              </div>
-              <div className="col-md-6 col-12 position-relative px-3">
-                <Image className="img-fluid tag-price position-absolute z-2" 
-                       src="/Assets/Pink Tag.png" 
-                       width={130} 
-                       height={130}
-                       style={{left:'-1px', marginTop:'12px'}} 
-                       alt=""
-                />
-                 <Card className="card-price-group px-4 py-4 mb-0 rounded-4" style={{height:'auto'}}>
-                  <Card.Body className="d-flex flex-column align-items-center justify-content-center p-0">
-                    <div className="d-flex flex-md-row flex-column align-items-center justify-content-center w-100 mb-4">
-                      <Card.Title className="group-price pb-4 pb-md-0 h-100 border-end text-center pe-md-5">
-                        <h2 className="text-main mt-md-5 mt-4 fw-700" style={{fontSize:'32px'}}>Rp65.000</h2>
-                        <p className="text-grey mb-0 fs-lg">/org</p>
-                      </Card.Title>
-                      <ul className="ps-0 ps-md-5 pe-4 pe-md-0 mb-0 text-start" style={{listStyleType:'none'}}>
-                        <li className="mt-md-3 mt-2"><i className="bi bi-check-circle-fill me-2" style={{color:'#22C55E'}}></i>3-5 Registered Email</li>
-                        <li className="mt-md-3 mt-2"><i className="bi bi-check-circle-fill me-2" style={{color:'#22C55E'}}></i>Access UI/UX Challenge</li>
-                        <li className="mt-md-3 mt-2"><i className="bi bi-check-circle-fill me-2" style={{color:'#22C55E'}}></i>Access Mindo-Talk Event</li>
-                      </ul>
-                    </div>
-                      <Link 
-                        href="https://api.whatsapp.com/send?phone=6282310101118&text=Halo,%20saya%20mau%20register%20sebagai%20group" 
-                        className="btn btn-price rounded-pill w-100 fw-600" 
-                        style={{width:'fit-content'}}
-                      >
-                        Beli Tiket
-                      </Link>
-                  </Card.Body>
-                </Card>
-              </div>
-            </div>
           </div>
         </div>
 
