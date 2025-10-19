@@ -6,7 +6,7 @@ import { Card } from "react-bootstrap";
 const commonData = {
   individu: {
     title: "Individu",
-    link: "https://uiuxindo.myr.id/pl/pdf2026",
+    link: "/payment",
     benefit: [
       "1 Registered Email",
       "Access UI/UX Challenge",

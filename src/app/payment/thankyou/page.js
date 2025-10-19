@@ -12,11 +12,11 @@ export default function ThankYouPage() {
         className="d-flex flex-column flex-md-row align-items-center justify-content-center bg-white rounded-4 p-4 p-md-5 thankyou-container"
       >
           <Image
-            src="/Assets/Payment.png"
+            src="https://cloud.uiuxindo.id/src/assets/phone-card-payment.png"
             alt="Payment Success"
-            width={400}
-            height={400}
-            className="img-fluid thankyou-image"
+            width={160}
+            height={160}
+            className="img-fluid thankyou-image m-5"
             priority
           />
 
