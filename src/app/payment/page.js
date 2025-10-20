@@ -31,7 +31,7 @@ export default function Payment() {
           </Link>
         </div>
       </div>
-      <div className="container-fluid">
+      <div className="container-fluid" style={{paddingTop:'52px'}}>
         <iframe allowfullscreen="" allowpaymentrequest="allowpaymentrequest" scrolling="no" frameborder="0" width="100%" height="100%" src="https://uiuxindo.myr.id/pl/pdf2026" ></iframe>
       </div>
     </>

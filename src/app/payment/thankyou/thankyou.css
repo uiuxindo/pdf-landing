@@ -1,0 +1,52 @@
+.thankyou-page {
+  padding-left: 220px !important;
+  padding-right: 220px !important;
+}
+
+.thankyou-container{
+ background-image: url("/Assets/BG-Thankyou.png"); 
+ background-size: cover;
+}
+
+.thankyou-title{
+  font-size: 32px;
+}
+
+.thankyou-btn {
+  background-color: #FFB929;
+  color: #000;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  width: fit-content;
+}
+
+.thankyou-btn:hover {
+  background-color: #FFFFFF;
+  color: #000;
+}
+
+@media (max-width:768px) {
+
+  .thankyou-page{
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+
+  .thankyou-title{
+    font-size: 24px !important;
+  }
+
+  .thankyou-btn {
+    width: auto;
+  }
+
+  .thankyou-container{
+    background-image: url("/Assets/BG-thankyou-mobile.png"); 
+    background-size: cover;
+    background-position: left;
+  }
+
+  .thankyou-image{
+    width: 180px;
+  }
+}
