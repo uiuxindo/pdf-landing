@@ -51,7 +51,7 @@
   }
 
   .tab-price-active{
-    background: #FFB929;
+    background: #FFB929 !important;
     padding-top: 12px;
     padding-bottom: 12px;
   }
@@ -436,11 +436,6 @@ footer{
   }
 
   /* PRICING */
-  .tab-price ,
-  .tab-price-active{
-    font-size: 14px;
-  }
-
   .card-price-individu,
   .card-price-group{
     height: auto !important;
