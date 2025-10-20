@@ -31,12 +31,12 @@ const pricingData = {
     group: { price: "Rp65.000" },
   },
   presale2: {
-    individu: { price: "Rp99.000", date: "1 Jan 2026 - 31 Mar 2026" },
-    group: { price: "Rp90.000" },
+    individu: { price: "Rp9?.000", date: "1 Jan 2026 - 31 Mar 2026" },
+    group: { price: "Rp9?.000" },
   },
   normal: {
-    individu: { price: "Rp129.000", date: "1 Apr 2026 - 1 Mei 2026" },
-    group: { price: "Rp115.000" },
+    individu: { price: "Rp12?.000", date: "1 Apr 2026 - 1 Mei 2026" },
+    group: { price: "Rp11?.000" },
   },
 };
 
@@ -96,7 +96,7 @@ const PricingSection = () => {
 
                   <div className="d-flex flex-md-row flex-column align-items-center justify-content-center my-4 card-content">
                     <div className="pb-4 pb-md-0 h-100 price text-center pe-md-5">
-                      <h2 className="text-main mt-md-5 mt-4 fw-700" style={{ fontSize: "32px" }}>
+                      <h2 className="text-main mt-md-5 fw-700" style={{ fontSize: "32px" }}>
                         {plan.price}
                       </h2>
                       <p className="text-grey mb-0 fs-lg">
