@@ -49,7 +49,7 @@ function MainNavbar({
     >
       <Container>
         <Navbar.Brand href="/">
-          <Image src={logo} alt="Logo" width={136} height={56} className="me-2" />
+          <Image src={logo} alt="Logo" width={120} height={50} className="me-2" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">

@@ -32,7 +32,7 @@ export default function Home() {
         icon="arrow-left"
       />
 
-      <div className="container-fluid" id="Home" style={{paddingTop:'80px'}}>
+      <div className="container-fluid" id="Home" style={{paddingTop:'76px'}}>
         <div id="Hero" className="row">
 
           {/* Hero */}
