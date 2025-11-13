@@ -95,8 +95,8 @@ const PricingSection = () => {
                   </div>
 
                   <div className="d-flex flex-md-row flex-column align-items-center justify-content-center my-4 card-content">
-                    <div className="pb-4 pb-md-0 h-100 price text-center pe-md-5">
-                      <h2 className="text-main mt-md-5 fw-700" style={{ fontSize: "32px" }}>
+                    <div className="pb-3 pb-md-0 price text-center pe-md-5">
+                      <h2 className="text-main fw-700" style={{ fontSize: "32px" }}>
                         {plan.price}
                       </h2>
                       <p className="text-grey mb-0 fs-lg">

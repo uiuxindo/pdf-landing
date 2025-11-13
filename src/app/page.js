@@ -74,19 +74,19 @@ export default function Home() {
         icon="palette2"
       />
 
-      <div className="container-fluid" id="Home" style={{paddingTop:'80px'}}>
+      <div className="container-fluid" id="Home" style={{paddingTop:'76px'}}>
         <div className="row">
 
           {/* Hero */}
           <div className="col-12 px-0 py-md-5 py-md-3 py-5 hero">
-            <div className="hero-content text-center">
+            <div className="hero-content text-center mt-5">
                 <p className="title-hero fw-700 mb-4 mb-md-2" style={{fontSize:'40px'}}>
                   From <span className="text-pink curved-underline">Beyond</span> to <span className="text-blue curved-underline">Worldwide</span>
                 </p>
                 <p className="desc-hero fs-xl mt-md-3 mt-0">Unlocking the Path to A Global Career from Wherever You Stand</p>
                 
                 {/* Countdown */}
-                <div className="row justify-content-center" style={{marginTop:'32px'}}>
+                {/* <div className="row justify-content-center" style={{marginTop:'32px'}}>
                   <div className="col-3 me-3 bg-white pt-md-2 pt-3 text-center border rounded-4" style={{width:'88px', height:'84px'}}>
                     <h2 className="fw-700 mb-0">{String(timeLeft.months).padStart(2, '0')}</h2>            
                     <p className="mb-0 text-grey fs-500">Months</p>
@@ -99,9 +99,9 @@ export default function Home() {
                     <h2 className="fw-700 mb-0">{String(timeLeft.hours).padStart(2, '0')}</h2>
                     <p className="mb-0 text-grey fs-500">Hours</p>
                   </div>
-                </div>
+                </div> */}
 
-                <Link href="/payment" className="btn btn-hero rounded-pill py-3 fw-500" style={{background:'#FFB929', width:'180px', marginTop:'32px'}}>
+                <Link href="/payment" className="btn bg-white rounded-pill py-3 fw-700" style={{background:'#FFB929', width:'180px', marginTop:'20px'}}>
                   Daftar Sekarang
                 </Link>
             </div>
