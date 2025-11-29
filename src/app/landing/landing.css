@@ -62,7 +62,7 @@
 
   .card-price-individu,
   .card-price-group{
-      height: 350px !important;
+      height: 100%;
   }
 
 .btn-price{
