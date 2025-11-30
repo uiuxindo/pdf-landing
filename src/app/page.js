@@ -101,8 +101,8 @@ export default function Home() {
                   </div>
                 </div> */}
 
-                <Link href="/payment" className="btn bg-white rounded-pill py-3 fw-700" style={{background:'#FFB929', width:'180px', marginTop:'20px'}}>
-                  Daftar Sekarang
+                <Link href="/#pricing" className="btn bg-white rounded-pill py-3 fw-700" style={{background:'#FFB929', marginTop:'20px'}}>
+                  Dapatkan Harga Promo Sekarang
                 </Link>
             </div>
           </div>
@@ -286,7 +286,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="container">
+      <div id="pricing" className="container">
 
         {/* Pricing */}
         <div className="row" style={{marginBottom:'100px'}}>
