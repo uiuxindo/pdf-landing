@@ -122,26 +122,8 @@ const PricingSection = () => {
 
                   {isBestOption && (
                     <div className="mb-4 w-100 p-3 overflow-hidden" style={{ border: "dashed 1px #dee2e6", borderRadius: "12px", background: "linear-gradient(rgb(229 241 255), transparent, transparent)" }}>
-                      <p style={{ fontSize: "18px", fontWeight: "600" }}>End Year Promo 🔥</p>
-                      <div className="d-flex justify-content-between">
-                        <div className="d-flex justify-content-start" style={{ columnGap: "16px" }}>
-                          <div className="text-start">
-                            <span style={{ color: "#666666", fontSize: "14px" }}>Periode</span>
-                            <p className="mb-0">1-15 Des 2025</p>
-                          </div>
-                          <div className="border-end"></div>
-                          <div className="text-start">
-                            <span style={{ color: "#666666", fontSize: "14px" }}>Harga</span>
-                            <p className="mb-0">Rp 49.000</p>
-                          </div>
-                        </div>
-                        <Button variant="link text-decoration-none d-none d-sm-none d-md-block" onClick={handleShow}>
-                          <div className="d-flex align-items-center" style={{ fontWeight: "500" }}>
-                            Lihat Promo <i className="bi bi-chevron-right" style={{ fontSize: "12px" }}></i>
-                          </div>
-                        </Button>
-                      </div>
-                      <Button variant="link text-decoration-none mt-3 d-md-none" onClick={handleShow}>
+                      <p className="mb-2" style={{ fontSize: "18px", fontWeight: "600" }}>Buy 1 get 1 Ebook The Designers Compass 🔥</p>
+                      <Button variant="link text-decoration-none py-0" onClick={handleShow}>
                         <div className="d-flex align-items-center" style={{ fontWeight: "500" }}>
                           Lihat Promo <i className="bi bi-chevron-right" style={{ fontSize: "12px" }}></i>
                         </div>
