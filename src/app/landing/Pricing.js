@@ -1,7 +1,8 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import { Card } from "react-bootstrap";
+import Image from "next/image";
+import { Button, Card, Modal } from "react-bootstrap";
 
 const commonData = {
   individu: {
@@ -44,6 +45,12 @@ const PricingSection = () => {
   const [activeTab, setActiveTab] = useState("presale1");
   const data = pricingData[activeTab];
 
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+  
+
   return (
     <>
       {/* Tab */}
@@ -79,7 +86,7 @@ const PricingSection = () => {
                   plan.title === "Individu" ? "card-price-individu" : "card-price-group"} px-md-4 px-3 py-4 mb-0 rounded-4`}
                 style={isBestOption ? { border: "2px solid #FFB800" } : {}}
               >
-                <Card.Body className="d-flex flex-column align-items-center justify-content-center p-0">
+                <Card.Body className="d-flex flex-column p-0">
                   <div className="w-100 d-flex justify-content-center align-items-center border-bottom pb-4">
                     <div className="text-main fw-700 fs-2xl me-3">
                       {plan.title}
@@ -113,6 +120,17 @@ const PricingSection = () => {
                     </ul>
                   </div>
 
+                  {isBestOption && (
+                    <div className="mb-4 w-100 p-3 overflow-hidden" style={{ border: "dashed 1px #dee2e6", borderRadius: "12px", background: "linear-gradient(rgb(229 241 255), transparent, transparent)" }}>
+                      <p className="mb-2" style={{ fontSize: "18px", fontWeight: "600" }}>Buy 1 get 1 Ebook The Designers Compass 🔥</p>
+                      <Button variant="link text-decoration-none py-0" onClick={handleShow}>
+                        <div className="d-flex align-items-center" style={{ fontWeight: "500" }}>
+                          Lihat Promo <i className="bi bi-chevron-right" style={{ fontSize: "12px" }}></i>
+                        </div>
+                      </Button>
+                    </div>
+                  )}
+
                   {isButtonDisabled ? (
                     <button className="btn btn-price rounded-pill w-100 fw-600"
                       disabled
@@ -133,6 +151,16 @@ const PricingSection = () => {
                   )}
                 </Card.Body>
               </Card>
+              <Modal show={show} onHide={handleClose}>
+                <Modal.Header closeButton>
+                  <Modal.Title>End Year Promo 🔥</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                  <div style={{ position: "relative", width: "100%", height: "700px" }}>
+                    <Image className="mb-0 img-fluid" src="/Assets/END-YEAR-PROMO.png" fill alt="" style={{ objectFit: "contain" }}/>
+                  </div>
+                </Modal.Body>
+              </Modal>
             </div>
           );
         })}
