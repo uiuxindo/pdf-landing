@@ -120,7 +120,7 @@ const PricingSection = () => {
                     </ul>
                   </div>
 
-                  {isBestOption && (
+                  {/* {isBestOption && (
                     <div className="mb-4 w-100 p-3 overflow-hidden" style={{ border: "dashed 1px #dee2e6", borderRadius: "12px", background: "linear-gradient(rgb(229 241 255), transparent, transparent)" }}>
                       <p className="mb-2" style={{ fontSize: "18px", fontWeight: "600" }}>Buy 1 get 1 Ebook The Designers Compass 🔥</p>
                       <Button variant="link text-decoration-none py-0" onClick={handleShow}>
@@ -129,7 +129,7 @@ const PricingSection = () => {
                         </div>
                       </Button>
                     </div>
-                  )}
+                  )} */}
 
                   {isButtonDisabled ? (
                     <button className="btn btn-price rounded-pill w-100 fw-600"

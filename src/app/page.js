@@ -102,7 +102,7 @@ export default function Home() {
                 </div> */}
 
                 <Link href="/#pricing" className="btn bg-white rounded-pill py-3 fw-700" style={{background:'#FFB929', marginTop:'20px'}}>
-                  Dapatkan Harga Promo Sekarang
+                  Daftar Sekarang
                 </Link>
             </div>
           </div>
