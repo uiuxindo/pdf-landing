@@ -32,8 +32,8 @@ const pricingData = {
     group: { price: "Rp65.000" },
   },
   presale2: {
-    individu: { price: "Rp9?.000", date: "1 Jan 2026 - 31 Mar 2026" },
-    group: { price: "Rp9?.000" },
+    individu: { price: "Rp99.000", date: "1 Jan 2026 - 31 Mar 2026" },
+    group: { price: "Rp95.000" },
   },
   normal: {
     individu: { price: "Rp12?.000", date: "1 Apr 2026 - 1 Mei 2026" },
@@ -42,7 +42,7 @@ const pricingData = {
 };
 
 const PricingSection = () => {
-  const [activeTab, setActiveTab] = useState("presale1");
+  const [activeTab, setActiveTab] = useState("presale2");
   const data = pricingData[activeTab];
 
   const [show, setShow] = useState(false);
