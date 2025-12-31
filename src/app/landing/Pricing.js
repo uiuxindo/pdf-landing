@@ -73,32 +73,54 @@ const PricingSection = () => {
       <div className="row mt-5 justify-content-center">
         {Object.keys(data).map((type, index) => {
           const plan = { ...commonData[type], ...data[type] };
-          const isBestOption =
-            activeTab === "presale1" && plan.title === "Individu";
 
-          const isButtonDisabled =
-            activeTab === "presale2" || activeTab === "normal";
+          const isIndividu = plan.title === "Individu";
+
+          const isHighlightIndividuPresale2 =
+            activeTab === "presale2" && isIndividu;
+
+          const showBestOptionBadge = 
+            activeTab === "presale1" && isIndividu;
+
+          // const isBestOption =
+          //   activeTab === "presale1" && plan.title === "Individu";
+
+          // const isButtonDisabled =
+          //   activeTab === "presale2" || activeTab === "normal";
+
+          const isButtonDisabled = activeTab !== "presale2";
 
           return (
             <div className="col-md-6 col-12 position-relative mb-3 mb-md-0 px-3" key={index}>
               <Card
                 className={`${
-                  plan.title === "Individu" ? "card-price-individu" : "card-price-group"} px-md-4 px-3 py-4 mb-0 rounded-4`}
-                style={isBestOption ? { border: "2px solid #FFB800" } : {}}
+                  isIndividu ? "card-price-individu" : "card-price-group"
+                } px-md-4 px-3 py-4 mb-0 rounded-4`}
+                style={
+                  isHighlightIndividuPresale2
+                    ? { border: "2px solid #FFB800" }
+                    : {}
+                }
               >
+
                 <Card.Body className="d-flex flex-column p-0">
                   <div className="w-100 d-flex justify-content-center align-items-center border-bottom pb-4">
                     <div className="text-main fw-700 fs-2xl me-3">
                       {plan.title}
                     </div>
-                    {isBestOption && (
-                      <div className="d-flex align-items-center bg-warning text-dark rounded-pill px-3 py-2 fw-600" 
-                           style={{ fontSize: "14px" }}
-                      >
-                        <i className="bi bi-hand-thumbs-up me-2"></i>
-                        Opsi Terbaik
-                      </div>
-                    )}
+                      {showBestOptionBadge && (
+                        <div
+                          className="d-flex align-items-center rounded-pill px-3 py-2 fw-600 ms-3"
+                          style={{
+                            fontSize: "14px",
+                            backgroundColor: "#E5E7EB",
+                            color: "#6B7280",        
+                          }}
+                        >
+                          <i className="bi bi-hand-thumbs-up me-2"></i>
+                          Opsi Terbaik
+                        </div>
+                      )}
                   </div>
 
                   <div className="d-flex flex-md-row flex-column align-items-center justify-content-center my-4 card-content">
