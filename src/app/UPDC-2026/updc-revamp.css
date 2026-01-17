@@ -1,0 +1,727 @@
+
+/* HERO */
+.hero-updc{
+	background-image: url("../../../public/Assets/Revamp/UPDC-Revamp/BG-Hero-UPDC.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 870px;
+	padding: 170px 200px;
+}
+
+.updc-heading-container{
+	display: grid;
+	justify-content: center;
+}
+
+.updc-heading, .updc-heading2{
+	font-size: 96px;
+}
+
+.heading-2{
+	width: 100%;
+	/* margin-left: 105px; */
+}
+
+.updc-heading2{
+	letter-spacing: 9px;
+}
+
+.updc-subheading{
+	font-size: 24px;
+}
+
+.btn-updc{
+	font-size: 20px;
+}
+
+.btn-updc:hover{
+	color: #FFB929;
+}
+
+/* KETERANGAN */
+.section-keterangan{
+	margin: 50px 0;
+}
+
+.keterangan-heading{
+	font-size: 32px;
+}
+
+.card-general{
+	border: solid 1px #4DA2FF;
+	padding: 32px;
+}
+
+.card-heading-container{
+	background-image: url("../../../public/Assets/Revamp/UPDC-Revamp/BG-Heading-CardTerms.png");
+	background-size: cover;
+	margin-bottom: 32px;
+}
+
+.card-heading{
+	color: #1751DE;
+	font-size: 32px;
+}
+
+.card-metrics{
+	width: 300px;
+	height: 204px;
+}
+
+/* Timeline */
+.section-timeline{
+	background: #FFFAEB;
+}
+
+.timeline-heading{
+	font-size: 32px;
+}
+
+.card-timeline{
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+  --bs-card-border-color:none;
+}
+
+.timeline-row {
+  gap: 32px;
+}
+
+.timeline-col {
+  flex: 0 0 auto;
+	z-index: 1;
+	margin-top: 60px;
+}
+
+.timeline-col::after {
+  content: "";
+  position: absolute;
+  left: 120px;
+	top: -30px;
+  width: 300px;
+  height: 160px;
+  border-radius: 50%;
+  border-top: 4px dashed #B74A06;
+	z-index: -1;
+}
+
+  .timeline-row > .timeline-col:nth-child(4)::after,
+  .timeline-row > .timeline-col:nth-child(7)::after {
+    display: none;
+  }
+
+.curved-line-1{
+	top: 16px;
+	left: 250px;
+}
+
+.curved-line-2{
+	top: 390px;
+	left: 360px;
+}
+
+/* REWARD */
+.section-reward{
+	background-image: url("../../../public/Assets/Revamp/UPDC-Revamp/BG-Reward.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin-top: 50px;
+}
+
+.reward-heading{
+	font-size: 32px;
+}
+
+.reward-subheading{
+	margin-bottom: 40px !important;
+}
+
+.podium{
+	border-bottom: solid 4px #FFB929;
+}
+
+.podium-reward{
+	padding: 0 200px;
+}
+
+.position{
+	font-family: 'Inter', sans-serif;
+	font-size:100px;
+	color: transparent;
+	-webkit-text-stroke: 1.5px #9E9E9E;
+	paint-order: stroke fill;
+}
+
+.juara-2{
+	height: 400px;
+	background-color: #FFF1C6;
+}
+
+.position-title{
+	font-size: 32px;
+}
+
+.juara-1{
+	height: 450px;
+  background-color: #FFCC4A;
+}
+
+.juara-3{
+  background-color: #FFF1C6;
+  height: 350px;
+}
+
+/* JURI */
+
+.section-juri{
+	margin: 100px 0;
+}
+
+.heading-juri{
+	font-size: 32px;
+}
+
+.juri{
+	margin-top: 40px;
+}
+
+.nama-juri{
+	font-size: 24px;
+}
+
+.job-juri{
+	font-size: 20px;
+}
+
+.linkedin-container{
+	background: #FFB929;
+	padding: 6px;
+	border: solid 1px #B74A06;
+	width: fit-content;
+	top: 120px;
+	left: 40px;
+}
+
+.linkedin-juri{
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #1275B1;
+}
+
+/* FOOTER */
+footer{
+  padding: 50px 100px;
+  border-top: solid 3px #E7E7E7;
+}
+
+/* COPYRIGHT */
+.copyright{
+  padding: 20px 100px 20px 100px;
+}
+
+@media (min-width: 768px) and (max-width:1000px){
+
+		/* HERO */
+	.hero-updc{
+		background-image: url("../../../public/Assets/Revamp/UPDC-Revamp/BG-Hero-UPDC-Mobile.png");
+		background-size: cover;
+		height: 1620px !important;
+		padding: 560px 40px 0 40px;
+	}
+
+	.updc-heading, .updc-heading2{
+		font-size: 64px;
+	}
+
+	.updc-subheading{
+		font-size: 18px;
+	}
+
+	.btn-updc{
+		font-size: 24px;
+	}
+
+	/* KETERANGAN */
+
+	.keterangan{
+		font-size: 18px;
+	}
+
+	.card-metrics{
+		width: fit-content;
+		height: auto;
+	}
+
+	/* TIMELINE */
+	  .timeline-col{
+		margin-top: 60px !important;
+    height: 100%;
+  }
+
+  .slick-track {
+    overflow: visible !important;
+  }
+
+  .timeline-col::after {
+		top: -30px;
+    z-index: -1;
+  }
+
+  .timeline-col.is-last::after {
+    display: none;
+  }
+
+  .card-timeline{
+    border-color:none;
+    border-radius: 12px;
+    padding:50px 8px 8px 8px;
+    height:100%;
+    width:248px;
+    min-height: 280px !important;
+  }
+
+	.slick-slider{
+		padding-left: 6px;
+	}
+
+  .slick-list{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .slick-slide{
+    width: fit-content !important;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
+  .curved-line-mobile{
+		top: 0px;
+		left: 10px;
+	}
+
+	/* REWARD */
+
+	.section-reward{
+		background-image: none;
+	}
+
+	.podium-reward{
+		padding: 0 60px;
+	}
+
+	.juara-2{
+	height: 440px;
+	background-color: #FFF1C6;
+}
+
+	.position-title{
+		font-size: 28px;
+	}
+
+	.juara-1{
+		height: 480px;
+		background-color: #FFCC4A;
+	}
+
+	.juara-3{
+		background-color: #FFF1C6;
+		height: 380px;
+	}
+
+	.yellow-vector{
+		left: 72px;
+		width: 80px;
+		bottom: 900px;		
+	}
+
+	.blue-vector{
+		left: 640px;
+		width: 40px;
+	}
+
+	.red-star{
+		width: 36px;
+		top: 280px;
+		left: 60px;
+	}
+
+	.yellow-star{
+		width: 36px;
+		top: 320px;
+		left: 700px;
+	}
+
+	/* JURI */
+
+	.linkedin-container{
+		top: 80px;
+		left: -5px;
+	}
+
+	.linkedin-juri{
+		width: 32px;
+		height: 32px;
+	}
+
+  /* FOOTER */
+  footer{
+    padding: 50px;
+  }
+
+  /* COPYRIGHT */
+  .copyright{
+    padding: 24px !important;
+  }
+
+}
+
+@media (min-width: 1001px) and (max-width:1400px){
+
+		/* HERO */
+	.hero-updc{
+		background-image: url("../../../public/Assets/Revamp/UPDC-Revamp/BG-Hero-UPDC-Mobile.png");
+		background-size: cover;
+		height: 2150px !important;
+		padding: 800px 40px 0 40px;
+	}
+
+	.updc-heading, .updc-heading2{
+		font-size: 84px;
+	}
+
+	.updc-subheading{
+		font-size: 24px;
+	}
+
+	.btn-updc{
+		margin-top: 80px !important;
+		font-size: 28px;
+	}
+
+	/* KETERANGAN */
+
+	.keterangan{
+		font-size: 18px;
+	}
+
+	.card-metrics{
+		width: fit-content;
+		height: auto;
+	}
+
+	/* TIMELINE */
+	.timeline-row {
+		gap: 32px;
+	}
+
+	.timeline-col {
+		flex: 0 0 auto;
+		z-index: 1;
+		margin-top: 60px;
+	}
+
+	.timeline-col::after {
+		content: "";
+		position: absolute;
+		left: 120px;
+		top: -30px;
+		width: 300px;
+		height: 160px;
+		border-radius: 50%;
+		border-top: 4px dashed #B74A06;
+		z-index: -1;
+	}
+
+		.timeline-row > .timeline-col:nth-child(4)::after,
+		.timeline-row > .timeline-col:nth-child(7)::after {
+			display: none;
+		}
+
+	.curved-line-1{
+		top: 16px;
+		left: 250px;
+	}
+
+	.curved-line-2{
+		top: 390px;
+		left: 360px;
+	}
+
+	/* REWARD */
+
+	.section-reward{
+		background-image: url("../../../public/Assets/Revamp/UPDC-Revamp/BG-Reward.png");
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		margin-top: 50px;
+	}
+
+	.podium-reward{
+		padding: 0 60px;
+	}
+
+	.juara-2{
+		height: 400px;
+		background-color: #FFF1C6;
+	}
+
+	.position-title{
+		font-size: 28px;
+	}
+
+	.juara-1{
+		height: 440px;
+		background-color: #FFCC4A;
+	}
+
+	.juara-3{
+		background-color: #FFF1C6;
+		height: 340px;
+	}
+
+	/* JURI */
+
+	.linkedin-container{
+		top: 120px;
+		left: -5px;
+	}
+
+	.linkedin-juri{
+		width: 36px;
+		height: 36px;
+	}
+
+  /* FOOTER */
+  footer{
+    padding: 50px;
+  }
+
+  /* COPYRIGHT */
+  .copyright{
+    padding: 24px !important;
+  }
+
+}
+
+@media(max-width:767px){
+
+	/* HERO */
+	.hero-updc{
+		background-image: url("../../../public/Assets/Revamp/UPDC-Revamp/BG-Hero-UPDC-Mobile.png");
+		background-size: cover;
+		height: 910px;
+		padding-left: 20px;
+		padding-right: 20px;
+		padding-top: 290px;
+	}
+
+  .updc-heading-container {
+    display: grid;
+    justify-content: center;
+		
+  }
+
+  .heading-2 {
+    width: 100%;
+    justify-self: center;
+		padding: 0 40px;
+  }
+
+	.updc-heading, .updc-heading2{
+		font-size: 32px;
+	}
+
+	.heading-2{
+		width: fit-content;
+	}
+
+	.updc-heading2{
+		letter-spacing: 0px;
+	}
+
+	.updc-subheading{
+		font-size: 16px;
+	}
+
+	.btn-updc{
+		font-size: 16px;
+		padding-top: 12px;
+		padding-bottom: 12px;
+	}
+
+	/* KETERANGAN */
+	.card-general{
+		padding: 16px;
+	}
+
+	.card-heading{
+		font-size: 24px;
+	}
+
+	.card-metrics{
+		width: fit-content;
+		height: auto;
+	}
+
+	/* Timeline */
+
+	.section-timeline{
+		padding-left: 20px !important;
+	}
+
+  .timeline-bg{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+  }
+
+	.timeline-heading{
+		font-size: 24px;
+	}
+
+  .timeline-col{
+		margin-top: 60px !important;
+    height: 100%;
+  }
+
+  .slick-track {
+    overflow: visible !important;
+  }
+
+  .timeline-col::after {
+		top: -30px;
+    z-index: -1;
+  }
+
+  .timeline-col.is-last::after {
+    display: none;
+  }
+
+  .card-timeline{
+    border-color:none;
+    border-radius: 12px;
+    padding:50px 8px 8px 8px;
+    height:100%;
+    width:248px;
+    min-height: 280px !important;
+  }
+
+	.slick-slider{
+		padding-left: 6px;
+	}
+
+  .slick-list{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .slick-slide{
+    width: fit-content !important;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
+  .curved-line-mobile{
+		top: 0px;
+		left: 10px;
+	}
+
+	/* REWARD */
+
+	.section-reward{
+		background-image: none;
+	}
+
+	.podium{
+		padding: 0 20px;
+	}
+
+	.podium-reward{
+		padding: 0 20px;
+	}
+
+	.yellow-vector{
+		left: 12px;
+	}
+
+	.blue-vector{
+		left: 390px;
+	}
+
+	.red-star{
+		top: 920px;
+		left: 40px;
+	}
+
+	.yellow-star{
+		top: 1800px;
+		left: 370px;
+	}
+
+	.juara-1-container {
+    order: 1;
+  }
+
+  .juara-2-container {
+    order: 2;
+  }
+
+  .juara-3-container {
+    order: 3;
+  }
+
+	.position{
+	font-size: 200px;
+	}
+
+  .juara-2, 
+  .juara-3{
+    margin-top: 0;
+  }
+
+  .juara-1, .juara-3{
+		height: 400px;
+  }
+
+	.trophy-container{
+		border-top: solid 4px #F99307;
+		padding-top: 80px;
+		margin-top: 0 !important;
+	}
+
+	/* JURI */
+	.section-juri{
+		margin: 50px 0;
+	}
+
+	.heading-juri{
+		font-size: 24px;
+	}
+
+	.juri-container{
+		margin-bottom: 40px;
+	}
+
+	.juri-image{
+		width: 250px;
+		height: 250px;
+	}
+
+	.linkedin-container{
+		top: 100px !important;
+		left: 48px !important;
+	}
+
+  /* FOOTER */
+  footer {
+  	padding: 36px 20px;
+  } 
+
+  /* COPYRIGHT */
+  .copyright{
+    padding: 24px 24px 24px 24px !important;
+  }
+
+}

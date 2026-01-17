@@ -7,6 +7,7 @@
  .fs-lg {font-size: 16px;}
  .fs-xl {font-size: 20px;}
  .fs-2xl {font-size: 24px;}
+.fs-3xl {font-size: 32px;}
  
  /* Font Weight */
  .fw-100 {font-weight: 100;}
@@ -95,7 +96,7 @@ a {
 
 .btn-hero{
   background-color: #FFB929;
-  padding: 12px 24px !important;
+  padding: 16px 24px !important;
 }
 
 .btn-cta{
