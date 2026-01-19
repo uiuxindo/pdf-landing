@@ -98,8 +98,8 @@ export default function Home() {
           <div className="col-12">
             <div className="d-flex flex-lg-row flex-column align-items-center justify-content-center heading-benefit-container">
               <div className="heading-benefit text-center text-lg-start w-100 mb-md-3">
-                <p className="heading-benefit-1 fw-700 mb-2">Why You Should Join PDF'26?</p>
-                <p className="text-grey mb-0 subheading-benefit-1">Because PDF ’26 gives you the freedom to learn, connect, and grow with a global community</p>
+                <p className="heading-benefit-1 fw-700 mb-2">Why You Should Join PDF&apos;26?</p>
+                <p className="text-grey mb-0 subheading-benefit-1">Because PDF&rsquo;26 gives you the freedom to learn, connect, and grow with a global community</p>
               </div>
               <div className="heading-benefit-2 text-center text-lg-start py-3 py-md-0 mb-md-5 mb-lg-0">
                 <p className="fw-600 mb-0" style={{color:'#454545'}}>100% Online via Zoom & Access from Anywhere</p>
@@ -273,9 +273,9 @@ export default function Home() {
         {/* FAQ */}
         <div className="row d-flex align-items-center faq-section" style={{margin:'100px 0'}}>
           <div className="col-lg-4 col-12 contact-us" style={{padding:'32px'}}>
-            <p className="text-white fw-700 mb-4 contact-heading">Not seeing the answer you're looking for?</p>
+            <p className="text-white fw-700 mb-4 contact-heading">Not seeing the answer you&apos;re looking for?</p>
             <p className="text-white contact-subheading" style={{marginBottom:'32px'}}>
-              If the answer you need isn't here, feel free to contact us through email or Whatsapp. We'll reply as quickly as we can
+              If the answer you need isn&apos;t here, feel free to contact us through email or Whatsapp. We&apos;ll reply as quickly as we can
             </p>
             <div className="d-flex flex-md-row flex-column align-items-md-center">
               <Link href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJTLpcfBBMDFHFqlbDBnmPJPVXJcDRxJshgSLHhxnfMjLNdzjRbsWRCmzXdwWFhTTTlbQBB" 

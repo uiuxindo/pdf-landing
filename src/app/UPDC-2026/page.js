@@ -57,7 +57,7 @@ export default function Home() {
       <div id='Keterangan' className='row section-keterangan text-center'>
         <p className='fw-700 mb-3 keterangan-heading'>What is UPDC?</p>
         <p className='text-grey keterangan'>UPDC (UIUXINDO Product Design Challenge) is a UI/UX design competition by UIUXINDO, created for students, fresh graduates, and career switchers. 
-          It’s a space to sharpen your UI/UX and product design skills through real-world case studies, while gaining hands-on experience in building solutions and presenting ideas to stakeholders.
+          It&apos;s a space to sharpen your UI/UX and product design skills through real-world case studies, while gaining hands-on experience in building solutions and presenting ideas to stakeholders.
         </p>
         <Card className='card-general radius-16'>
           <CardBody className='p-0'>
@@ -176,7 +176,7 @@ export default function Home() {
                 <p className='position mb-0 text-center'>03</p>
                 <div className='juara-3 p-4 px-3 py-4'>
                   <div className='bg-white text-center py-3 mb-4'><h5 className="fw-700 mb-0 position-title">Rising Star</h5></div>
-                  <p className='text-center'>Langkah awal yang solid buat perjalanan kamu selanjutnya. Keep going, you're on the right track!</p>
+                  <p className='text-center'>Langkah awal yang solid buat perjalanan kamu selanjutnya. Keep going, you&apos;re on the right track!</p>
                   <ul className="ps-0" style={{listStyleType:'none'}}>
                     <li className="mt-3"><i className="bi bi-check-circle-fill me-2" style={{color:'#FFB929'}}></i>Uang Tunai Rp75.000</li>
                     <li className="mt-3"><i className="bi bi-check-circle-fill me-2" style={{color:'#FFB929'}}></i>Sertifikat UPDC</li>

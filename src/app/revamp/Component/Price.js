@@ -61,7 +61,7 @@ const PricingSection = () => {
     <>
       <div className="d-flex flex-lg-row flex-column align-items-center justify-content-between">
         <div className="text-lg-start text-center">
-          <p className="fw-700 mb-2 heading-price">We've got the perfect price for you</p>
+          <p className="fw-700 mb-2 heading-price">We&apos;ve got the perfect price for you</p>
           <p className="text-grey mb-0 subheading-price">No need to burn your wallet just to level up at this festival</p>
         </div>
         {/* Tab */}
