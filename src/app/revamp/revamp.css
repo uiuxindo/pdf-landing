@@ -194,6 +194,12 @@
   overflow: hidden;
 }
 
+.img-speaker{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
 .speaker-card:hover .speaker-image {
   background: #ffb800;
 }
@@ -229,12 +235,6 @@
   background: rgba(255, 255, 255, 0.4);
   top: -50px;
   right: 0px;
-}
-
-.img-speaker{
-  width: 100%;
-  height: auto;
-  object-fit: cover;
 }
 
 .speaker-card:hover .speaker-image::before,
@@ -964,14 +964,22 @@ footer{
     margin-bottom: 50px !important;
   }
 
+  .speaker-heading{
+    font-size: 24px;
+  }
+
   .speaker-image {
-    width: 100%;
-    height: 320px;
+    width: 260px;
+    height: 300px;
   }
 
   .slick-slide{
     width: fit-content !important;
-    margin-right: 32px;
+    /* margin-right: 32px; */
+  }
+
+  .speaker-slider .slick-dots {
+    bottom: -10px !important;
   }
 
   /* Schedule */
@@ -1025,6 +1033,10 @@ footer{
 
   /* PRICING */
 
+  .heading-price{
+    font-size: 24px;
+  }
+
   .tab-price, .tab-price-active{
     font-size: 14px;
     padding: 12px 20px !important;
@@ -1074,6 +1086,10 @@ footer{
   /* TESTIMONI */
   .section-testimoni{
     padding: 0;
+  }
+
+  .heading-testimoni{
+    font-size: 24px;
   }
 
   .slick-track{
@@ -1158,7 +1174,7 @@ footer{
   }
 
   .slick-dots {
-    bottom: -40px !important;
+    bottom: -48px !important;
   }
 
   .slick-dots ul{

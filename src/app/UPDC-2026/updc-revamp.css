@@ -242,6 +242,10 @@ footer{
 
 	/* KETERANGAN */
 
+	.keterangan-heading{
+		font-size: 28px;
+	}
+
 	.keterangan{
 		font-size: 18px;
 	}
@@ -252,6 +256,11 @@ footer{
 	}
 
 	/* TIMELINE */
+
+.timeline-heading{
+	font-size: 28px;
+}
+
   .timeline-col{
 	margin-top: 60px !important;
     height: 100%;
@@ -291,7 +300,7 @@ footer{
 
   .slick-slide{
     width: fit-content !important;
-    padding-left: 12px !important;
+    padding-left: 8px !important;
     padding-right: 12px !important;
   }
 
@@ -304,6 +313,10 @@ footer{
 
 	.section-reward{
 		background-image: none;
+	}
+
+	.reward-heading{
+		font-size: 28px;
 	}
 
 	.podium-reward{
@@ -353,6 +366,10 @@ footer{
 	}
 
 	/* JURI */
+
+	.heading-juri{
+		font-size: 28px;
+	}
 
 	.linkedin-container{
 		top: 80px;

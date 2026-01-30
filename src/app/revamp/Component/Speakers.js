@@ -42,17 +42,14 @@ const SpeakerSection = () => {
 
       <div className="d-md-none speaker-slider px-0">
         <Slider {...sliderSettings}>
-          {speakerChunks.map((group, index) => (
-            <div className="index" key={index}>
-              <div className="d-flex flex-column gap-3 align-items-center" style={{width:'fit-content'}}>
-                {group.map((item) => (
-                  <SpeakerCard key={item.id} item={item} />
-                ))}
-              </div>
+          {speakers_data.map((item) => (
+            <div key={item.id} className="speaker-slide">
+              <SpeakerCard item={item} />
             </div>
           ))}
         </Slider>
       </div>
+
     </>
   );
 };
