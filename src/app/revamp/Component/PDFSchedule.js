@@ -9,22 +9,26 @@ export default function PDFSchedule() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="container" style={{marginTop:'40px'}}>
+    <div className="container" style={{ marginTop: "40px" }}>
       <div className={`schedule-wrapper ${isOpen ? "expanded" : ""}`}>
         <div className="row g-4">
-           {schedule_data.map((item) => (
+          {schedule_data.map((item) => (
             <ScheduleCard key={item.id} item={item} />
-           ))}
-         </div>
-         {!isOpen && <div className="schedule-overlay" />}
-       </div>
+          ))}
+        </div>
 
-       <div className="mt-5 text-center schedule-breakdown">
-        <p className="fw-600 schedule-breakdown-heading">Want the full breakdown for each session?</p>
+        {!isOpen && <div className="schedule-gradient" />}
+      </div>
+
+      <div className="text-center schedule-breakdown">
+        <p className="fw-600 schedule-breakdown-heading">
+          Want the full breakdown for each session?
+        </p>
+
         <div className="d-flex flex-md-row flex-column justify-content-center align-items-center">
           <Link
             href="#schedule"
-            className={`btn btn-outline-warning px-4 me-md-3 fw-600 rounded-pill`}
+            className="btn btn-outline-warning px-4 me-md-3 fw-600 rounded-pill"
             onClick={(e) => {
               e.preventDefault();
               setIsOpen(!isOpen);
@@ -33,13 +37,16 @@ export default function PDFSchedule() {
             {isOpen ? "Hide Full Schedule" : "See Full Schedule"}
           </Link>
 
-          <Link href="/payment" className="btn-main-schedule mt-3 mt-md-0 rounded-pill px-4 fw-600">
+          <Link
+            href="/payment"
+            className="btn-main-schedule mt-3 mt-md-0 rounded-pill px-4 fw-600"
+          >
             Get Your Ticket
           </Link>
         </div>
       </div>
+    </div>
 
-      </div>
   );
 }
 

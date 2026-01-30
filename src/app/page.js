@@ -62,17 +62,17 @@ export default function Home() {
             <div className="hero-content text-center">
               <div className="hero-heading text-center">
                 <div className="d-flex flex-row align-items-center justify-content-center">
-                  <p className="title-hero fw-700 mb-0 me-1" style={{fontSize:'72px'}}>
+                  <p className="title-hero fw-700 mb-0 me-1">
                     From Beyond
                   </p>
                   <Image className="mb-md-0 ms-2 img-fluid image-beyond" src="/Assets/Revamp/Beyond.png" width={220} height={220} alt=""/>
                 </div>
                 <div className="title-second-row d-flex flex-row align-items-center justify-content-center" style={{marginTop:'-16px'}}>
-                  <p className="title-hero fw-700 mb-4 mb-md-0 me-1" style={{fontSize:'72px'}}>
+                  <p className="title-hero fw-700 mb-4 mb-md-0 me-1">
                     to
                   </p>
                   <Image className="mb-md-0 img-fluid mx-2 image-worldwide" src="/Assets/Revamp/Worldwide.png" width={220} height={220} alt=""/>
-                  <p className="title-hero fw-700 mb-4 mb-md-0 ms-1" style={{fontSize:'72px'}}>
+                  <p className="title-hero fw-700 mb-4 mb-md-0 ms-1">
                     Worldwide
                   </p>
                 </div>
