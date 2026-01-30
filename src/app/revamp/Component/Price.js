@@ -82,7 +82,7 @@ const PricingSection = () => {
       </div>
 
       {/* Pricing Cards */}
-      <div className="row justify-content-center" style={{columnGap:'60px'}}>
+      <div className="row justify-content-center px-2 px-md-0" style={{columnGap:'60px'}}>
         {Object.keys(data).map((type, index) => {
           const plan = { ...commonData[type], ...data[type] };
 
