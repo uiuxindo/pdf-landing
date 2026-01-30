@@ -71,9 +71,10 @@ export default function MobileHighlightHangerSlider() {
                       <Image
                         src={item.image}
                         alt={item.title}
-                        className="radius-16"
-                        width={375}
-                        height={220}
+                        className="radius-16 img-hanger"
+                        fill
+                        // width={375}
+                        // height={220}
                       />
                     </div>
 

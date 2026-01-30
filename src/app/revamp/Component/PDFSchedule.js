@@ -21,21 +21,22 @@ export default function PDFSchedule() {
 
        <div className="mt-5 text-center schedule-breakdown">
         <p className="fw-600 schedule-breakdown-heading">Want the full breakdown for each session?</p>
-        <Link
-          href="#schedule"
-          className={`btn btn-outline-warning px-4 me-4 fw-600 rounded-pill`}
-          onClick={(e) => {
-            e.preventDefault();
-            setIsOpen(!isOpen);
-          }}
-          style={{paddingTop:'12px', paddingBottom:'12px'}}
-        >
-          {isOpen ? "Hide Full Schedule" : "See Full Schedule"}
-        </Link>
+        <div className="d-flex flex-md-row flex-column justify-content-center align-items-center">
+          <Link
+            href="#schedule"
+            className={`btn btn-outline-warning px-4 me-md-3 fw-600 rounded-pill`}
+            onClick={(e) => {
+              e.preventDefault();
+              setIsOpen(!isOpen);
+            }}
+          >
+            {isOpen ? "Hide Full Schedule" : "See Full Schedule"}
+          </Link>
 
-        <Link href="/payment" className="btn-main-schedule rounded-pill py-3 px-4 fw-600" style={{marginTop:'40px'}}>
-          Get Your Ticket
-        </Link>
+          <Link href="/payment" className="btn-main-schedule mt-3 mt-md-0 rounded-pill px-4 fw-600">
+            Get Your Ticket
+          </Link>
+        </div>
       </div>
 
       </div>

@@ -35,7 +35,7 @@ const speakers_data = [
 		id: 202605,
 		speaker_name: "Nieza Ayurisma",
 		current_job: "TOEFL iBT/ITP & ESP Specialist",
-		current_office: "Dibimbing.id",
+		current_office: "",
 		photo_source: "/Assets/Revamp/Speaker/Nieza Ayurisma.png",
 		linkedin_url: "https://www.linkedin.com/in/nieza-ayurisma-463195124/"
 	},

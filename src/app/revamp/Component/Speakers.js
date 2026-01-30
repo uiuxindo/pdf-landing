@@ -32,7 +32,7 @@ const SpeakerSection = () => {
 
   return (
     <>
-      <div className="row g-4 d-none d-md-flex">
+      <div className="row d-none d-md-flex">
         {speakers_data.map((item) => (
           <div className="col-md-6 col-lg-3 d-md-flex justify-content-center align-items-center" key={item.id}>
             <SpeakerCard item={item} />
@@ -63,8 +63,9 @@ const SpeakerCard = ({ item }) => (
       <Image
         src={item.photo_source}
         alt=""
-        width={300}
-        height={330}
+        fill
+        // width={300}
+        // height={330}
         className="img-speaker radius-12"
       />
       <p className="speaker-name fw-600 w-100 mb-0 text-white text-center position-absolute">{item.speaker_name}</p>
@@ -78,8 +79,13 @@ const SpeakerCard = ({ item }) => (
       </Link>
 
       <div>
-        <p className="fw-600 mb-0">{item.current_job}</p>
-        <p className="text-grey mb-0">{item.current_office}</p>
+        <p className="mb-0">{item.current_job}</p>
+
+        {item.current_office && (
+          <p className="mb-0">
+            at {item.current_office}
+          </p>
+        )}
       </div>
     </div>
   </div>

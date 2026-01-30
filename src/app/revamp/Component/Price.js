@@ -72,7 +72,7 @@ const PricingSection = () => {
                 key={i}
                 onClick={() => setActiveTab(tab)}
                 className={`btn rounded-pill px-4 fw-500 ${
-                  activeTab === tab ? "tab-price-active" : "tab-price"} ${i < 2 ? "me-1" : ""}`}
+                  activeTab === tab ? "tab-price-active" : "tab-price"} ${i < 2 ? "me-0" : ""}`}
               >
                 {tab === "presale1" ? "Presale 1" : tab === "presale2" ? "Presale 2" : "Normal"}
               </button>
@@ -97,7 +97,7 @@ const PricingSection = () => {
           const isButtonDisabled = activeTab !== "presale2";
 
           return (
-            <div className="col-lg-4 card-price-container position-relative mb-3 mb-md-0 px-0" key={index}>
+            <div className="col-lg-5 card-price-container position-relative mb-3 mb-md-0 px-0" key={index}>
               <div
                 className={`d-flex align-items-center justify-content-center ${
                   showBestOptionBadge ? "mt-5 mt-md-0 mb-md-0" : ""

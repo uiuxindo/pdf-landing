@@ -60,26 +60,28 @@ export default function Home() {
           {/* Hero */}
           <div id="Home" className="col-12 hero-revamp d-flex flex-column justify-content-center align-items-center">
             <div className="hero-content text-center">
-              <div className="d-flex flex-row align-items-center justify-content-center">
-                <p className="title-hero fw-700 mb-0 me-1" style={{fontSize:'100px'}}>
-                  From Beyond
-                </p>
-                <Image className="mb-md-0 ms-2 img-fluid image-beyond" src="/Assets/Revamp/Beyond.png" width={300} height={300} alt=""/>
+              <div className="hero-heading text-center">
+                <div className="d-flex flex-row align-items-center justify-content-center">
+                  <p className="title-hero fw-700 mb-0 me-1" style={{fontSize:'72px'}}>
+                    From Beyond
+                  </p>
+                  <Image className="mb-md-0 ms-2 img-fluid image-beyond" src="/Assets/Revamp/Beyond.png" width={220} height={220} alt=""/>
+                </div>
+                <div className="title-second-row d-flex flex-row align-items-center justify-content-center" style={{marginTop:'-16px'}}>
+                  <p className="title-hero fw-700 mb-4 mb-md-0 me-1" style={{fontSize:'72px'}}>
+                    to
+                  </p>
+                  <Image className="mb-md-0 img-fluid mx-2 image-worldwide" src="/Assets/Revamp/Worldwide.png" width={220} height={220} alt=""/>
+                  <p className="title-hero fw-700 mb-4 mb-md-0 ms-1" style={{fontSize:'72px'}}>
+                    Worldwide
+                  </p>
+                </div>
+                <p className="desc-hero fs-xl mb-0 text-grey">Unlocking the Path to A Global Career from Wherever You Stand</p>
               </div>
-              <div className="title-second-row d-flex flex-row align-items-center justify-content-center" style={{marginTop:'-16px'}}>
-                <p className="title-hero fw-700 mb-4 mb-md-0 me-1" style={{fontSize:'100px'}}>
-                  to
-                </p>
-                <Image className="mb-md-0 img-fluid mx-2 image-worldwide" src="/Assets/Revamp/Worldwide.png" width={300} height={300} alt=""/>
-                <p className="title-hero fw-700 mb-4 mb-md-0 ms-1" style={{fontSize:'100px'}}>
-                  Worldwide
-                </p>
-              </div>
-              <p className="desc-hero fs-2xl mb-0 text-grey">Unlocking the Path to A Global Career from Wherever You Stand</p>
+              <Link href="/payment" className="btn-main-hero rounded-pill py-3 px-4 fw-600">
+                Register Now
+              </Link>
             </div>
-            <Link href="/payment" className="btn-main-hero rounded-pill py-3 px-4 fw-600">
-              Register Now
-            </Link>
           </div>
         </div>
 
@@ -97,7 +99,7 @@ export default function Home() {
         <div className="row benefit-wrapper">
           <div className="col-12">
             <div className="d-flex flex-lg-row flex-column align-items-center justify-content-center heading-benefit-container">
-              <div className="heading-benefit text-center text-lg-start w-100 mb-md-3">
+              <div className="heading-benefit text-center text-lg-start w-75 mb-md-3">
                 <p className="heading-benefit-1 fw-700 mb-2">Why You Should Join PDF&apos;26?</p>
                 <p className="text-grey mb-0 subheading-benefit-1">Because PDF&rsquo;26 gives you the freedom to learn, connect, and grow with a global community</p>
               </div>
@@ -134,8 +136,10 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </div>
 
-        {/* Speaker */}
+      {/* Speaker */}
+      <div className="container container-speaker">
         <div id="Speaker" className="row section-speaker" style={{margin:'100px 0'}}>
           <div className="col-12 text-center px-0">
             <p className="fw-700 speaker-heading">Speaker Line Up ✨</p>
@@ -163,9 +167,9 @@ export default function Home() {
       <div className="container">
         {/* CTA UPDC */}
         <div className="row CTA-UPDC">
-          <div className="col-12 text-center mt-md-5 CTA-UPDC-container">
+          <div className="col-12 text-center mt-lg-5 mt-3 CTA-UPDC-container">
               <h1 className="fw-700 heading-CTA-UPDC">UIUXINDO<br/>PRODUCT DESIGN CHALLENGE</h1>
-              <Link href="/UPDC-2026" className="btn btn-cta bg-white rounded-pill mt-3 py-3 fw-700 text-main" style={{background:'#FFB929'}}>
+              <Link href="/UPDC-2026" className="btn btn-cta bg-white rounded-pill mt-lg-3 py-3 fw-700 text-main" style={{background:'#FFB929'}}>
                   Selengkapnya
               </Link>
           </div>
@@ -193,86 +197,84 @@ export default function Home() {
       <div className="container-fluid px-0 gallery">
         {/* Testimoni */}
         <div className="row" style={{margin:"100px 0"}}>
-          <div id="Testimoni" className="col-12">
-            <div  className="row section-testimoni">
-              <div>
-                <SliderTestimoni/>
-              </div>
-            </div>  
-            <div className="row highlight" style={{marginTop:'150px'}}>
-              <div className="col-12 px-0 position-relative">
-                <div className="d-flex align-items-center justify-content-between highlight-heading-container">
-                  <div className="text-center text-md-start">
-                    <p className="fw-700 mb-2 highlight-heading">Highlights From Our Previous Festival</p>
-                    <p>A glimpse into the moments, energy, and experiences from our last event</p>
-                  </div>
-                  <div className="d-none d-lg-flex gap-3">
-                    <Link
-                      href="#"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        circularGalleryRef.current?.prev();
-                      }}
-                      className="btn bg-white border rounded-circle"
-                    >
-                      <i className="bi bi-arrow-left fs-2xl"></i>
-                    </Link>
-
-                    <Link
-                      href="#"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        circularGalleryRef.current?.next();
-                      }}
-                      className="btn bg-white border rounded-circle"
-                    >
-                      <i className="bi bi-arrow-right fs-2xl"></i>
-                    </Link>
-                  </div>
-                </div>
-                {/* <FestivalSection/> */}
-
-                <Image className="d-none d-lg-block" 
-                      src="/Assets/Revamp/white-line.png" 
-                      width={1585} 
-                      height={200}
-                      alt=""
-                      style={{marginTop:'-70px'}}
-                />
-                {/* <div className='blue-clip'/> */}
-                <div className="d-none d-md-block">
-                  <GalleryCardGenerator className='d-none d-md-block' onGenerated={setGalleryItems} />
-                </div>
-
-                {galleryItems.length > 0 && (
-                  <div className="d-none d-md-block ">
-                    <CircularGallery
-                      items={galleryItems}
-                      bend={-2}
-                      borderRadius={0.05}
-                      scrollEase={0.02}
-                      ref={circularGalleryRef}
-                    />
-                  </div>
-                )}
-                <MobileHighlightHangerSlider className='d-block d-lg-none'/>
-              </div>
+          <div className="col-12 px-0">
+            <div className="container px-lg-0">
+              <SliderTestimoni/>
             </div>
+                <div className="row highlight" style={{marginTop:'150px'}}>
+                  <div className="col-12 px-md-0 position-relative">
+                    <div className="d-flex align-items-center justify-content-between highlight-heading-container">
+                      <div className="text-center text-md-start">
+                        <p className="fw-700 mb-2 highlight-heading">Highlights From Our Previous Festival</p>
+                        <p>A glimpse into the moments, energy, and experiences from our last event</p>
+                      </div>
+                      <div className="d-none d-lg-flex gap-3">
+                        <Link
+                          href="#"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            circularGalleryRef.current?.prev();
+                          }}
+                          className="btn bg-white border rounded-circle"
+                        >
+                          <i className="bi bi-arrow-left fs-2xl"></i>
+                        </Link>
+
+                        <Link
+                          href="#"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            circularGalleryRef.current?.next();
+                          }}
+                          className="btn bg-white border rounded-circle"
+                        >
+                          <i className="bi bi-arrow-right fs-2xl"></i>
+                        </Link>
+                      </div>
+                    </div>
+
+                    <Image className="d-none d-lg-block" 
+                          src="/Assets/Revamp/white-line.png" 
+                          width={1585} 
+                          height={200}
+                          alt=""
+                          style={{marginTop:'-70px'}}
+                    />
+                    <div className="d-none d-md-block">
+                      <GalleryCardGenerator className='d-none d-md-block' onGenerated={setGalleryItems} />
+                    </div>
+
+                    {galleryItems.length > 0 && (
+                      <div className="d-none d-md-block ">
+                        <CircularGallery
+                          items={galleryItems}
+                          bend={-2}
+                          borderRadius={0.05}
+                          scrollEase={0.02}
+                          ref={circularGalleryRef}
+                        />
+                      </div>
+                    )}
+                    <MobileHighlightHangerSlider className='d-block d-lg-none'/>
+                  </div>
+                </div>
           </div>
         </div>
       </div>
 
-      <div className="container section-partner-carousel">
+      <div className="section-partner-carousel">
         {/* Partner Carousel */}
         <div id="Partner" className="row">
           <div className="col-12">
             <PartnerCarousel/>
           </div>
         </div>
+      </div>
 
-        {/* FAQ */}
+      {/* FAQ */}
+      <div className="container px-lg-0">
         <div className="row d-flex align-items-center faq-section" style={{margin:'100px 0'}}>
-          <div className="col-lg-4 col-12 contact-us" style={{padding:'32px'}}>
+          <div className="col-lg-5 col-12 contact-us">
             <p className="text-white fw-700 mb-4 contact-heading">Not seeing the answer you&apos;re looking for?</p>
             <p className="text-white contact-subheading" style={{marginBottom:'32px'}}>
               If the answer you need isn&apos;t here, feel free to contact us through email or Whatsapp. We&apos;ll reply as quickly as we can
@@ -302,7 +304,7 @@ export default function Home() {
                 </Link>
             </div>
           </div>
-          <div className="col-lg-8 col-12 accordion-faq">
+          <div className="col-lg-7 col-12 accordion-faq">
             <div className="text-center" style={{marginBottom:'32px'}}>
               <p className="fw-700 faq-heading">FAQ Corner</p>
               <p className="text-grey mb-0">Curious? We got you. All the must-know things packed in one easy place</p>

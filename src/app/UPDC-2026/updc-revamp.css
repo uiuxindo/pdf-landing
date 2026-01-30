@@ -1,10 +1,14 @@
+/* .container{
+	max-width: 1140px;
+} */
+
 
 /* HERO */
 .hero-updc{
 	background-image: url("../../../public/Assets/Revamp/UPDC-Revamp/BG-Hero-UPDC.png");
-	background-size: cover;
+	background-size: 100% 100%;
 	background-repeat: no-repeat;
-	height: 870px;
+	height: 820px;
 	padding: 170px 200px;
 }
 
@@ -14,12 +18,7 @@
 }
 
 .updc-heading, .updc-heading2{
-	font-size: 96px;
-}
-
-.heading-2{
-	width: 100%;
-	/* margin-left: 105px; */
+	font-size: 72px;
 }
 
 .updc-heading2{
@@ -27,11 +26,11 @@
 }
 
 .updc-subheading{
-	font-size: 24px;
+	font-size: 20px;
 }
 
 .btn-updc{
-	font-size: 20px;
+	font-size: 16px;
 }
 
 .btn-updc:hover{
@@ -122,7 +121,7 @@
 /* REWARD */
 .section-reward{
 	background-image: url("../../../public/Assets/Revamp/UPDC-Revamp/BG-Reward.png");
-	background-size: cover;
+	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	margin-top: 50px;
 }
@@ -198,7 +197,7 @@
 	border: solid 1px #B74A06;
 	width: fit-content;
 	top: 120px;
-	left: 40px;
+	left: 12px;
 }
 
 .linkedin-juri{
@@ -221,11 +220,11 @@ footer{
 
 @media (min-width: 768px) and (max-width:1000px){
 
-		/* HERO */
+	/* HERO */
 	.hero-updc{
 		background-image: url("../../../public/Assets/Revamp/UPDC-Revamp/BG-Hero-UPDC-Mobile.png");
-		background-size: cover;
-		height: 1620px !important;
+		background-size: 100% 100%;
+		height: 1600px !important;
 		padding: 560px 40px 0 40px;
 	}
 
@@ -238,7 +237,7 @@ footer{
 	}
 
 	.btn-updc{
-		font-size: 24px;
+		font-size: 20px;
 	}
 
 	/* KETERANGAN */
@@ -253,12 +252,13 @@ footer{
 	}
 
 	/* TIMELINE */
-	  .timeline-col{
-		margin-top: 60px !important;
+  .timeline-col{
+	margin-top: 60px !important;
     height: 100%;
   }
 
   .slick-track {
+	margin-left: 40px !important;
     overflow: visible !important;
   }
 
@@ -336,20 +336,20 @@ footer{
 	}
 
 	.blue-vector{
-		left: 640px;
+		left: 740px;
 		width: 40px;
 	}
 
 	.red-star{
 		width: 36px;
 		top: 280px;
-		left: 60px;
+		left: 40px;
 	}
 
 	.yellow-star{
 		width: 36px;
 		top: 320px;
-		left: 700px;
+		left: 760px;
 	}
 
 	/* JURI */
@@ -510,8 +510,8 @@ footer{
 	/* HERO */
 	.hero-updc{
 		background-image: url("../../../public/Assets/Revamp/UPDC-Revamp/BG-Hero-UPDC-Mobile.png");
-		background-size: cover;
-		height: 910px;
+		background-size: 100% 100%;
+		height: 840px;
 		padding-left: 20px;
 		padding-right: 20px;
 		padding-top: 290px;
@@ -546,18 +546,27 @@ footer{
 	}
 
 	.btn-updc{
-		font-size: 16px;
+		font-size: 14px;
 		padding-top: 12px;
 		padding-bottom: 12px;
 	}
 
 	/* KETERANGAN */
+
+	.keterangan-heading{
+		font-size: 24px;
+	}
+
+	.keterangan{
+		font-size: 14px !important;
+	}
+
 	.card-general{
 		padding: 16px;
 	}
 
 	.card-heading{
-		font-size: 24px;
+		font-size: 20px;
 	}
 
 	.card-metrics{
@@ -634,6 +643,10 @@ footer{
 		background-image: none;
 	}
 
+	.reward-heading{
+		font-size: 24px;
+	}
+
 	.podium{
 		padding: 0 20px;
 	}
@@ -647,7 +660,7 @@ footer{
 	}
 
 	.blue-vector{
-		left: 390px;
+		left: 360px;
 	}
 
 	.red-star{

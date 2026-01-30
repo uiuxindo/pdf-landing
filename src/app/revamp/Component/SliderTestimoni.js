@@ -10,7 +10,7 @@ import testimony_data from "../../Data_JSON/testimony_data";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const MAX_LENGTH = 270;
+const MAX_LENGTH = 160;
 
 const truncateText = (text, maxLength = MAX_LENGTH) => {
   if (text.length <= maxLength) return text;

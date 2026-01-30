@@ -55,7 +55,7 @@ export default function BenefitCards() {
                     >
                       {card.title}
                     </p>
-                    <p className="mb-0">{card.subtitle}</p>
+                    <p className="mb-0 card-subheading-benefit">{card.subtitle}</p>
                   </div>
                 </div>
 

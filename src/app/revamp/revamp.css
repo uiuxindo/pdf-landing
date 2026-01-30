@@ -4,6 +4,10 @@
   }
 }
 
+.container{
+  max-width: 1140px;
+}
+
 .btn-main{
   background: #FFB929;
 }
@@ -16,10 +20,14 @@
 
 /* HERO */
 .hero-revamp{
-  background-image: url("../../../public/Assets/Revamp/Hero-Section-Alt-3.png");
-  background-size: cover;
-  height: 800px;
+  background-image: url("../../../public/Assets/Revamp/Hero-Section-BG.png");
+  background-size: 100% 100%;
+  height: 720px;
   background-repeat: no-repeat;
+}
+
+.hero-heading{
+  margin-bottom: 60px;
 }
 
 .btn-main-hero{
@@ -100,6 +108,10 @@
   width: 25%;
 }
 
+/* .subheading-benefit-1{
+  width: 400px;
+} */
+
 .bg-blue {
   background-size: cover;
   background-image: url('../../../public/Assets/Revamp/BG-Blue.png');
@@ -126,6 +138,11 @@
   font-size: 32px;
 }
 
+.card-subheading-benefit{
+  font-size: 16px;
+  color: black;
+}
+
 /* CTA Count Proof */
 
 .count-proof{
@@ -133,8 +150,9 @@
 }
 
 .CTA-CountProof {
-  background-size: cover;
-  background-image: url('../../../public/Assets/Revamp/Count Proof.png');
+  background-image: url('../../../public/Assets/Revamp/Count-Proof-BG.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
   background-position: center;
   border-radius: 16px;
   padding: 50px 32px;
@@ -162,17 +180,18 @@
 }
 
 .speaker-card {
-  width: fit-content;
+  width: 100%;
   cursor: pointer;
+  margin-bottom: 40px;
 }
 
 .speaker-image {
   background: linear-gradient(to top,rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0));
-  width: fit-content;
+  width: 100%;
+  height: 320px;
   transition: all 0.35s ease;
   border-radius: 24px;
   overflow: hidden;
-  height: auto;
 }
 
 .speaker-card:hover .speaker-image {
@@ -212,6 +231,12 @@
   right: 0px;
 }
 
+.img-speaker{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
 .speaker-card:hover .speaker-image::before,
 .speaker-card:hover .speaker-image::after {
   opacity: 1;
@@ -230,7 +255,7 @@
 }
 
 .speaker-card:hover .linkedin-speaker {
-  border: solid 3px #ff0000;
+  border: solid 2.5px #ff0000;
 }
 
 /* SCHEDULE */
@@ -240,14 +265,14 @@
 }
 
 .schedule-wrapper {
-  height: 580px;
+  height: 660px;
   position: relative;
   overflow: hidden;
   transition: max-height 0.5s ease;
 }
 
 .schedule-wrapper.expanded {
-  min-height: 800px;
+  min-height: 900px;
 }
 
 .schedule-breakdown-heading{
@@ -258,6 +283,12 @@
   background: #ffb929;
 }
 
+.btn-main-schedule, .btn-outline-warning{
+  padding-top: 12px;
+  padding-bottom: 12px;
+  width: 50px;
+}
+
 .btn-outline-warning:hover{
   background: none;
   color: #FFB929;
@@ -265,8 +296,9 @@
 
 /* CTA UPDC */
 .CTA-UPDC {
-  background-size: cover;
   background-image: url('../../../public/Assets/Revamp/CTA PDF.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
   background-position: center;
   border-radius: 16px;
   height: 330px;
@@ -349,9 +381,9 @@
 
 /* Testimoni */
 
-.section-testimoni{
+/* .section-testimoni{
   padding: 0 100px;
-}
+} */
 
 .highlight-heading-container{
   padding: 0 100px;
@@ -362,7 +394,7 @@
 }
 
 .card-testimonial{
-  min-height: 372px;
+  min-height: 360px;
   min-width: 0 !important;
 }
 
@@ -456,9 +488,9 @@
 
 
 /* PARTNER CAROUSEL */
-/* .section-partner-carousel{
-  margin-top: -50px;
-} */
+.section-partner-carousel{
+  margin: 0 100px !important;
+}
 
 .logo-carousel-wrapper {
   overflow: hidden;
@@ -512,7 +544,8 @@
   background-image: url("../../../public/Assets/Revamp/BG-contact.png");
   background-size: contain;
   background-repeat: no-repeat;
-  min-height: 556px;
+  height: 640px;
+  padding: 32px;
 }
 
 .contact-heading{
@@ -528,7 +561,7 @@
 }
 
 .accordion-faq{
-  padding-left: 90px;
+  padding-left: 60px;
 }
 
 .accordion-button{
@@ -560,6 +593,10 @@ footer{
 
 @media (min-width: 768px) and (max-width:1000px){
 
+  .container{
+    padding: 0 40px;
+  }
+
   /* .slick-dots {
     padding-top: 60px !important;
   } */
@@ -567,14 +604,19 @@ footer{
   /* HERO */
   .hero-revamp{
     background-image: url("../../../public/Assets/Revamp/Hero-Section-Alt-3-Mobile.png");
-    min-height: 1500px;
+    background-size: 100% 100%;
+    height: 1400px;
     background-position: center;
   }
 
-  .hero-content{
+  .hero-heading{
     padding-left: 70px !important;
     padding-right: 70px !important;
-    /* margin-bottom: 100px; */
+    margin-bottom: 240px;
+  }
+
+  .btn-main-hero{
+    margin-bottom: 540px !important;
   }
 
   .title-second-row{
@@ -635,12 +677,27 @@ footer{
   }
 
   .card-heading-benefit{
-    font-size: 28px !important;
+    font-size: 32px !important;
+  }
+
+  .card-subheading-benefit{
+    font-size: 24px;
+    color: black;
+  }
+
+  /* Count Proof */
+  .count-proof{
+    padding: 0 60px;
   }
 
   /* SPEAKER */
   .speaker-heading{
     font-size: 28px;
+  }
+
+  .speaker-image {
+    width: 100%;
+    height: 400px;
   }
 
   /* SCHEDULE */
@@ -654,7 +711,31 @@ footer{
   }
 
   .schedule-wrapper.expanded {
-    min-height: 1600px;
+    min-height: 1500px;
+  }
+
+  .btn-main-schedule, .btn-outline-warning{
+    width: 200px;
+  }
+
+  /* CTA-UPDC */
+    .CTA-UPDC {
+      background-image: url('../../../public/Assets/Revamp/CTA PDF.png');
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      border-radius: 16px;
+      height: 180px;
+      margin: 100px 0;
+    }
+
+  .heading-CTA-UPDC{
+    font-size: 24px !important;
+  }
+
+  .btn-cta{
+    font-size: 14px !important;
+    padding: 12px !important;
   }
 
   /* PRICING */
@@ -701,7 +782,7 @@ footer{
   }
 
   .card-testimonial{
-    min-height: 443px !important;
+    min-height: 360px !important;
     width: 100%;
     margin-right: 40px !important;
   }
@@ -711,14 +792,18 @@ footer{
     font-size: 28px;
   }
 
+  /* PARTNER CAROUSEL */
+  .section-partner-carousel{
+    margin: 0 40px !important;
+  }
+
   /* FAQ */
 
   .contact-us{
     background-image: url("../../../public/Assets/Revamp/BG-contact.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    min-height: 900px;
-    padding: 80px 60px !important;
+    background-size: 100% 100%;
+    height: 700px;
+    padding: 48px;
   }
 
   .contact-heading{
@@ -764,7 +849,7 @@ footer{
     background-position: center;
   }
 
-  .hero-content{
+  .hero-heading{
     padding-left: 20px !important;
     padding-right: 20px !important;
   }
@@ -835,6 +920,11 @@ footer{
     margin-bottom: 24px;
   }
 
+  .card-subheading-benefit{
+    font-size: 16px;
+    color: black;
+  }
+
   .card-body-benefit{
     padding: 16px;
   }
@@ -879,8 +969,9 @@ footer{
     margin-bottom: 50px !important;
   }
 
-  .img-speaker{
-    width: 280px;
+  .speaker-image {
+    width: 100%;
+    height: 320px;
   }
 
   .slick-slide{
@@ -889,6 +980,10 @@ footer{
   }
 
   /* Schedule */
+
+  .btn-main-schedule, .btn-outline-warning{
+    width: 100% !important;
+  }
 
   .union{
     width: 600px;
@@ -913,7 +1008,7 @@ footer{
 
   /* CTA UPDC */
   .CTA-UPDC {
-    background-size: cover;
+    background-size: contain;
     background-image: url('../../../public/Assets/Revamp/CTA-PDF-Mobile.png');
     background-position: center;
     border-radius: 16px;
@@ -934,6 +1029,11 @@ footer{
   }
 
   /* PRICING */
+
+  .tab-price, .tab-price-active{
+    font-size: 14px;
+    padding: 12px 20px !important;
+  }
 
   .pricing{
     margin: 50px 0;
@@ -970,6 +1070,7 @@ footer{
     width: 100% !important;
   }
 
+  
   /* GALLERY */
   .gallery{
     padding: 0 12px;
@@ -986,7 +1087,7 @@ footer{
 
   .card-testimonial{
     min-height: 395px !important;
-    min-width: 420px !important;
+    min-width: 400px !important;
   }
 
   /* HIGHLIGHT SLIDER */
@@ -1040,15 +1141,25 @@ footer{
 
   .hanger-card {
     margin-top: 36px;
-    max-width: 410px;
-    min-height: 374px;
+    max-width: 400px;
+    min-height: 300px;
     border-radius: 24px;
     z-index: 2;
     padding-bottom: 32px;
   }
 
+  .hanger-image{
+    width: 356px;
+    height: 200px;
+  }
+
+  .img-hanger{
+    width: 100%;
+    height: auto;
+  }
+
   .title-card-highlight{
-    font-size: 24px;
+    font-size: 20px;
   }
 
   .slick-dots {
@@ -1061,7 +1172,7 @@ footer{
 
   /* PARTNER CAROUSEL */
   .section-partner-carousel{
-    margin-top: 120px;
+    margin: 0 12px !important;
   }
 
   /* FAQ */
@@ -1070,11 +1181,11 @@ footer{
     margin: 50px 0 !important;
   }
 
-  /* .contact-us{
+  .contact-us{
     background-image: url("../../../public/Assets/Revamp/BG-contact.png");
-    background-size: cover;
-    min-height: 455px;
-  } */
+    background-size: 100% 100%;
+    height: 440px;
+  }
 
   .faq-heading{
     font-size: 24px;
