@@ -286,7 +286,6 @@
 .btn-main-schedule, .btn-outline-warning{
   padding-top: 12px;
   padding-bottom: 12px;
-  width: 50px;
 }
 
 .btn-outline-warning:hover{
@@ -712,10 +711,6 @@ footer{
 
   .schedule-wrapper.expanded {
     min-height: 1500px;
-  }
-
-  .btn-main-schedule, .btn-outline-warning{
-    width: 200px;
   }
 
   /* CTA-UPDC */
