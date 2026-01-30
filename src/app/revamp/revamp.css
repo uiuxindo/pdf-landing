@@ -973,6 +973,10 @@ footer{
     height: 300px;
   }
 
+  .speaker-name{
+    font-size: 28px !important;
+  }
+
   .slick-slide{
     width: fit-content !important;
     /* margin-right: 32px; */
