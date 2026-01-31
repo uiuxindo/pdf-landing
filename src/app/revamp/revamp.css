@@ -1053,6 +1053,10 @@ footer{
     font-size: 28px !important;
   }
 
+  .speaker-info{
+    width: 260px;
+  }
+
   .slick-slide{
     width: fit-content !important;
     /* margin-right: 32px; */

@@ -198,57 +198,62 @@ export default function Home() {
           <p className='fw-700 mb-3 heading-juri'>Meet the Judges</p>
           <p className='text-grey'>Your work will be reviewed by experienced UI/UX practitioners who are ready to share valuable insights and feedback</p>
           <div className='row juri'>
+            
             <div className='col-md-4 col-12 position-relative text-center juri-container'>
-              <Image className="mb-md-4 img-fluid juri-image me-md-0 me-3 mb-4 mb-md-0" src="/Assets/UPDC/Juri-1.png" 
-                     width={302} 
-                     height={302} 
-                     alt=""
-                     style={{filter:'grayscale(100%)'}}
-              />
-              <p className='fw-700 mb-2 nama-juri'>Faris Rakha</p>
-              <p className='text-grey mb-0 job-juri'>Product Designer at Wagely</p>
-              <div className='rounded-circle position-absolute linkedin-container'>
-                <Link href="https://www.linkedin.com/in/denny-wirawan-b5a576183/">
+              <div className='juri-image-wrapper'>
+                <Image className="mb-md-4 img-fluid juri-image me-md-0 me-3 mb-4 mb-md-0" src="/Assets/UPDC/Juri-1.png" 
+                      width={302} 
+                      height={302} 
+                      alt=""
+                      style={{filter:'grayscale(100%)'}}
+                />
+                <Link href="https://www.linkedin.com/in/denny-wirawan-b5a576183/" className='linkedin-container position-absolute rounded-circle'>
                   <div className='d-flex align-items-center justify-content-center linkedin-juri'>
                     <FontAwesomeIcon icon={faLinkedinIn} className='linkedin-icon fs-2xl' style={{color: "white"}} />
-                  </div>
+                  </div>     
                 </Link>
               </div>
-            </div>
-            <div className='col-md-4 col-12 position-relative text-center juri-container'>
-              <Image className="mb-md-4 img-fluid juri-image me-md-0 me-3 mb-4 mb-md-0" src="/Assets/UPDC/Juri-2.png" 
-                     width={302} 
-                     height={302} 
-                     alt=""
-                     style={{filter:'grayscale(100%)'}}
-              />
               <p className='fw-700 mb-2 nama-juri'>Denny Wirawan</p>
               <p className='text-grey mb-0 job-juri'>Sr. Product Designer at Blibli</p>
-              <div className='rounded-circle position-absolute linkedin-container'>
-                <Link href="https://www.linkedin.com/in/denny-wirawan-b5a576183/">
+            </div>
+
+            <div className='col-md-4 col-12 position-relative text-center juri-container'>
+              <div className='juri-image-wrapper'>
+                <Image className="mb-md-4 img-fluid juri-image me-md-0 me-3 mb-4 mb-md-0" src="/Assets/UPDC/Juri-2.png" 
+                      width={302} 
+                      height={302} 
+                      alt=""
+                      style={{filter:'grayscale(100%)'}}
+                />
+                <Link href="https://www.linkedin.com/in/faris-rakha/" className='linkedin-container position-absolute rounded-circle'>
                   <div className='d-flex align-items-center justify-content-center linkedin-juri'>
                     <FontAwesomeIcon icon={faLinkedinIn} className='linkedin-icon fs-2xl' style={{color: "white"}} />
-                  </div>
+                  </div>     
                 </Link>
               </div>
+              <p className='fw-700 mb-2 nama-juri'>Faris Rakha</p>
+              <p className='text-grey mb-0 job-juri'>Product Designer at Wagely</p>
             </div>
+
             <div className='col-md-4 col-12 position-relative text-center'>
+              <div className='juri-image-wrapper'>
               <Image className="mb-md-4 img-fluid juri-image me-md-0 me-3 mb-4 mb-md-0" src="/Assets/UPDC/Juri-3.png" 
                      width={302} 
                      height={302} 
                      alt=""
                      style={{filter:'grayscale(100%)'}}
               />
+
+              <Link href="https://www.linkedin.com/in/rayyan-adwiarto/" className='linkedin-container position-absolute rounded-circle'>
+                <div className='d-flex align-items-center justify-content-center linkedin-juri'>
+                  <FontAwesomeIcon icon={faLinkedinIn} className='linkedin-icon fs-2xl' style={{color: "white"}} />
+                </div>
+              </Link>
+              </div>
               <p className='fw-700 mb-2 nama-juri'>Rayyan Adwiarto</p>
               <p className='text-grey mb-0 job-juri'>Product Designer at Astrapay</p>
-              <div className='rounded-circle position-absolute linkedin-container'>
-                <Link href="https://www.linkedin.com/in/denny-wirawan-b5a576183/">
-                  <div className='d-flex align-items-center justify-content-center linkedin-juri'>
-                    <FontAwesomeIcon icon={faLinkedinIn} className='linkedin-icon fs-2xl' style={{color: "white"}} />
-                  </div>
-                </Link>
-              </div>
             </div>
+            
           </div>
         </div>
       </div>

@@ -191,13 +191,18 @@
 	font-size: 20px;
 }
 
+.juri-image-wrapper{
+	display: inline-block;
+}
+
 .linkedin-container{
 	background: #FFB929;
 	padding: 6px;
 	border: solid 1px #B74A06;
 	width: fit-content;
-	top: 120px;
-	left: 12px;
+  	top: 40%;
+  	left:15%;
+  	transform: translate(-35%, -50%);
 }
 
 .linkedin-juri{
@@ -372,8 +377,8 @@ footer{
 	}
 
 	.linkedin-container{
-		top: 80px;
-		left: -5px;
+		top: 30%;
+		left: 5%;
 	}
 
 	.linkedin-juri{
@@ -395,7 +400,7 @@ footer{
 
 @media (min-width: 1001px) and (max-width:1400px){
 
-		/* HERO */
+	/* HERO */
 	.hero-updc{
 		background-image: url("../../../public/Assets/Revamp/UPDC-Revamp/BG-Hero-UPDC-Mobile.png");
 		background-size: cover;
@@ -500,15 +505,16 @@ footer{
 
 	/* JURI */
 
-	.linkedin-container{
-		top: 120px;
-		left: -5px;
-	}
-
 	.linkedin-juri{
 		width: 36px;
 		height: 36px;
 	}
+
+	.linkedin-container{
+		top: 35%;
+		left: 5%;
+	}
+
 
   /* FOOTER */
   footer{
@@ -731,13 +737,17 @@ footer{
 	}
 
 	.juri-image{
-		width: 250px;
-		height: 250px;
+		width: 220px;
+		height: 220px;
+	}
+
+	.juri-image-wrapper{
+		display: inline-block;
 	}
 
 	.linkedin-container{
-		top: 100px !important;
-		left: 48px !important;
+		top: 35% !important;
+		left: 18% !important;
 	}
 
   /* FOOTER */
