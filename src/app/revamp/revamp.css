@@ -275,9 +275,9 @@
   transition: max-height 0.5s ease;
 }
 
-.schedule-wrapper.expanded {
-  min-height: 900px;
-}
+  .schedule-wrapper.expanded {
+    min-height: fit-content !important;
+  }
 
 .schedule-gradient {
   position: absolute;
@@ -295,7 +295,7 @@
 }
 
 .schedule-breakdown{
-  margin-top: 70px;
+  margin-top: 60px !important;
 }
 
 .schedule-breakdown-heading{
@@ -732,9 +732,9 @@ footer{
     min-height: 800px;
   }
 
-  .schedule-wrapper.expanded {
+  /* .schedule-wrapper.expanded {
     min-height: 1500px;
-  }
+  } */
 
     .schedule-gradient {
       top: 0px !important;
@@ -745,10 +745,6 @@ footer{
         #fffaeb 55%,
         #fffaeb 100%
       );
-  }
-
-  .schedule-breakdown{
-    margin-top: 40px !important;
   }
 
 
@@ -899,10 +895,6 @@ footer{
     min-height: 750px;
   }
 
-  .schedule-wrapper.expanded {
-    min-height: 2700px !important;
-  }
-
     .schedule-gradient {
       top: 650px !important;
       height: 100px;
@@ -912,10 +904,6 @@ footer{
         #fffaeb 55%,
         #fffaeb 100%
       );
-  }
-
-  .schedule-breakdown{
-    margin-top: 0px !important;
   }
 
 }
@@ -951,6 +939,7 @@ footer{
 
   .desc-hero{
     font-size: 14px;
+    margin-top: 24px;
   }
 
   /* BENEFIT */
@@ -1105,10 +1094,6 @@ footer{
         #fffaeb 55%,
         #fffaeb 100%
       );
-  }
-
-  .schedule-breakdown{
-    margin-top: 0px;
   }
 
   .schedule-breakdown-heading{
@@ -1333,7 +1318,7 @@ footer{
 
 @media(min-width:390px) and (max-width:766px){
   
-  .schedule-wrapper.expanded {
+  /* .schedule-wrapper.expanded {
     min-height: 2500px;
-  }
+  } */
 }

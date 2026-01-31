@@ -541,17 +541,13 @@ footer{
   }
 
   .heading-2 {
-    width: 100%;
+    width: 320px;
     justify-self: center;
 		padding: 0 40px;
   }
 
 	.updc-heading, .updc-heading2{
 		font-size: 32px;
-	}
-
-	.heading-2{
-		width: fit-content;
 	}
 
 	.updc-heading2{
