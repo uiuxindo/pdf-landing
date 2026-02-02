@@ -60,7 +60,7 @@ export default function MobileHighlightHangerSlider() {
           </div>
           <Slider {...settings}>
             {highlightsData.map(item => (
-              <div className="hanger-wrapper position-relative d-flex justify-content-center">
+              <div key={item.id} className="hanger-wrapper position-relative d-flex justify-content-center">
                 <Card className="hanger-card px-3 pt-3 overflow-hidden position-relative">
                   <div className="hanger-image position-relative">
                     <Image
@@ -68,8 +68,6 @@ export default function MobileHighlightHangerSlider() {
                       alt={item.title}
                       className="radius-16 img-hanger"
                       fill
-                      // width={375}
-                      // height={220}
                     />
                   </div>
 
