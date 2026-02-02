@@ -234,7 +234,7 @@ export default function Home() {
                 />
                 hello@uiuxindo.id
                 </Link>
-                <Link href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJTLpcfBBMDFHFqlbDBnmPJPVXJcDRxJshgSLHhxnfMjLNdzjRbsWRCmzXdwWFhTTTlbQBB" 
+                <Link href="https://api.whatsapp.com/send?phone=6282310101118&text=Halo,%20saya%20mau%20bertanya" 
                     className="btn rounded-pill px-3 py-2 bg-white d-flex align-items-center fw-700 btn-contact-us" 
                     style={{width:'fit-content'}}>
                   <Image className="me-2" 
