@@ -14,19 +14,14 @@ import PDFSchedule from "./revamp/Component/PDFSchedule";
 import PricingSection from "./revamp/Component/Price";
 import OrnamentCarousel from "./revamp/Component/OrnamentCarousel";
 import SliderTestimoni from "./revamp/Component/SliderTestimoni";
-import HighlightsSlider from "./revamp/Component/Highlight";
-import CircularGallery from "./revamp/Component/CircularGallery";
-import GalleryCardGenerator from "./revamp/Component/GalleryCardGenerator";
 import MobileHighlightHangerSlider from "./revamp/Component/MobileCircularGallery";
-import FestivalSection from "./revamp/Component/FestivalSection";
+import HighlightSection from "./revamp/Component/HighlightSlider";
 import PartnerCarousel from "./revamp/Component/PartnerCarousel";
 import FAQ from "./revamp/Component/FAQ";
 import Footer from "./Footer/Footer";
 import FloatingWhatsapp from "./landing/WidgetWhatsapp";
 
 export default function Home() {
-
-  const [galleryItems, setGalleryItems] = useState([]);
 
   const homeMenus = [
     { label: "Home", href: "#Home" },
@@ -37,9 +32,6 @@ export default function Home() {
     { label: "Partner", href: "#Partner" },
   ];
 
-  const desktopSliderRef = useRef(null);
-  const mobileSliderRef = useRef(null);
-  const circularGalleryRef = useRef(null);
 
   return (
     <>
@@ -58,7 +50,7 @@ export default function Home() {
         <div className="row">
 
           {/* Hero */}
-          <div id="Home" className="col-12 hero-revamp d-flex flex-column justify-content-center align-items-center">
+          <div id="Home" className="col-12 hero-revamp">
             <div className="hero-content text-center">
               <div className="hero-heading text-center">
                 <div className="d-flex flex-row align-items-center justify-content-center">
@@ -78,7 +70,7 @@ export default function Home() {
                 </div>
                 <p className="desc-hero fs-xl mb-0 text-grey">Unlocking the Path to A Global Career from Wherever You Stand</p>
               </div>
-              <Link href="/payment" className="btn-main-hero rounded-pill py-3 px-4 fw-600">
+              <Link href="/payment" className="btn btn-main-hero rounded-pill py-3 px-4 fw-600">
                 Register Now
               </Link>
             </div>
@@ -107,7 +99,7 @@ export default function Home() {
                 <p className="fw-600 mb-0" style={{color:'#454545'}}>100% Online via Zoom & Access from Anywhere</p>
               </div>
               <div className="heading-benefit-3 mt-3 mt-md-0 text-center">
-                <Link href="/payment" className="btn-main rounded-pill p-3 fw-600" style={{marginTop:'40px'}}>
+                <Link href="/payment" className="btn btn-main rounded-pill py-3 px-4 fw-600">
                   Get Your Ticket
                 </Link>
               </div>
@@ -201,63 +193,14 @@ export default function Home() {
             <div className="container px-lg-0">
               <SliderTestimoni/>
             </div>
-                <div className="row highlight" style={{marginTop:'150px'}}>
-                  <div className="col-12 px-md-0 position-relative">
-                    <div className="d-flex align-items-center justify-content-between highlight-heading-container">
-                      <div className="text-center text-md-start">
-                        <p className="fw-700 mb-2 highlight-heading">Highlights From Our Previous Festival</p>
-                        <p>A glimpse into the moments, energy, and experiences from our last event</p>
-                      </div>
-                      <div className="d-none d-lg-flex gap-3">
-                        <Link
-                          href="#"
-                          onClick={(e) => {
-                            e.preventDefault();
-                            circularGalleryRef.current?.prev();
-                          }}
-                          className="btn bg-white border rounded-circle"
-                        >
-                          <i className="bi bi-arrow-left fs-2xl"></i>
-                        </Link>
-
-                        <Link
-                          href="#"
-                          onClick={(e) => {
-                            e.preventDefault();
-                            circularGalleryRef.current?.next();
-                          }}
-                          className="btn bg-white border rounded-circle"
-                        >
-                          <i className="bi bi-arrow-right fs-2xl"></i>
-                        </Link>
-                      </div>
-                    </div>
-
-                    <Image className="d-none d-lg-block" 
-                          src="/Assets/Revamp/white-line.png" 
-                          width={1585} 
-                          height={200}
-                          alt=""
-                          style={{marginTop:'-70px'}}
-                    />
-                    <div className="d-none d-md-block">
-                      <GalleryCardGenerator className='d-none d-md-block' onGenerated={setGalleryItems} />
-                    </div>
-
-                    {galleryItems.length > 0 && (
-                      <div className="d-none d-md-block ">
-                        <CircularGallery
-                          items={galleryItems}
-                          bend={-2}
-                          borderRadius={0.05}
-                          scrollEase={0.02}
-                          ref={circularGalleryRef}
-                        />
-                      </div>
-                    )}
-                    <MobileHighlightHangerSlider className='d-block d-lg-none'/>
-                  </div>
-                </div>
+            <div className="container px-lg-0">
+              <div className="row highlight d-none d-md-block" style={{marginTop:'150px'}}>
+                <HighlightSection/>
+              </div>
+              <div className="row highlight d-block d-md-none" style={{marginTop:'150px'}}>
+                <MobileHighlightHangerSlider/>
+              </div>
+            </div>
           </div>
         </div>
       </div>

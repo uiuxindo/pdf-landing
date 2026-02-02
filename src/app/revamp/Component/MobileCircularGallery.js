@@ -53,42 +53,35 @@ export default function MobileHighlightHangerSlider() {
 
   return (
     <section className="hanger-section position-relative d-md-none">
-      <div className="container px-0 position-relative">
-        <div className="bg-white mt-5 position-absolute rope"/>
-        <div className='slider-wrapper position-relative'>
+      <div className="container">
+          <div className="text-center">
+            <p className="fw-700 fs-2xl mb-1">Highlights From Our Previous Festival</p>
+            <p className="text-dark">A glimpse into the moments, energy, and experiences from our last event</p>
+          </div>
           <Slider {...settings}>
             {highlightsData.map(item => (
-              <div key={item.id} className="hanger-slide">
-                <div className="hanger-wrapper position-relative d-flex justify-content-center">
-
-                  {/* <div className="bg-white mt-5 position-absolute rope"/> */}
-                  <div className="blue-clip-mobile radius-4 d-flex justify-content-center position-absolute">
-                    <span className='rounded-circle bg-white'/>
+              <div className="hanger-wrapper position-relative d-flex justify-content-center">
+                <Card className="hanger-card px-3 pt-3 overflow-hidden position-relative">
+                  <div className="hanger-image position-relative">
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      className="radius-16 img-hanger"
+                      fill
+                      // width={375}
+                      // height={220}
+                    />
                   </div>
 
-                  <Card className="hanger-card px-3 pt-3 overflow-hidden position-relative">
-                    <div className="hanger-image position-relative">
-                      <Image
-                        src={item.image}
-                        alt={item.title}
-                        className="radius-16 img-hanger"
-                        fill
-                        // width={375}
-                        // height={220}
-                      />
-                    </div>
+                  <div className="mt-2">
+                    <p className="fw-bold mb-1 fw-700 title-card-highlight">{item.title}</p>
+                    <p className="mb-0 text-grey">{item.description}</p>
+                  </div>
+                </Card>
 
-                    <div className="mt-3">
-                      <p className="fw-bold mb-1 fw-700 title-card-highlight">{item.title}</p>
-                      <p className="mb-0 text-grey">{item.description}</p>
-                    </div>
-                  </Card>
-
-                </div>
               </div>
             ))}
           </Slider>
-        </div>
       </div>
     </section>
   );

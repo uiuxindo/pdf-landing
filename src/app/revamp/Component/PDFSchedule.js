@@ -39,7 +39,7 @@ export default function PDFSchedule() {
 
           <Link
             href="/payment"
-            className="btn-main-schedule mt-3 mt-md-0 rounded-pill px-4 fw-600"
+            className="btn btn-main-schedule mt-3 mt-md-0 rounded-pill px-4 fw-600"
           >
             Get Your Ticket
           </Link>

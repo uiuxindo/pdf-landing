@@ -10,12 +10,15 @@
 
 .btn-main{
   background: #FFB929;
+  transition: all 0.3s ease;
 }
 
 .btn-main:hover{
   border: solid 1px #FFB929;
   color: #ffb929;
   background: transparent;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 185, 41, 0.3);
 }
 
 /* HERO */
@@ -24,6 +27,7 @@
   background-size: 100% 100%;
   height: 720px;
   background-repeat: no-repeat;
+  padding-top: 150px;
 }
 
 .hero-heading{
@@ -35,12 +39,16 @@
 }
 
 .btn-main-hero{
-  margin-top: 40px !important;
   background: #FFB929;
+  transition: all 0.3s ease;
 }
 
 .btn-main-hero:hover{
-  background: white;
+  background: transparent;
+  color: #ffb929;
+  border: solid 1px #ffb929;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 185, 41, 0.3);
 }
 
 /* CAROUSEL TAG */
@@ -306,14 +314,21 @@
   background: #ffb929;
 }
 
+.btn-main-schedule:hover{
+  background: white !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 185, 41, 0.3);
+}
+
 .btn-main-schedule, .btn-outline-warning{
   padding-top: 12px;
   padding-bottom: 12px;
 }
 
 .btn-outline-warning:hover{
-  background: none;
-  color: #FFB929;
+  background: #ffb929;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 185, 41, 0.3);
 }
 
 /* CTA UPDC */
@@ -330,6 +345,12 @@
 .heading-CTA-UPDC{
   font-size: 40px;
 }
+
+  .btn-cta:hover{
+    background: #ffb929;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 185, 41, 0.3);
+  }
 
 /* PRICING */
 
@@ -395,10 +416,11 @@
 
 /* GALLERY */
 .gallery{
-  background-size: cover;
+  background-size: contain;
   background-image: url('../../../public/Assets/Revamp/BG-Testimoni.png');
   background-position: center;
-  height: 1440px;
+  height: fit-content;
+  padding-bottom: 100px;
 }
 
 /* Testimoni */
@@ -442,72 +464,41 @@
   min-height: 600px;
 }
 
-.circular-gallery {
-  width: 100%;
-  height: 400px;
-  /* overflow: hidden; */
-  cursor: grab;
-  display: flex;
-  justify-content: center;
-  margin-top: -48px;
-}
+  .slick-dots li{
+    margin: 0 4px !important;
+  }
 
-.circular-gallery:active {
-  cursor: grabbing;
-}
+  .slick-dots li button::before{
+    font-size: 12px !important;
+    line-height: 40px !important;
+  }
 
-/* .card-root{
-  overflow: visible;
-} */
+  .swiper {
+    width: 100%;
+    margin-top: 50px;
+    padding-bottom: 50px;
+  }
 
-.circular-gallery {
-  width: 100%;
-  height: 400px;
-  overflow: hidden;
-  cursor: grab;
-  display: flex;
-  justify-content: center;
-  margin-top: -48px;
-}
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: auto !important;
+    height: 50% !important;
+  }
 
-.circular-gallery:active {
-  cursor: grabbing;
-}
+  .swiper-slide img {
+    display: block;
+    width: 400px;
+  }
 
-.card-image-wrapper {
-  position: relative;
-  width: 325px;
-  border-radius: 16px;
-  overflow: hidden;
-  margin-bottom: 12px;
-  /* margin-top: 12px; */
-}
+  .card-highlight{
+    width: 440px;
+  }
 
-.blue-clip {
-  width: 30px;
-  height: 50px;
-  background-color: #4A90E2;
-  position: absolute;
-  top: 0px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 2;
-  border-radius: 2px;
-}
-
-.blue-clip::after {
-  content: '';
-  position: absolute;
-  top: 10px;
-  left: 50%;
-  width: 12px;
-  height: 12px;
-  background: #ffffff;
-  border-radius: 50%;
-  transform: translateX(-50%);
-  opacity: 0.9;
-}
-
+  .card-img-top{
+    width: 100% !important;
+    height: 230px;
+  }
 
 /* PARTNER CAROUSEL */
 .section-partner-carousel{
@@ -625,20 +616,22 @@ footer{
 
   /* HERO */
   .hero-revamp{
-    background-image: url("../../../public/Assets/Revamp/Hero-Section-Alt-3-Mobile.png");
+    background-image: url("../../../public/Assets/Revamp/Hero-Section-BG.png");
     background-size: 100% 100%;
-    height: 1400px;
+    height: 480px;
     background-position: center;
+    padding-top: 80px;
   }
 
   .hero-heading{
     padding-left: 70px !important;
     padding-right: 70px !important;
-    margin-bottom: 240px;
+    margin-bottom: 20px;
   }
 
   .btn-main-hero{
-    margin-bottom: 540px !important;
+    font-size: 14px;
+    padding: 12px 24px !important;
   }
 
   .title-second-row{
@@ -647,15 +640,16 @@ footer{
 
 
   .title-hero{
-    font-size: 48px !important;
+    font-size: 32px !important;
   }
 
   .image-beyond, .image-worldwide{
-    width: 300px !important;
-    height: 110px !important;
+    width: 160px !important;
+    height: 60px !important;
   }
 
   .desc-hero{
+    font-size: 16px;
     margin-top: 16px !important;
   }
 
@@ -737,7 +731,7 @@ footer{
   } */
 
     .schedule-gradient {
-      top: 0px !important;
+      top: 700px !important;
       height: 100px;
       background: linear-gradient(
         to bottom,
@@ -764,7 +758,6 @@ footer{
   }
 
   .btn-cta{
-    font-size: 14px !important;
     padding: 12px !important;
   }
 
@@ -794,6 +787,15 @@ footer{
   }
 
   /* TESTIMONI */
+
+    .gallery{
+      padding: 0 12px;
+      background-size: contain;
+      background-image: url('../../../public/Assets/Revamp/BG-Gallery-Mobile.png');
+      /* height: fit-content; */
+      padding-bottom: 100px;
+    }
+
   .section-testimoni{
     padding: 0 24px !important;
   }
@@ -895,15 +897,33 @@ footer{
     min-height: 750px;
   }
 
-    .schedule-gradient {
-      top: 650px !important;
-      height: 100px;
-      background: linear-gradient(
-        to bottom,
-        rgba(255, 250, 235, 0) 0%,
-        #fffaeb 55%,
-        #fffaeb 100%
-      );
+  .schedule-gradient {
+    top: 650px !important;
+    height: 100px;
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 250, 235, 0) 0%,
+      #fffaeb 55%,
+      #fffaeb 100%
+    );
+  }
+
+  /* GALLERY */
+  .gallery{
+    padding: 0 12px;
+    background-size: contain;
+    background-image: url('../../../public/Assets/Revamp/BG-Gallery-Mobile.png');
+    /* height: fit-content; */
+    padding-bottom: 100px;
+  }
+
+  /* HIGHLIGHT */
+  .hanger-card{
+    width: 100%;
+  }
+
+  .img-hanger{
+    height: 180px !important;
   }
 
 }
@@ -912,15 +932,17 @@ footer{
 
   /* HERO */
   .hero-revamp{
-    background-image: url("../../../public/Assets/Revamp/Hero-Section-Alt-3-Mobile.png");
-    background-size: cover;
-    height: 840px;
+    background-image: url("../../../public/Assets/Revamp/BG-Hero-Mobile.png");
+    background-size: 100% 100%;
+    height: 700px;
     background-position: center;
+    padding-top: 240px !important;
   }
 
   .hero-heading{
     padding-left: 20px !important;
     padding-right: 20px !important;
+    margin-bottom: 40px;
   }
 
   .title-second-row{
@@ -1064,6 +1086,11 @@ footer{
 
   .speaker-slider .slick-dots {
     bottom: -10px !important;
+    margin: 0 1px;
+  }
+
+  .speaker-slider .slick-dots li button:before{
+    font-size: 12px !important;
   }
 
   /* Schedule */
@@ -1106,11 +1133,12 @@ footer{
 
   /* CTA UPDC */
   .CTA-UPDC {
-    background-size: contain;
+    background-size: 100% 100%;
     background-image: url('../../../public/Assets/Revamp/CTA-PDF-Mobile.png');
     background-position: center;
     border-radius: 16px;
-    height: 320px;
+    height: auto;
+    padding: 48px 0;
     margin: 50px 0;
   }
 
@@ -1176,6 +1204,10 @@ footer{
   /* GALLERY */
   .gallery{
     padding: 0 12px;
+    background-size: contain;
+    background-image: url('../../../public/Assets/Revamp/BG-Gallery-Mobile.png');
+    /* height: fit-content; */
+    padding-bottom: 100px;
   }
 
   /* TESTIMONI */
@@ -1205,57 +1237,21 @@ footer{
     font-size: 24px;
   }
 
-  /* Mobile Circular Gallery */
-
-  .hanger-slide {
-    padding-top: 10px;
-    margin-left: 8px;
-  }
-  
-  .rope {
-    top: -16px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    z-index: 1;
-  }
-
-  .slider-wrapper{
-    z-index: 2;
-  }
-
   .hanger-wrapper{
-    margin-top: 20px;
-  }
-
-  .blue-clip-mobile {
-    top: -10px;
-    /* left: 50%;
-    transform: translateX(-50%); */
-    width: 36px;
-    height: 56px;
-    background: #4DA2FF;
-    border: solid 1px #1F67F1;
-    z-index: 3;
-  }
-
-  .blue-clip-mobile span {
-    margin-top: 8px;
-    width: 14px;
-    height: 14px;
+    margin-top: 24px;
+    margin-left: 6px;
   }
 
   .hanger-card {
-    margin-top: 36px;
-    max-width: 400px;
-    min-height: 300px;
+    max-width: 390px;
+    min-height: 350px;
     border-radius: 24px;
     z-index: 2;
     padding-bottom: 32px;
   }
 
   .hanger-image{
-    width: 356px;
+    width: 100%;
     height: 200px;
   }
 
@@ -1320,9 +1316,17 @@ footer{
 
 }
 
-@media(min-width:390px) and (max-width:766px){
-  
-  /* .schedule-wrapper.expanded {
-    min-height: 2500px;
-  } */
+@media (min-width:1001px) and (max-width:1400px){
+    .gallery{
+    padding: 0 12px;
+    background-size: contain;
+    background-image: url('../../../public/Assets/Revamp/BG-Gallery-Mobile.png');
+    /* height: fit-content; */
+    padding-bottom: 100px;
+  }
 }
+
+
+
+
+

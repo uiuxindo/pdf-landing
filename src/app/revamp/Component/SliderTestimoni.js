@@ -23,6 +23,8 @@ const CardTestimoni = () => {
   const mobileSliderRef = useRef(null);
 
   const [selectedTestimony, setSelectedTestimony] = useState(null);
+  // State untuk melacak index slide saat ini
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   const desktopSettings = {
     infinite: false,
@@ -31,6 +33,8 @@ const CardTestimoni = () => {
     slidesToScroll: 1,
     arrows: false,
     dots: true,
+    // Callback untuk update state saat slide berubah
+    afterChange: (current) => setCurrentSlide(current),
   };
 
   const tabletSettings = {
@@ -40,6 +44,7 @@ const CardTestimoni = () => {
     slidesToScroll: 1,
     arrows: false,
     dots: true,
+    afterChange: (current) => setCurrentSlide(current),
   };
 
   const mobileSettings = {
@@ -49,7 +54,8 @@ const CardTestimoni = () => {
     slidesToScroll: 1,
     arrows: false,
     dots: true,
-		variableWidth:true,
+    variableWidth: true,
+    afterChange: (current) => setCurrentSlide(current),
     appendDots: (dots) => (
       <div>
         <ul className="ps-0 pe-4 mb-0 mt-4 d-flex justify-content-center gap-2">
@@ -58,6 +64,10 @@ const CardTestimoni = () => {
       </div>
     ),
   };
+
+  // Logika untuk disable button
+  const isBeginning = currentSlide === 0;
+  const isEnd = currentSlide >= testimony_data.length - desktopSettings.slidesToShow;
 
   const renderCards = () =>
     testimony_data.map((item) => {
@@ -108,7 +118,6 @@ const CardTestimoni = () => {
 
   return (
     <>
-
       <div className="d-flex justify-content-between align-items-center mb-4">
         <div>
           <p className="fw-700 mb-1 heading-testimoni">
@@ -125,9 +134,13 @@ const CardTestimoni = () => {
             href="#"
             onClick={(e) => {
               e.preventDefault();
-              desktopSliderRef.current?.slickPrev();
+              if (!isBeginning) desktopSliderRef.current?.slickPrev();
             }}
-            className="btn bg-white border rounded-circle"
+            className={`btn bg-white border rounded-circle ${isBeginning ? 'disabled' : ''}`}
+            style={{ 
+              opacity: isBeginning ? 0.5 : 1, 
+              pointerEvents: isBeginning ? 'none' : 'auto' 
+            }}
           >
             <i className="bi bi-arrow-left fs-2xl"></i>
           </Link>
@@ -136,9 +149,13 @@ const CardTestimoni = () => {
             href="#"
             onClick={(e) => {
               e.preventDefault();
-              desktopSliderRef.current?.slickNext();
+              if (!isEnd) desktopSliderRef.current?.slickNext();
             }}
-            className="btn bg-white border rounded-circle"
+            className={`btn bg-white border rounded-circle ${isEnd ? 'disabled' : ''}`}
+            style={{ 
+              opacity: isEnd ? 0.5 : 1, 
+              pointerEvents: isEnd ? 'none' : 'auto' 
+            }}
           >
             <i className="bi bi-arrow-right fs-2xl"></i>
           </Link>
