@@ -7,6 +7,7 @@
  .fs-lg {font-size: 16px;}
  .fs-xl {font-size: 20px;}
  .fs-2xl {font-size: 24px;}
+.fs-3xl {font-size: 32px;}
  
  /* Font Weight */
  .fw-100 {font-weight: 100;}
@@ -30,6 +31,7 @@
 .radius-10 {border-radius: 10px;}
 .radius-12 {border-radius: 12px;}
 .radius-16 {border-radius: 16px;}
+.radius-24 {border-radius: 24px;}
 
 html,
 body {
@@ -95,12 +97,18 @@ a {
 
 .btn-hero{
   background-color: #FFB929;
-  padding: 12px 24px !important;
+  padding: 16px 24px !important;
 }
 
 .btn-cta{
   padding: 12px 24px !important;
 }
+
+/* .btn-cta:hover{
+  background: #ffb929;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 185, 41, 0.3);
+} */
 
 .btn-navbar {
   width: fit-content;
@@ -134,7 +142,7 @@ a {
 
 .whatsapp-fab {
   /* position: fixed; */
-  bottom: 100px;
+  bottom: 30px;
   right: 30px;
   z-index: 99;
 }

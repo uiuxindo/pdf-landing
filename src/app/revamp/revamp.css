@@ -1,0 +1,1332 @@
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
+.container{
+  max-width: 1140px;
+}
+
+.btn-main{
+  background: #FFB929;
+  transition: all 0.3s ease;
+}
+
+.btn-main:hover{
+  border: solid 1px #FFB929;
+  color: #ffb929;
+  background: transparent;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 185, 41, 0.3);
+}
+
+/* HERO */
+.hero-revamp{
+  background-image: url("../../../public/Assets/Revamp/Hero-Section-BG.png");
+  background-size: 100% 100%;
+  height: 720px;
+  background-repeat: no-repeat;
+  padding-top: 150px;
+}
+
+.hero-heading{
+  margin-bottom: 60px;
+}
+
+.title-hero{
+  font-size: 72px;
+}
+
+.btn-main-hero{
+  background: #FFB929;
+  transition: all 0.3s ease;
+}
+
+.btn-main-hero:hover{
+  background: transparent;
+  color: #ffb929;
+  border: solid 1px #ffb929;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 185, 41, 0.3);
+}
+
+/* CAROUSEL TAG */
+
+.tag-carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+  padding: 24px 0;
+}
+
+.tag-carousel-track {
+  display: flex;
+  width: max-content;
+  gap: 32px;
+  animation: scroll-left 25s linear infinite;
+}
+
+@keyframes scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* .tag-carousel-item {
+  flex-shrink: 0;
+} */
+
+.tag-pill {
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.tag-icon {
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+}
+
+/* BENEFIT */
+
+.benefit-wrapper{
+  margin-top: 100px;
+}
+
+.heading-benefit-container{
+  margin-bottom: 40px;
+}
+
+.heading-benefit-1{
+  font-size: 32px;
+}
+
+.heading-benefit-2{
+  font-size: 24px;
+  padding: 0 32px;
+  border-left: solid 1px #E7E7E7;
+  border-right: solid 1px #e7e7e7;
+}
+
+.heading-benefit-3{
+  width: 25%;
+}
+
+/* .subheading-benefit-1{
+  width: 400px;
+} */
+
+.bg-blue {
+  background-size: cover;
+  background-image: url('../../../public/Assets/Revamp/BG-Blue.png');
+  background-position: center;
+  border-radius: 8px; 
+}
+
+.bg-pink {
+  background-size: cover;
+  background-image: url('../../../public/Assets/Revamp/BG-Pink.png');
+  background-position: center;
+  border-radius: 8px;
+}
+
+.card-heading{
+  margin-bottom: 32px;
+}
+
+.card-body-benefit{
+  padding: 27px 32px;
+}
+
+.card-heading-benefit{
+  font-size: 32px;
+}
+
+.card-subheading-benefit{
+  font-size: 16px;
+  color: black;
+}
+
+/* CTA Count Proof */
+
+.count-proof{
+  margin-top: 100px;
+}
+
+.CTA-CountProof {
+  background-image: url('../../../public/Assets/Revamp/Count-Proof-BG.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 16px;
+  padding: 50px 32px;
+}
+
+.countproof-heading{
+  font-size: 40px;
+  margin-bottom: 60px;
+}
+
+.countproof-metrics-2{
+  padding: 0 24px;
+  border-left: solid 4px #F99307;
+  border-right: solid 4px #F99307;
+}
+
+.countproof-metrics-heading{
+  font-size: 40px;
+}
+
+/* SPEAKER */
+
+.speaker-heading{
+  font-size: 32px;
+}
+
+.speaker-card {
+  width: 100%;
+  cursor: pointer;
+  margin-bottom: 40px;
+}
+
+.speaker-image {
+  background: linear-gradient(to top,rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0));
+  width: 100%;
+  height: 320px;
+  transition: all 0.35s ease;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.img-speaker{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.speaker-card:hover .speaker-image {
+  background: #ffb800;
+}
+
+.speaker-name{
+  font-size: 32px;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.speaker-image::before,
+.speaker-image::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.35s ease;
+  z-index: 5;
+}
+
+.speaker-image::before {
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.4);
+  top: -44px;
+  right: -52px;
+}
+
+.speaker-image::after {
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.4);
+  top: -50px;
+  right: 0px;
+}
+
+.speaker-card:hover .speaker-image::before,
+.speaker-card:hover .speaker-image::after {
+  opacity: 1;
+}
+
+.speaker-card:hover .speaker-info {
+  background: #fffaeb;
+  border: 1px solid #e0e0e0;
+}
+
+.linkedin-speaker{
+  background-color: #1F67F1;
+  width: fit-content;
+  padding: 3px 5px;
+  border: solid 3px #FFB929;
+}
+
+.speaker-card:hover .linkedin-speaker {
+  border: solid 2.5px #ff0000;
+}
+
+/* SCHEDULE */
+
+.heading-schedule{
+  font-size: 32px;
+}
+
+.schedule-wrapper {
+  height: 660px;
+  position: relative;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+  .schedule-wrapper.expanded {
+    min-height: fit-content !important;
+  }
+
+.schedule-gradient {
+  position: absolute;
+  top: 480px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 200px;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 250, 235, 0) 0%,
+    #fffaeb 100%
+  );
+  pointer-events: none;
+}
+
+.schedule-breakdown{
+  margin-top: 60px !important;
+}
+
+.schedule-breakdown-heading{
+  font-size: 24px;
+}
+
+.btn-main-schedule{
+  background: #ffb929;
+}
+
+.btn-main-schedule:hover{
+  background: white !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 185, 41, 0.3);
+}
+
+.btn-main-schedule, .btn-outline-warning{
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.btn-outline-warning:hover{
+  background: #ffb929;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 185, 41, 0.3);
+}
+
+/* CTA UPDC */
+.CTA-UPDC {
+  background-image: url('../../../public/Assets/Revamp/CTA PDF.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 16px;
+  height: 330px;
+  margin: 100px 0;
+}
+
+.heading-CTA-UPDC{
+  font-size: 40px;
+}
+
+  .btn-cta:hover{
+    background: #ffb929;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 185, 41, 0.3);
+  }
+
+/* PRICING */
+
+  .pricing{
+    margin: 100px 0;
+  }
+
+  .heading-price{
+    font-size: 32px;
+  }
+
+  .tab-price{
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .tab-price-active{
+    background: #FFB929 !important;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .card-price-individu,
+  .card-price-group{
+    height: 100%;
+  }
+
+  .btn-price{
+    background-color: #FFB929;
+    padding: 12px 24px !important;
+  }
+
+  .btn-price:hover {
+    background-color: #fff !important;
+    color: #ffb929 !important;
+    border-color: #ffb929 !important;
+    /* background-color: #FFB929 !important; */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 185, 41, 0.3);
+  }
+
+/* Ornament Carousel */
+
+.section-ornament-carousel{
+  margin: 150px 0 100px 0;
+}
+
+.infinite-track {
+  width: max-content;
+  animation: marquee 22s linear infinite;
+}
+
+.infinite-row {
+  display: flex;
+}
+
+.infinite-item {
+  gap: 12px;
+  white-space: nowrap;
+  font-size: 20px;
+  color: #7a2e0e;
+}
+
+/* GALLERY */
+.gallery{
+  background-size: contain;
+  background-image: url('../../../public/Assets/Revamp/BG-Testimoni.png');
+  background-position: center;
+  height: fit-content;
+  padding-bottom: 100px;
+}
+
+/* Testimoni */
+
+/* .section-testimoni{
+  padding: 0 100px;
+} */
+
+.highlight-heading-container{
+  padding: 0 100px;
+}
+
+.heading-testimoni{
+  font-size: 32px;
+}
+
+.card-testimonial{
+  min-height: 360px;
+  min-width: 0 !important;
+}
+
+.slick-slide{
+  padding-right: 24px;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* HIGHLIGHT SLIDER */
+.highlight-heading{
+  font-size: 32px;
+}
+
+.highlights-section {
+  min-height: 600px;
+}
+
+  .slick-dots li{
+    margin: 0 4px !important;
+  }
+
+  .slick-dots li button::before{
+    font-size: 12px !important;
+    line-height: 40px !important;
+  }
+
+  .swiper {
+    width: 100%;
+    margin-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: auto !important;
+    height: 50% !important;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 400px;
+  }
+
+  .card-highlight{
+    width: 440px;
+  }
+
+  .card-img-top{
+    width: 100% !important;
+    height: 230px;
+  }
+
+/* PARTNER CAROUSEL */
+.section-partner-carousel{
+  margin: 0 100px !important;
+}
+
+.logo-carousel-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+.logo-carousel-track {
+  display: flex;
+  width: max-content;
+}
+
+.logo-carousel-item {
+  flex: 0 0 auto;
+  width: 184px;
+  height: 100px;
+  padding: 18px;
+  background-origin: content-box;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.scroll-left {
+  animation-name: scrollLeft;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.speed-1 {
+  animation-duration: 30s;
+}
+.speed-2 {
+  animation-duration: 30s;
+}
+.speed-3 {
+  animation-duration: 40s;
+}
+
+/* FAQ */
+
+.contact-us{
+  background-image: url("../../../public/Assets/Revamp/BG-contact.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 640px;
+  padding: 32px;
+}
+
+.contact-heading{
+  font-size: 24px;
+}
+
+.btn-contact-us{
+  font-size: 16px;
+}
+
+.faq-heading{
+  font-size: 32px;
+}
+
+.accordion-faq{
+  padding-left: 60px;
+}
+
+.accordion-button{
+  font-weight: 600;
+}
+
+.accordion-button:not(.collapsed) {
+  --bs-accordion-active-bg: white;
+}
+
+.accordion-collapse.show .accordion-body {
+  background-color: #FFFAEB !important;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+/* FOOTER */
+footer{
+  padding: 50px 100px;
+  border-top: solid 3px #E7E7E7;
+}
+
+/* COPYRIGHT */
+.copyright{
+  padding: 20px 100px 20px 100px;
+}
+
+@media (min-width: 768px) and (max-width:1000px){
+
+  .container{
+    padding: 0 40px;
+  }
+
+  /* .slick-dots {
+    padding-top: 60px !important;
+  } */
+
+  /* HERO */
+  .hero-revamp{
+    background-image: url("../../../public/Assets/Revamp/Hero-Section-BG.png");
+    background-size: 100% 100%;
+    height: 480px;
+    background-position: center;
+    padding-top: 80px;
+  }
+
+  .hero-heading{
+    padding-left: 70px !important;
+    padding-right: 70px !important;
+    margin-bottom: 20px;
+  }
+
+  .btn-main-hero{
+    font-size: 14px;
+    padding: 12px 24px !important;
+  }
+
+  .title-second-row{
+    margin-top: 16px !important;
+  }
+
+
+  .title-hero{
+    font-size: 32px !important;
+  }
+
+  .image-beyond, .image-worldwide{
+    width: 160px !important;
+    height: 60px !important;
+  }
+
+  .desc-hero{
+    font-size: 16px;
+    margin-top: 16px !important;
+  }
+
+  .btn-main{
+    font-size: 24px;
+    margin-bottom: 100px !important;
+  }
+
+  /* BENEFIT */
+
+  .heading-benefit-container{
+    margin-bottom: 24px;
+  }
+
+  .heading-benefit-1{
+    font-size: 28px;
+  }
+
+  .subheading-benefit-1{
+    font-size: 24px;
+    padding: 0 12px;
+  }
+
+  .heading-benefit-3{
+    width: 100%;
+    margin-top: 16px !important;
+  }
+
+  .heading-benefit-2{
+    font-size: 28px !important;
+    padding: 16px 100px !important;
+    margin: 16px 0 !important;
+    border-top: solid 1px #E7E7E7;
+    border-bottom: solid 1px #e7e7e7;
+    border-left: 0;
+    border-right: 0;
+  }
+
+  .card-benefit{
+    margin-top: 40px !important;
+  }
+
+  .card-heading-benefit{
+    font-size: 32px !important;
+  }
+
+  .card-subheading-benefit{
+    font-size: 24px;
+    color: black;
+  }
+
+  /* Count Proof */
+  .count-proof{
+    padding: 0 60px;
+  }
+
+  /* SPEAKER */
+  .speaker-heading{
+    font-size: 28px;
+  }
+
+  .speaker-image {
+    width: 100%;
+    height: 400px;
+  }
+
+  /* SCHEDULE */
+
+  .heading-schedule{
+    font-size: 28px !important;
+  }
+
+  .schedule-wrapper {
+    min-height: 800px;
+  }
+
+  /* .schedule-wrapper.expanded {
+    min-height: 1500px;
+  } */
+
+    .schedule-gradient {
+      top: 700px !important;
+      height: 100px;
+      background: linear-gradient(
+        to bottom,
+        rgba(255, 250, 235, 0) 0%,
+        #fffaeb 55%,
+        #fffaeb 100%
+      );
+  }
+
+
+  /* CTA-UPDC */
+    .CTA-UPDC {
+      background-image: url('../../../public/Assets/Revamp/CTA PDF.png');
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      border-radius: 16px;
+      height: 180px;
+      margin: 100px 0;
+    }
+
+  .heading-CTA-UPDC{
+    font-size: 24px !important;
+  }
+
+  .btn-cta{
+    padding: 12px !important;
+  }
+
+  /* PRICING */
+  .heading-price{
+    font-size: 28px;
+  }
+
+  .subheading-price{
+    font-size: 20px;
+  }
+
+  .tab-price, .tab-price-active{
+    font-size: 20px;
+  }
+
+  .tab-price{
+    padding: 16px 0;
+  }
+
+  .card-price-container{
+    margin-top: 40px;
+  }
+
+  .card-price-individu, .card-price-group{
+    padding: 32px 32px 0 32px !important;
+  }
+
+  /* TESTIMONI */
+
+    .gallery{
+      padding: 0 12px;
+      background-size: contain;
+      background-image: url('../../../public/Assets/Revamp/BG-Gallery-Mobile.png');
+      /* height: fit-content; */
+      padding-bottom: 100px;
+    }
+
+  .section-testimoni{
+    padding: 0 24px !important;
+  }
+
+  .heading-testimoni{
+    font-size: 28px;
+  }
+
+  .slick-track{
+    display: flex !important;
+  }
+
+  .slick-slide{
+    /* margin-right: 200px; */
+    padding-right: 24px;
+  }
+
+  .card-testimonial{
+    min-height: 360px !important;
+    width: 100%;
+    margin-right: 40px !important;
+  }
+
+  /* HIGHLIGHT */
+  .highlight-heading{
+    font-size: 28px;
+  }
+
+  /* PARTNER CAROUSEL */
+  .section-partner-carousel{
+    margin: 0 40px !important;
+  }
+
+  /* FAQ */
+
+  .contact-us{
+    background-image: url("../../../public/Assets/Revamp/BG-contact.png");
+    background-size: 100% 100%;
+    height: 700px;
+    padding: 48px;
+  }
+
+  .contact-heading{
+    font-size: 32px;
+  }
+
+  .contact-subheading{
+    font-size: 20px;
+  }
+
+  .accordion-faq{
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 40px;
+  }
+
+  .faq-heading{
+    font-size: 28px !important;
+  }
+
+  .accordion-button, .accordion-body{
+    font-size: 18px;
+  }
+
+  /* FOOTER */
+  footer{
+    padding: 50px;
+  }
+
+  /* COPYRIGHT */
+  .copyright{
+    padding: 24px !important;
+  }
+}
+
+/* MOBILE */
+
+@media(min-width:320px) and (max-width:369px){
+
+  .hero-heading{
+    margin-bottom: 36px;
+  }
+
+  .title-hero{
+    font-size: 28px !important;
+    margin-bottom: 0 !important;
+  }
+
+  .image-beyond, .image-worldwide{
+    width: 120px !important;
+    height: 40px !important;
+  }
+
+  .btn-main-hero{
+    font-size: 14px !important;
+  }
+
+  .schedule-wrapper{
+    min-height: 750px;
+  }
+
+  .schedule-gradient {
+    top: 650px !important;
+    height: 100px;
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 250, 235, 0) 0%,
+      #fffaeb 55%,
+      #fffaeb 100%
+    );
+  }
+
+  /* GALLERY */
+  .gallery{
+    padding: 0 12px;
+    background-size: contain;
+    background-image: url('../../../public/Assets/Revamp/BG-Gallery-Mobile.png');
+    /* height: fit-content; */
+    padding-bottom: 100px;
+  }
+
+  /* HIGHLIGHT */
+  .hanger-card{
+    width: 100%;
+  }
+
+  .img-hanger{
+    height: 180px !important;
+  }
+
+}
+
+@media (max-width: 767px) {
+
+  /* HERO */
+  .hero-revamp{
+    background-image: url("../../../public/Assets/Revamp/BG-Hero-Mobile.png");
+    background-size: 100% 100%;
+    height: 700px;
+    background-position: center;
+    padding-top: 240px !important;
+  }
+
+  .hero-heading{
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    margin-bottom: 40px;
+  }
+
+  .title-second-row{
+    margin-top: 0 !important;
+  }
+
+  .title-hero{
+    font-size: 32px;
+    /* margin-bottom: 16px !important; */
+  }
+
+  .image-beyond, .image-worldwide{
+    width: 120px;
+    height: 48px;
+  }
+
+  .desc-hero{
+    font-size: 14px;
+    margin-top: 24px;
+  }
+
+  /* BENEFIT */
+  .section-benefit{
+    padding: 32px 20px !important;
+  }
+
+  .benefit-wrapper{
+    margin-top: 0px;
+  }
+
+  .heading-benefit-1{
+    font-size: 24px;
+  }
+
+  .heading-benefit-2{
+    padding: 0;
+    margin: 16px 0 !important;
+    border-top: solid 1px #E7E7E7;
+    border-bottom: solid 1px #e7e7e7;
+    border-left: 0;
+    border-right: 0;
+  }
+
+  .heading-benefit-3{
+    width: 100%;
+  }
+
+  .card-benefit{
+    margin-bottom: 32px;
+  }
+
+  .bg-blue {
+    background-size: cover;
+    background-image: url('../../../public/Assets/Revamp/BG-Blue-Mobile.png');
+    background-position: top;
+    height: auto;
+    border-radius: 8px; 
+  }
+
+  .bg-pink {
+    background-size: cover;
+    background-image: url('../../../public/Assets/Revamp/BG-Pink-Mobile.png');
+    background-position: center;
+    border-radius: 8px;
+  }
+
+  .card-heading{
+    margin-bottom: 24px;
+  }
+
+  .card-subheading-benefit{
+    font-size: 16px;
+    color: black;
+  }
+
+  .card-body-benefit{
+    padding: 16px;
+  }
+
+  .card-heading-benefit{
+    font-size: 20px;
+  }
+  
+  /* CTA Count Proof */
+
+  .count-proof{
+    margin: 50px 0;
+  }
+
+  .CTA-CountProof {
+    background-size: cover;
+    background-image: url('../../../public/Assets/Revamp/Count Proof - Mobile.png');
+    background-position: top;
+    border-radius: 16px;
+    padding: 32px 16px;
+  }
+
+  .countproof-heading{
+    font-size: 24px;
+    margin-bottom: 32px;
+  }
+
+  .countproof-metrics-2{
+    padding: 24px 0;
+    border-top: solid 4px #F99307;
+    border-bottom: solid 4px #F99307;
+    border-left: 0;
+    border-right: 0;
+  }
+
+  .countproof-metrics-heading{
+    font-size: 40px;
+  }
+
+  /* Speaker */
+  .section-speaker{
+    margin-bottom: 50px !important;
+  }
+
+  .speaker-heading{
+    font-size: 24px;
+  }
+
+  .speaker-image {
+    width: 260px;
+    height: 300px;
+  }
+
+  .speaker-name{
+    font-size: 28px !important;
+  }
+
+  .speaker-info{
+    width: 260px;
+  }
+
+  .slick-slide{
+    width: fit-content !important;
+    /* margin-right: 32px; */
+  }
+
+  .speaker-slider .slick-dots {
+    bottom: -10px !important;
+    margin: 0 1px;
+  }
+
+  .speaker-slider .slick-dots li button:before{
+    font-size: 12px !important;
+  }
+
+  /* Schedule */
+
+  .btn-main-schedule, .btn-outline-warning{
+    width: 100% !important;
+  }
+
+  .union{
+    width: 600px;
+    height: 100px;
+  }
+
+  .heading-schedule{
+    font-size: 24px;
+  }
+
+  .schedule-wrapper {
+    height: 640px;
+  }
+
+  /* .schedule-wrapper.expanded {
+    min-height: 2300px;
+  } */
+
+    .schedule-gradient {
+      top: 550px;
+      height: 100px;
+      background: linear-gradient(
+        to bottom,
+        rgba(255, 250, 235, 0) 0%,
+        #fffaeb 55%,
+        #fffaeb 100%
+      );
+  }
+
+  .schedule-breakdown-heading{
+    font-size: 20px;
+  }
+
+  /* CTA UPDC */
+  .CTA-UPDC {
+    background-size: 100% 100%;
+    background-image: url('../../../public/Assets/Revamp/CTA-PDF-Mobile.png');
+    background-position: center;
+    border-radius: 16px;
+    height: auto;
+    padding: 48px 0;
+    margin: 50px 0;
+  }
+
+  .heading-CTA-UPDC{
+    font-size: 24px;
+  }
+
+  .CTA-UPDC-container{
+    padding: 0 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* PRICING */
+
+  .heading-price{
+    font-size: 24px;
+  }
+
+  .tab-price, .tab-price-active{
+    font-size: 14px;
+    padding: 12px 20px !important;
+  }
+
+  .pricing{
+    margin: 50px 0;
+  }
+
+  .card-price-individu,
+  .card-price-group{
+    height: auto !important;
+    padding: 24px 16px !important;
+  }
+
+  .card-content{
+    width: 100% !important;
+  }
+
+  .price{
+    border-right: none;
+  }
+
+  .individu-price,
+  .group-price{
+    width: 100%;
+    border-right: none !important;
+    border-bottom: solid 1px #dee2e6;
+  }
+
+  .tag-price{
+    width:90px;
+    height: 50px;
+    left: 4px !important;
+  }
+
+  .btn-price{
+    width: 100% !important;
+  }
+
+  
+  /* GALLERY */
+  .gallery{
+    padding: 0 12px;
+    background-size: contain;
+    background-image: url('../../../public/Assets/Revamp/BG-Gallery-Mobile.png');
+    /* height: fit-content; */
+    padding-bottom: 100px;
+  }
+
+  /* TESTIMONI */
+  .section-testimoni{
+    padding: 0;
+  }
+
+  .heading-testimoni{
+    font-size: 24px;
+  }
+
+  .slick-track{
+    display: flex !important;
+  }
+
+  .card-testimonial{
+    min-height: 395px !important;
+    min-width: 400px !important;
+  }
+
+  /* HIGHLIGHT SLIDER */
+  .highlight-heading-container{
+    padding: 0 12px;
+  }
+
+  .highlight-heading{
+    font-size: 24px;
+  }
+
+  .hanger-wrapper{
+    margin-top: 24px;
+    margin-left: 6px;
+  }
+
+  .hanger-card {
+    max-width: 390px;
+    min-height: 350px;
+    border-radius: 24px;
+    z-index: 2;
+    padding-bottom: 32px;
+  }
+
+  .hanger-image{
+    width: 100%;
+    height: 200px;
+  }
+
+  .img-hanger{
+    width: 100%;
+    height: auto;
+  }
+
+  .title-card-highlight{
+    font-size: 20px;
+  }
+
+  .slick-dots {
+    bottom: -48px !important;
+  }
+
+  .slick-dots ul{
+    padding-right: 0 !important;
+  }
+
+  /* PARTNER CAROUSEL */
+  .section-partner-carousel{
+    margin: 0 12px !important;
+  }
+
+  /* FAQ */
+
+  .faq-section{
+    margin: 50px 0 !important;
+  }
+
+  .contact-us{
+    background-image: url("../../../public/Assets/Revamp/BG-contact.png");
+    background-size: 100% 100%;
+    height: 440px;
+  }
+
+  .faq-heading{
+    font-size: 24px;
+  }
+
+  .accordion-faq{
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 40px;
+  }
+
+    /* FOOTER */
+  footer {
+  padding: 36px 20px;
+  } 
+
+  /* COPYRIGHT */
+  .copyright{
+    padding: 24px 24px 24px 24px !important;
+  }
+
+  .text-momen{
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+
+}
+
+@media (min-width:1001px) and (max-width:1400px){
+    .gallery{
+    padding: 0 12px;
+    background-size: contain;
+    background-image: url('../../../public/Assets/Revamp/BG-Gallery-Mobile.png');
+    /* height: fit-content; */
+    padding-bottom: 100px;
+  }
+}
+
+
+
+
+

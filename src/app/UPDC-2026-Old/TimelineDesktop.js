@@ -1,27 +1,16 @@
 import React from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import timelineData from "../Data_JSON/timeline_data";
 import { Card } from "react-bootstrap";
 import Image from "next/image";
 
-const TimelineMobile = () => {
-  const settings = {
-    dots: true,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    centerMode: true,
-    centerPadding: "24px",
-  };
-
+const TimelineDesktop = () => {
   return (
-    <div className="container px-0" style={{marginBottom:'100px'}}>
-      <Slider {...settings}>
+    <div className="container mt-5 px-0 position-relative">
+      {/* <Image className="img-fluid position-absolute curved-line-1" src="/Assets/Revamp/UPDC-Revamp/curved-line-1.png" width={840} height={64} alt=""/> */}
+      {/* <Image className="img-fluid position-absolute curved-line-2" src="/Assets/Revamp/UPDC-Revamp/curved-line-2.png" width={600} height={64} alt=""/> */}
+      <div className="d-flex flex-wrap justify-content-center timeline-row">
         {timelineData.map((item) => (
-          <div key={item.id} className="timeline-col mt-4 mb-4">
+          <div className="timeline-col position-relative" key={item.id}>
             <Card className="card-timeline position-relative bg-white border-none text-start" 
                   style={{
                     borderColor:'none', 
@@ -48,9 +37,9 @@ const TimelineMobile = () => {
             </Card>
           </div>
         ))}
-      </Slider>
+      </div>
     </div>
   );
 };
 
-export default TimelineMobile;
+export default TimelineDesktop;

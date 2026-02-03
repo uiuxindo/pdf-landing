@@ -5,10 +5,10 @@ import TimelineMobile from "./TimelineMobile";
 const TimelineSection = () => {
   return (
     <div className="timeline-bg">
-      <div className="d-none d-md-block" style={{marginBottom:'100px'}}>
+      <div className="d-none d-lg-block" style={{marginBottom:'100px'}}>
         <TimelineDesktop />
       </div>
-      <div className="d-block d-md-none h-100">
+      <div className="d-block d-lg-none h-100">
         <TimelineMobile />
       </div>
     </div>
