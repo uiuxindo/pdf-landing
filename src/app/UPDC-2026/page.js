@@ -2,13 +2,13 @@
 
 import dynamic from 'next/dynamic';
 import Link from "next/link";
-import MainNavbar from "../Navbar/navbar-lp";
+import MainNavbar from "../../app/Navbar/navbar-lp";
 import Image from "next/image";
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import './UPDC.css';
-import Timeline from "./Timeline";
-import { Card } from "react-bootstrap";
-import Footer from "../Footer/Footer";
+import './updc-revamp.css';
+import Timeline from "../../app/UPDC-2026-Old/Timeline";
+import { Card, CardBody } from "react-bootstrap";
+import Footer from "../../app/Footer/Footer.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 
@@ -16,10 +16,10 @@ export default function Home() {
 
   const menuPageMenus = [
     { label: "Home", href: "#Hero" },
+    { label: "Keterangan", href: "#Keterangan" },
     { label: "Timeline", href: "#Timeline" },
     { label: "Hadiah", href: "#Hadiah" },
-    { label: "Keterangan", href: "#Keterangan" },
-    // { label: "Hasil Karya", href: "#HasilKarya" },
+    { label: "Juri", href: "#Juri" },
   ];
 
   return (
@@ -36,186 +36,229 @@ export default function Home() {
         <div id="Hero" className="row">
 
           {/* Hero */}
-          <div className="col-12 px-0 py-md-3 py-5 hero-updc text-center">
-            <h1 className="fw-700 mb-3">UI PRODUCT DESIGN <span className="text-pink curved-underline">CHALLENGE</span></h1>
-            <p className="fs-xl mb-4">Empowering Local, Competing Global: Designing Digital Bridges for Business</p>
-            <div className="d-flex flex-md-row flex-column align-items-center justify-content-center">
-              <Image className="mb-md-0 mb-2 me-1 img-fluid" src="/Assets/UPDC/Users.png" width={180} height={180} alt=""/>
-              <div className="ms-2 d-flex flex-column align-items-center align-items-md-start">
-                <Image className="mb-0 img-fluid" src="/Assets/UPDC/Stars.png" width={152} height={152} alt=""/>
-                <p className="mb-0">Diikuti oleh <span className="text-pink fw-700">100+</span> peserta</p>
+          <div className="col-12 hero-updc text-center">
+            <div className='updc-heading-container text-center mx-auto'>
+              <h1 className="fw-700 mb-3 text-white updc-heading">UI PRODUCT DESIGN</h1>
+              <div className="bg-white py-2 text-center mb-4 heading-2">
+                <p className="text-pink fw-700 mb-0 updc-heading2">C H A L L E N G E</p>
               </div>
+              <p className='text-center updc-subheading'>Empowering Local, Competing Global: Designing Digital Bridges for Business</p>
             </div>
-           <Link href="/payment" className="btn btn-cta bg-white rounded-pill mt-md-4 mt-3 py-3 fw-700 text-main" style={{background:'#FFB929'}}>
-              Daftar Sekarang
+           <Link href="/payment" className="btn btn-updc bg-white rounded-pill mt-md-4 px-4 py-md-3 fw-700 " style={{background:'#FFB929'}}>
+              Register Now
             </Link>
           </div>
         </div>
       </div>
 
-    {/* Timeline */}
     <div className="container">
-      <div id="Timeline" className="row" style={{marginTop:'50px', padding:'0 20px'}}>
-        <div className="col-12 px-0 text-center">
-          <h1 className="text-main fw-700">Timeline</h1>
-          <p className="text-grey">Dengan berpartisipasi dalam acara ini, kamu akan mendapatkan pengalaman belajar yang menarik tentang 
-            desain produk dan hubungan profesional yang membawa energi positif
-          </p>
-          <Timeline />
-        </div>
-      </div>
 
-      {/* Hadiah */}
-      <div id="Hadiah" className="row" style={{marginBottom:'100px'}}>
-        <div className="col-12 text-center">
-          <h1 className="text-pink fw-700">Hadiah & Benefit</h1>
-          <p className="text-grey">Ikuti tantangannya, menangkan hadiahnya, dan bawa pulang pengalaman serta insight berharga untuk perjalanan karirmu
-          </p>
-          <div className="row px-4 align-items-end" style={{marginTop:'44px'}}>
-            <div className="col-md-4 col-12 text-start juara-2">
-              <Image className="mb-0 me-1 img-fluid" src="/Assets/UPDC/Trophy.png" width={84} height={84} alt=""/>
-              <h5 className="fw-700 mt-4">Juara 2</h5>
-              <ul className="ps-0" style={{listStyleType:'none'}}>
-                <li className="mt-3"><i className="bi bi-check-circle-fill me-2" style={{color:'#000000'}}></i>Hadiah uang tunai senilai Rp100.000</li>
-                <li className="mt-3"><i className="bi bi-check-circle-fill me-2" style={{color:'#000000'}}></i>Sertifikat UPDC</li>
-                <li className="mt-3"><i className="bi bi-check-circle-fill me-2" style={{color:'#000000'}}></i>Gratis Private Mentoring selama 1 jam</li>
-              </ul>
+      {/* KETERANGAN */}
+      <div id='Keterangan' className='row section-keterangan text-center'>
+        <p className='fw-700 mb-3 keterangan-heading'>What is UPDC?</p>
+        <p className='text-grey keterangan'>UPDC (UIUXINDO Product Design Challenge) is a UI/UX design competition by UIUXINDO, created for students, fresh graduates, and career switchers. 
+          It&apos;s a space to sharpen your UI/UX and product design skills through real-world case studies, while gaining hands-on experience in building solutions and presenting ideas to stakeholders.
+        </p>
+        <Card className='card-general radius-16'>
+          <CardBody className='p-0'>
+            <div className='card-heading-container p-3'>
+              <p className='fw-600 mb-0 card-heading'>General Terms</p>
+              <p className='mb-0'>Key things you should know before joining the UI Product Design Challenge</p>
             </div>
-            <div className="col-md-4 col-12 text-start juara-1">
-              <Image className="mb-0 me-1 img-fluid" src="/Assets/UPDC/Trophy-gold.png" width={84} height={84} alt=""/>
-              <h5 className="fw-700 mt-4">Juara 1</h5>
-              <ul className="ps-0" style={{listStyleType:'none'}}>
-                <li className="mt-3"><i className="bi bi-check-circle-fill me-2" style={{color:'#000000'}}></i>Hadiah uang tunai senilai Rp250.000</li>
-                <li className="mt-3"><i className="bi bi-check-circle-fill me-2" style={{color:'#000000'}}></i>Sertifikat UPDC</li>
-                <li className="mt-3"><i className="bi bi-check-circle-fill me-2" style={{color:'#000000'}}></i>Gratis Private Mentoring selama 1 jam</li>
-              </ul>
+            <div className='d-flex flex-lg-row flex-column align-items-lg-center justify-content-md-center'>
+              <div className='me-md-4 pt-3 pb-md-4 pb-3 px-3 card-metrics'> 
+                <div className='fs-2xl fw-700 text-white px-3  mb-3 rounded-pill' style={{background:"#4DA2FF", width:'fit-content'}}>
+                  01
+                  </div>
+                <p className='text-start mb-0'>
+                  Beli tiket PDF 2026 dan ikuti lomba UI/UX Design gratis, plus semua benefit tetap kamu dapatkan
+                </p>
+              </div>
+              <div className='me-md-4 pt-3 pb-4 px-3 card-metrics'> 
+                <div className='fs-2xl fw-700 text-white px-3  mb-3 rounded-pill' style={{background:"#4DA2FF", width:'fit-content'}}>
+                  02
+                  </div>
+                <p className='text-start mb-0'>
+                  Brief challenge akan tersedia di website pada Sabtu, 2 Mei 2026. Ikuti opening PDF 2026 untuk info lengkapnya
+                </p>
+              </div>
+              <div className='me-md-4 pt-3 pb-4 px-3 card-metrics'> 
+                <div className='fs-2xl fw-700 text-white px-3  mb-3 rounded-pill' style={{background:"#4DA2FF", width:'fit-content'}}>
+                  03
+                  </div>
+                <p className='text-start mb-0'>
+                  Lomba ini dilakukan oleh individu
+                </p>
+              </div>
+              <div className='pt-3 pb-4 px-3 card-metrics'> 
+                <div className='fs-2xl fw-700 text-white px-3  mb-3 rounded-pill' style={{background:"#4DA2FF", width:'fit-content'}}>
+                  04
+                </div>
+                <p className='text-start mb-0'>
+                  Brief challenge dapat digunakan untuk portofolio dengan memberikan kredit UIUXINDO sebagai penyelenggara
+                </p>
+              </div>
             </div>
-            <div className="col-md-4 col-12 text-start juara-3">
-              <Image className="mb-0 me-1 img-fluid" src="/Assets/UPDC/Trophy-bronze.png" width={84} height={84} alt=""/>
-              <h5 className="fw-700 mt-4">Juara 3</h5>
-              <ul className="ps-0" style={{listStyleType:'none'}}>
-                <li className="mt-3"><i className="bi bi-check-circle-fill me-2" style={{color:'#000000'}}></i>Hadiah uang tunai senilai Rp75.000</li>
-                <li className="mt-3"><i className="bi bi-check-circle-fill me-2" style={{color:'#000000'}}></i>Sertifikat UPDC</li>
-                <li className="mt-3"><i className="bi bi-check-circle-fill me-2" style={{color:'#000000'}}></i>Gratis Private Mentoring selama 1 jam</li>
-              </ul>
-            </div>
+          </CardBody>
+        </Card>
+      </div>
+    </div>
+
+    <div className='container-fluid px-0'>
+
+      {/* Timeline */}
+      <div id='Timeline' className='row'>
+        <Image className="d-none d-md-block mb-md-0 img-fluid px-0 union" src="/Assets/Revamp/Union.png" width={1585} height={300} alt=""/>
+        <Image className="d-block d-md-none mb-md-0 img-fluid px-0 union" src="/Assets/Revamp/Union-1-Mobile.png" width={300} height={300} alt=""/>
+        <div id="Timeline" className="row section-timeline px-0">
+          <div className="col-12 px-0 text-center">
+            <h1 className="fw-700 timeline-heading">How the Challenge Works</h1>
+            <p className="text-grey">Simple steps to join and complete the challenge</p>
+            <Timeline />
           </div>
         </div>
+        <Image className="d-none d-md-block mb-md-0 img-fluid px-0 union" src="/Assets/Revamp/Union-2.png" width={1585} height={300} alt=""/>
+        <Image className="d-block d-md-none mb-md-0 img-fluid px-0 union" src="/Assets/Revamp/Union-2-Mobile.png" width={300} height={300} alt=""/>
       </div>
 
-      <div id="Keterangan" className="row" style={{marginBottom:'50px', paddingLeft:'20px', paddingRight:'20px'}}>
-        <div className="col-12">
-          <div className="row">
-            <div className="col-md-3 col-12 ps-3 border-end">
-              <h1 className="text-main fw-700" style={{fontSize:'32px'}}>Apa itu UPDC?</h1>
-            </div>
-            <div className="col-md-9 col-12">
-              <p className="ms-md-5 mb-0 text-grey">Disini kamu bisa belajar, berkompetisi, dan bertumbuh bersama komunitas desainer lainnya</p>
-            </div>
-          </div>
-          <div className="row mt-5">
-            <div className="col-12 col-md-3 px-4 py-md-5 py-4 d-flex flex-row align-item-center header-updc">
-              <p>UPDC adalah UIUXINDO Product Design Challenge, ajang lomba UI/UX Design yang ditujukan untuk mahasiswa, fresh graduate & switch 
-                career. UPDC ini hadir sebagai solusi untuk mahasiswa yang ingin mengasah kemampuan UI/UX & product development serta memberikan 
-                pengalaman nyata dalam mengemukakan ide kepada stakeholder di dunia kerja
-              </p>
-            </div>
-            <div className="col-12 col-md-9 text-center ketentuan">
-              <h4 className="fw-700 mb-4">Ketentuan Umum</h4>
-              <div className="row">
-                <div className="col-md-6 col-12 mb-md-4 mb-3">
-                  <Card className="h-100">
-                    <Card.Body className="d-flex flex-md-row flex-column align-items-center p-3">
-                      <h2 className="text-blue fw-700 mb-md-0 pb-2 pb-md-0 me-md-4 pe-4 d-flex align-items-center title-ketentuan">01</h2>
-                      <p className="text-start mb-0 text-grey">Beli tiket PDF 2026 dan ikuti lomba UI/UX Design gratis, plus semua benefit tetap kamu dapatkan</p>
-                    </Card.Body>
-                  </Card>
+      {/* REWARD */}
+      <div id='Hadiah' className='row section-reward text-center'>
+        <div className='col-12 px-0'>
+          <div className='podium position-relative'>
+            <Image className="d-lg-none img-fluid position-absolute yellow-vector" src="/Assets/Revamp/UPDC-Revamp/yellow-vector.png" width={55} height={32} alt=""/>
+            <Image className="d-lg-none img-fluid position-absolute blue-vector" src="/Assets/Revamp/UPDC-Revamp/blue-vector.png" width={32} height={32} alt=""/>
+            <Image className="d-lg-none img-fluid position-absolute red-star" src="/Assets/Revamp/UPDC-Revamp/red-star.png" width={30} height={16} alt=""/>
+            <Image className="d-lg-none img-fluid position-absolute yellow-star" src="/Assets/Revamp/UPDC-Revamp/yellow-star.png" width={32} height={32} alt=""/>
+            <p className='fw-700 mb-3 reward-heading'>Rewards & Benefits</p>
+            <p className='text-grey mb-0 reward-subheading'>Put in the effort, learn from the process, and get rewards that make it all worth it</p>
+            <div className="row align-items-end podium-reward" style={{marginTop:'44px'}}>
+              <div className="col-md-4 col-12 text-start juara-2-container px-0">
+                <p className='position mb-0 text-center'>02</p>
+                <div className='juara-2 p-4 px-3 py-4'>
+                  <div className='bg-white text-center py-3 mb-4'><h5 className="fw-700 mb-0 position-title">Strong Performer</h5></div>
+                  <p className='text-center'>Hampir jadi yang teratas, tapi performa kamu tetap luar biasa dan layak diapresiasi</p>
+                  <ul className="ps-0" style={{listStyleType:'none'}}>
+                    <li className="mt-3"><i className="bi bi-check-circle-fill me-2" style={{color:'#FFB929'}}></i>Uang tunai Rp100.000</li>
+                    <li className="mt-3"><i className="bi bi-check-circle-fill me-2" style={{color:'#FFB929'}}></i>Sertifikat UPDC</li>
+                    <li className="mt-3"><i className="bi bi-check-circle-fill me-2" style={{color:'#FFB929'}}></i>Gratis Private Mentoring (1 jam)</li>
+                  </ul>
                 </div>
-               <div className="col-md-6 col-12 mb-md-4 mb-3">
-                  <Card className="h-100">
-                    <Card.Body className="d-flex flex-md-row flex-column align-items-center p-3">
-                      <h2 className="text-pink fw-700 mb-md-0 pb-2 pb-md-0 me-md-4 pe-4 d-flex align-items-center title-ketentuan">02</h2>
-                      <p className="text-start mb-0 text-grey">Brief challenge akan tersedia di website pada Sabtu, 2 Mei 2026. Ikuti opening PDF 2026 untuk info lengkapnya</p>
-                    </Card.Body>
-                  </Card>
+              </div>
+              <div className="col-md-4 col-12 text-start px-0 juara-1-container">
+                <div className='text-center trophy-container' 
+                    style={{
+                      background:'linear-gradient(to top, rgba(255,185,41,0.3), rgba(255,255,255,0))',
+                      marginTop:'60px'
+                    }}
+                  >
+                  <Image className="mb-0 me-1 img-fluid" src="/Assets/Revamp/UPDC-Revamp/Trophy.png" width={160} height={84} alt=""/>
                 </div>
-               <div className="col-md-6 col-12 mb-4 mb-3 mb-md-0">
-                  <Card className="h-100">
-                    <Card.Body className="d-flex flex-md-row flex-column align-items-center p-3">
-                      <h2 className="text-pink fw-700 mb-md-0 pb-2 pb-md-0 me-md-4 pe-4 d-flex align-items-center title-ketentuan">03</h2>
-                      <p className="align-self-start align-self-md-center text-start mb-0 text-grey">Lomba UI/UX ini dilakukan oleh individu</p>
-                    </Card.Body>
-                  </Card>
+                <div className='juara-1 p-lg-4 px-3 py-4'>
+                  <div className='bg-white text-center py-3 mb-4'><h5 className="fw-700 mb-0 position-title">The Ultimate Winner</h5></div>
+                  <p className='text-center'>Bukti kalau effort kamu nggak main-main. Kamu jadi yang paling standout dan pantas dapet reward terbaik</p>
+                  <ul className="ps-0" style={{listStyleType:'none'}}>
+                    <li className="mt-3">
+                      <i className="bi bi-check me-2 bg-white rounded-circle" style={{color:'#FFB929', padding:'0 2px'}}></i>
+                      Uang Tunai Rp250.000
+                    </li>
+                    <li className="mt-3">
+                      <i className="bi bi-check me-2 bg-white rounded-circle" style={{color:'#FFB929', padding:'0 2px'}}></i>
+                      Sertifikat UPDC
+                    </li>
+                    <li className="mt-3">
+                      <i className="bi bi-check me-2 bg-white rounded-circle" style={{color:'#FFB929', padding:'0 2px'}}></i>
+                      Gratis Private Mentoring (1 jam)
+                    </li>
+                  </ul>
                 </div>
-                <div className="col-md-6 col-12">
-                  <Card className="h-100">
-                    <Card.Body className="d-flex flex-md-row flex-column align-items-center p-3">
-                      <h2 className="text-blue fw-700 mb-md-0 pb-2 pb-md-0 me-md-4 pe-4 d-flex align-items-center title-ketentuan">04</h2>
-                      <p className="text-start mb-0 text-grey">Brief challenge dapat digunakan untuk portofolio dengan memberikan kredit UIUXINDO sebagai penyelenggara</p>
-                    </Card.Body>
-                  </Card>
+              </div>
+              <div className="col-md-4 col-12 text-start px-0 juara-3-container">
+                <p className='position mb-0 text-center'>03</p>
+                <div className='juara-3 p-4 px-3 py-4'>
+                  <div className='bg-white text-center py-3 mb-4'><h5 className="fw-700 mb-0 position-title">Rising Star</h5></div>
+                  <p className='text-center'>Langkah awal yang solid buat perjalanan kamu selanjutnya. Keep going, you&apos;re on the right track!</p>
+                  <ul className="ps-0" style={{listStyleType:'none'}}>
+                    <li className="mt-3"><i className="bi bi-check-circle-fill me-2" style={{color:'#FFB929'}}></i>Uang Tunai Rp75.000</li>
+                    <li className="mt-3"><i className="bi bi-check-circle-fill me-2" style={{color:'#FFB929'}}></i>Sertifikat UPDC</li>
+                    <li className="mt-3"><i className="bi bi-check-circle-fill me-2" style={{color:'#FFB929'}}></i>Gratis Private Mentoring (1 jam)</li>
+                  </ul>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+      <Image className="n" src="/Assets/Revamp/UPDC-Revamp/Tag-blue.png" width={1585} height={45} alt=""/>
+    </div>
+    
+    {/* Juri */}
+    <div className='container'>
+      <div id='Juri' className='row section-juri'>
+        <div className='col-12 text-center'>
+          <p className='fw-700 mb-3 heading-juri'>Meet the Judges</p>
+          <p className='text-grey'>Your work will be reviewed by experienced UI/UX practitioners who are ready to share valuable insights and feedback</p>
+          <div className='row juri'>
+            
+            <div className='col-md-4 col-12 position-relative text-center juri-container'>
+              <div className='juri-image-wrapper'>
+                <Image className="mb-md-4 img-fluid juri-image me-md-0 me-3 mb-4 mb-md-0" src="/Assets/UPDC/Juri-1.png" 
+                      width={302} 
+                      height={302} 
+                      alt=""
+                      style={{filter:'grayscale(100%)'}}
+                />
+                <Link href="https://www.linkedin.com/in/denny-wirawan-b5a576183/" className='linkedin-container position-absolute rounded-circle'>
+                  <div className='d-flex align-items-center justify-content-center linkedin-juri'>
+                    <FontAwesomeIcon icon={faLinkedinIn} className='linkedin-icon fs-2xl' style={{color: "white"}} />
+                  </div>     
+                </Link>
+              </div>
+              <p className='fw-700 mb-2 nama-juri'>Denny Wirawan</p>
+              <p className='text-grey mb-0 job-juri'>Sr. Product Designer at Blibli</p>
+            </div>
+
+            <div className='col-md-4 col-12 position-relative text-center juri-container'>
+              <div className='juri-image-wrapper'>
+                <Image className="mb-md-4 img-fluid juri-image me-md-0 me-3 mb-4 mb-md-0" src="/Assets/UPDC/Juri-2.png" 
+                      width={302} 
+                      height={302} 
+                      alt=""
+                      style={{filter:'grayscale(100%)'}}
+                />
+                <Link href="https://www.linkedin.com/in/faris-rakha/" className='linkedin-container position-absolute rounded-circle'>
+                  <div className='d-flex align-items-center justify-content-center linkedin-juri'>
+                    <FontAwesomeIcon icon={faLinkedinIn} className='linkedin-icon fs-2xl' style={{color: "white"}} />
+                  </div>     
+                </Link>
+              </div>
+              <p className='fw-700 mb-2 nama-juri'>Faris Rakha</p>
+              <p className='text-grey mb-0 job-juri'>Product Designer at Wagely</p>
+            </div>
+
+            <div className='col-md-4 col-12 position-relative text-center'>
+              <div className='juri-image-wrapper'>
+              <Image className="mb-md-4 img-fluid juri-image me-md-0 me-3 mb-4 mb-md-0" src="/Assets/UPDC/Juri-3.png" 
+                     width={302} 
+                     height={302} 
+                     alt=""
+                     style={{filter:'grayscale(100%)'}}
+              />
+
+              <Link href="https://www.linkedin.com/in/rayyan-adwiarto/" className='linkedin-container position-absolute rounded-circle'>
+                <div className='d-flex align-items-center justify-content-center linkedin-juri'>
+                  <FontAwesomeIcon icon={faLinkedinIn} className='linkedin-icon fs-2xl' style={{color: "white"}} />
+                </div>
+              </Link>
+              </div>
+              <p className='fw-700 mb-2 nama-juri'>Rayyan Adwiarto</p>
+              <p className='text-grey mb-0 job-juri'>Product Designer at Astrapay</p>
+            </div>
+            
           </div>
         </div>
       </div>
     </div>
 
-    <div className='container-fluid' style={{backgroundColor:'#FFB929'}}>
-      <div className='row'>
-        <div className='col-md-6 col-12 juri-desc'>
-          <h2 className='fw-700 mb-md-4'>Juri UPDC</h2>
-          <p className='mb-0'>Belajar langsung dari ahlinya. Para juri UPDC adalah praktisi berpengalaman di dunia product & design, siap memberikan insight berharga untuk setiap karya yang lahir dari challenge ini</p>
-        </div>
-        <div className='col-md-6 col-12 d-flex align-items-center justify-content-center align-items-center px-0'>
-          <div className='row flex-column flex-md-row justify-content-center align-items-center juri-updc'>
-            <div className='col-12 col-md-4 bg-white me-4 text-center p-md-3 mb-md-0 mb-3 d-flex flex-md-column flex-row align-items-center justify-content-between card-juri'>
-              <div className="d-flex flex-md-column flex-row align-items-center justify-content-center">
-                <Image className="mb-md-4 img-fluid juri-image me-md-0 me-3" src="/Assets/UPDC/Juri-1.png" width={132} height={132} alt=""/>
-                <div className="text-start text-md-center d-flex flex-column align-items-center justify-content-center mb-md-3 mb-0">
-                  <h5 className='mb-md-2 mb-0'>Denny Wirawan</h5>
-                  <p className='text-grey mb-md-2 mb-0'>Sr. Product Designer at Blibli</p>
-                </div>
-              </div>
-              <Link href="https://www.linkedin.com/in/denny-wirawan-b5a576183/">
-                  <div className='d-flex align-items-center justify-content-center linkedin-juri'>
-                  <FontAwesomeIcon icon={faLinkedinIn} className='linkedin-icon' style={{color: "white"}} />
-                </div>
-              </Link>
-            </div>
-            <div className='col-12 col-md-4 bg-white me-4 text-center p-md-3 mb-md-0 mb-3 d-flex flex-md-column flex-row align-items-center justify-content-between card-juri'>
-              <div className="d-flex flex-md-column flex-row align-items-center justify-content-center">
-                <Image className="mb-md-4 img-fluid juri-image me-md-0 me-3" src="/Assets/UPDC/Juri-2.png" width={132} height={132} alt=""/>
-                <div className="text-start text-md-center d-flex flex-column align-items-center justify-content-center mb-md-3 mb-0">
-                  <h5 className='mb-md-2 mb-0'>Faris <br className='break-word'/>Rakha</h5>
-                  <p className='text-grey mb-md-2 mb-0'>Product Designer at Wagely</p>
-                </div>
-              </div>
-              <Link href="https://www.linkedin.com/in/faris-rakha/">
-                  <div className='d-flex align-items-center justify-content-center linkedin-juri'>
-                  <FontAwesomeIcon icon={faLinkedinIn} className='linkedin-icon' style={{color: "white"}} />
-                </div>
-              </Link>
-            </div>
-            <div className='col-12 col-md-4 bg-white me-4 text-center p-md-3 mb-md-0 d-flex flex-md-column flex-row align-items-center justify-content-between card-juri'>
-              <div className="d-flex flex-md-column flex-row align-items-center justify-content-center">
-                <Image className="mb-md-4 img-fluid juri-image me-md-0 me-3" src="/Assets/UPDC/Juri-3.png" width={132} height={132} alt=""/>
-                <div className="text-start text-md-center d-flex flex-column align-items-center justify-content-center mb-md-3 mb-0">
-                  <h5 className='mb-md-2 mb-0'>Rayyan Adwiarto</h5>
-                  <p className='text-grey mb-md-2 mb-0'>Product Designer at AstraPay</p>
-                </div>
-              </div>
-              <Link href="https://www.linkedin.com/in/rayyan-adwiarto/">
-                  <div className='d-flex align-items-center justify-content-center linkedin-juri'>
-                  <FontAwesomeIcon icon={faLinkedinIn} className='linkedin-icon' style={{color: "white"}} />
-                </div>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
     {/* Footer */}
     <Footer/>
