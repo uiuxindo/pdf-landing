@@ -190,7 +190,7 @@ export default function Home() {
         {/* Testimoni */}
         <div className="row" style={{margin:"100px 0"}}>
           <div className="col-12 px-0">
-            <div className="container px-lg-0">
+            <div id="Testimoni" className="container px-lg-0">
               <SliderTestimoni/>
             </div>
             <div className="container px-lg-0">
