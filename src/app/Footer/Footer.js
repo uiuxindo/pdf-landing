@@ -26,7 +26,7 @@ const Footer = () => {
           </div>
 
           <div className="col-md-3 col-12 mb-4 mb-md-0 d-flex flex-column">
-            <h5 className="mb-4">Explore UIUXINDO</h5>
+            <h5 className="mb-4">Company</h5>
             <a href="https://api.whatsapp.com/send?phone=6282310101118" className="text-grey mb-1 mb-md-3">(+62) 823 1010 1118</a>
             <a href="https://www.uiuxindo.id/contact" className="text-grey mb-1 mb-md-3">hello@uiuxindo.id</a>
           </div>
