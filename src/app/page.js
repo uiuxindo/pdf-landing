@@ -59,13 +59,14 @@ export default function Home() {
                   </p>
                   <Image className="mb-md-0 ms-2 img-fluid image-beyond" src="/Assets/Revamp/Beyond.png" width={220} height={220} alt=""/>
                 </div>
-                <div className="title-second-row d-flex flex-row align-items-center justify-content-center" style={{marginTop:'-16px'}}>
+                <div className="title-second-row d-flex flex-row align-items-center justify-content-center position-relative" style={{marginTop:'-16px'}}>
                   <p className="title-hero fw-700 mb-4 mb-md-0 me-1">
                     to
                   </p>
                   <Image className="mb-md-0 img-fluid mx-2 image-worldwide" src="/Assets/Revamp/Worldwide.png" width={220} height={220} alt=""/>
-                  <p className="title-hero fw-700 mb-4 mb-md-0 ms-1">
+                  <p className="title-hero fw-700 mb-4 mb-md-0 ms-1 position-relative">
                     Worldwide
+                    <Image className="d-none d-sm-none d-md-block position-absolute" src="/Assets/Revamp/figma-bubble-pdf.png" width={127} height={73} alt="" style={{ right: "-127px", bottom: "-38px" }} />
                   </p>
                 </div>
                 <p className="desc-hero fs-xl mb-0 text-grey">Unlocking the Path to A Global Career from Wherever You Stand</p>
@@ -74,6 +75,9 @@ export default function Home() {
                 Register Now
               </Link>
             </div>
+            <Image className="d-none d-sm-none d-md-block position-absolute" src="/Assets/Revamp/Supergraphics-head-2.png" width={150} height={150} alt="" style={{ top: "116px", left: "31px", transform: "rotate(8deg)" }} />
+            <Image className="d-none d-sm-none d-md-block position-absolute" src="/Assets/Revamp/figma-user-bubble.png" width={125} height={73} alt="" style={{ bottom: "182px", left: "50%", transform: "translateX(-100%)", marginLeft: "-81px" }} />
+            <Image className="d-none d-sm-none d-md-block position-absolute" src="/Assets/Revamp/Supergraphics-head-1.png" width={200} height={200} alt="" style={{ bottom: "0", right: "43px", transform: "rotate(13deg)" }} />
           </div>
         </div>
 
@@ -147,8 +151,8 @@ export default function Home() {
           <Image className="d-none d-md-block mb-md-0 img-fluid px-0 union" src="/Assets/Revamp/Union.png" width={300} height={300} alt=""/>
           <Image className="d-block d-md-none mb-md-0 img-fluid px-0 union" src="/Assets/Revamp/Union-1-Mobile.png" width={300} height={300} alt=""/>
           <div className="col-12 px-md-0" style={{backgroundColor:'#FFFAEB'}}>
-            <p className="heading-schedule fw-700 mb-2 text-center">Your 9-Day Product Design Journey</p>
-            <p className="text-grey text-center">One meaningful session per day - fully online via Zoom</p>
+            <p className="heading-schedule fw-700 mb-2 text-center">A One-Month Product Design Journey</p>
+            <p className="text-grey text-center">Learn, practice, and grow through webinars, workshops, and hands-on sessions - all online via Zoom</p>
             <PDFSchedule/>
           </div>
           <Image className="d-none d-md-block mb-md-0 img-fluid px-0 union" src="/Assets/Revamp/Union-2.png" width={300} height={300} alt=""/>
