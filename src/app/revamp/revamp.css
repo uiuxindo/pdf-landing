@@ -28,6 +28,7 @@
   height: 720px;
   background-repeat: no-repeat;
   padding-top: 150px;
+  position: relative;
 }
 
 .hero-heading{
