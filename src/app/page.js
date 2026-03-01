@@ -10,6 +10,7 @@ import '../app/revamp/revamp.css';
 import BenefitCards from "./revamp/Component/BenefitCard";
 import CarouselTag from "./revamp/Component/CarouselTag";
 import SpeakerSection from "./revamp/Component/Speakers";
+import Sylabus from "./revamp/Component/Sylabus";
 import PDFSchedule from "./revamp/Component/PDFSchedule";
 import PricingSection from "./revamp/Component/Price";
 import OrnamentCarousel from "./revamp/Component/OrnamentCarousel";
@@ -161,6 +162,13 @@ export default function Home() {
       </div>
 
       <div className="container">
+
+        <div className="row sylabus">
+          <p className="heading-schedule fw-700 mb-3 text-center">Silabus Workshop</p>
+          <p className="text-grey text-center mb-0">Rangkaian materi terstruktur yang dirancang interaktif, aplikatif, dan relevan dengan kebutuhan industri</p>
+          <Sylabus />
+        </div>
+
         {/* CTA UPDC */}
         <div className="row CTA-UPDC">
           <div className="col-12 text-center mt-lg-5 mt-3 CTA-UPDC-container">
