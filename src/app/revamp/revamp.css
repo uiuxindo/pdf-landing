@@ -366,7 +366,6 @@
   font-weight: 600;
 }
 
-/* ===== LIST ===== */
 .syllabus-item {
   display: flex;
   gap: 14px;
@@ -385,7 +384,6 @@
   font-weight: bold;
 }
 
-/* ===== IMAGE CARD ===== */
 .syllabus-image-card {
   position: relative;
   width: 100%;
@@ -1228,6 +1226,10 @@ footer{
 
   .silabus-pembelajaran{
     font-size: 20px !important;
+  }
+
+  .syllabus-image-card {
+    height: 480px;
   }
 
   /* CTA UPDC */
