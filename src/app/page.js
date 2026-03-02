@@ -164,8 +164,8 @@ export default function Home() {
       <div className="container">
 
         <div className="row sylabus">
-          <p className="heading-schedule fw-700 mb-3 text-center">Silabus Workshop</p>
-          <p className="text-grey text-center mb-0">Rangkaian materi terstruktur yang dirancang interaktif, aplikatif, dan relevan dengan kebutuhan industri</p>
+          <p className="heading-schedule fw-700 mb-3 text-center">Workshop Syllabus</p>
+          <p className="text-grey text-center mb-0">A series of structured materials designed to be interactive, applicable, and relevant to industry needs.</p>
           <Sylabus />
         </div>
 

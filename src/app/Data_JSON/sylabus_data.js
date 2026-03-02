@@ -124,8 +124,8 @@ export const syllabusData = {
     title: "Silabus Pembelajaran Software Engineering:",
     image: "/Assets/Revamp/Sylabus/sylabus-software-engineer.png",
     duration:
-      "Total Durasi 2 jam → 1 jam teori + 1 jam praktik bersama mentor. Peserta akan diberikan tugas pada sesi ini.",
-    showDuration: false,
+      "Total 2 jam (1 jam teori + 1 jam demo)",
+    showDuration: true,
     items: [
       {
         title: "Engineering for Experience",
@@ -154,8 +154,8 @@ export const syllabusData = {
     title: "Silabus Pembelajaran English Profesional:",
     image: "/Assets/Revamp/Sylabus/sylabus-english.png",
     duration:
-      "Total Durasi 2 jam → 1 jam teori + 1 jam praktik bersama mentor. Peserta akan diberikan tugas pada sesi ini.",
-    showDuration: false,
+      "Total 2 jam (1 jam teori + 1 jam praktik)",
+    showDuration: true,
     items: [
       {
         title: "Why English Matters in Global Teams",
@@ -184,8 +184,8 @@ export const syllabusData = {
     title: "Silabus Pembelajaran Career & Mental Health:",
     image: "/Assets/Revamp/Sylabus/sylabus-career.png",
     duration:
-      "Total Durasi 2 jam → 1 jam teori + 1 jam praktik bersama mentor. Peserta akan diberikan tugas pada sesi ini.",
-    showDuration: false,
+      "Total 2 jam (1 jam talkshow + 1 jam mindfullness session)",
+    showDuration: true,
     items: [
       {
         title: "Designing Mindful Career",
