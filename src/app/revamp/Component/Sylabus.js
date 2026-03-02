@@ -91,9 +91,11 @@ export default function Sylabus() {
                 className="object-fit-cover"
               />
 
-              <div className="duration-box">
-                ⏱ {data.duration}
-              </div>
+              {data.showDuration && (
+                <div className="duration-box">
+                  ⏱ {data.duration}
+                </div>
+              )}
             </div>
           </div>
         </div>
