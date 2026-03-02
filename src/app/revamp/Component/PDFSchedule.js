@@ -53,24 +53,26 @@ export default function PDFSchedule() {
 function ScheduleCard({ item }) {
   return (
     <div className="col-lg-4 col-md-6">
-      <div className="card h-100 border p-4 rounded-4">
-        <div className="card-body p-0">
+      <div className="card h-100 border p-4 rounded-4 card-schedule">
+        <div className="card-body p-0 d-flex flex-column">
 
-          <div style={{marginBottom:'60px'}}>
+          <div>
             <p className="text-grey d-block mb-2">
               {item.day} • {item.date} • {item.time}
             </p>
-            <p className="fs-xl fw-600 mb-3" style={{lineHeight:'120%'}}>
+
+            <p className="fs-xl fw-600 mb-3" style={{ lineHeight: "120%" }}>
               {item.topic}
             </p>
           </div>
 
           {item.speaker && (
-            <div className="d-flex align-items-center justify-content-between">
+            <div className="d-flex align-items-center justify-content-between mt-auto">
               <div>
                 <p className="mb-0 fw-semibold">{item.speaker}</p>
                 <p className="text-grey fs-md mb-0">{item.speakerJob}</p>
               </div>
+
               {item.speakerPhoto && (
                 <Image
                   src={item.speakerPhoto}
