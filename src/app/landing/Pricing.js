@@ -32,11 +32,11 @@ const pricingData = {
     group: { price: "Rp65.000" },
   },
   presale2: {
-    individu: { price: "Rp99.000", date: "1 Jan 2026 - 31 Mar 2026" },
+    individu: { price: "Rp99.000", date: "1 Jan 2026 - 18 Apr 2026" },
     group: { price: "Rp95.000" },
   },
   normal: {
-    individu: { price: "Rp12?.000", date: "1 Apr 2026 - 1 Mei 2026" },
+    individu: { price: "Rp12?.000", date: "19 Apr 2026 - 1 Mei 2026" },
     group: { price: "Rp11?.000" },
   },
 };

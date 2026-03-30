@@ -47,7 +47,7 @@ export default function Home() {
         icon="palette2"
       />
 
-      <div className="container-fluid px-0" id="Home" style={{paddingTop:'76px', marginBottom:'50px'}}>
+      <div className="container-fluid px-0" id="Home" style={{paddingTop:'98px', marginBottom:'50px'}}>
         <div className="row">
 
           {/* Hero */}
@@ -180,7 +180,7 @@ export default function Home() {
         </div>
 
         {/* Pricing */}
-        <div className="row pricing">
+        <div id="pricingSection" className="row pricing">
           <div className="col-12">
             <PricingSection/>
           </div>
