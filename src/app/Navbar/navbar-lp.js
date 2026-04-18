@@ -47,12 +47,6 @@ function MainNavbar({
       onToggle={setExpanded}
       className={`border-bottom transition-all d-block pt-0 ${scrolled ? "glass-navbar" : "bg-body-tertiary"}`}
     >
-      <div style={{ background: "linear-gradient(to right, #FA950D, #FAB024, #FA950D)", color: "#FFFFFF" }} className="text-center py-1">
-        <Link href="#pricingSection">
-          <div className="d-none d-sm-none d-md-block">🎉 <span style={{ textDecoration: "underline" }}>Pendaftaran Pre-Sale 2 Diperpanjang. Gunakan Kupon ENDPRESALE2</span></div>
-          <div className="d-md-none" style={{ fontSize: 14 }}>🎉 <span style={{ textDecoration: "underline" }}>Pre-Sale 2 Diperpanjang. Gunakan Kupon ENDPRESALE2</span></div>
-        </Link>
-      </div>
       <Container>
         <Navbar.Brand href="/">
           <Image src={logo} alt="Logo" width={120} height={50} className="me-2" />

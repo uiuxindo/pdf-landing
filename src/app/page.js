@@ -47,7 +47,7 @@ export default function Home() {
         icon="palette2"
       />
 
-      <div className="container-fluid px-0" id="Home" style={{paddingTop:'98px', marginBottom:'50px'}}>
+      <div className="container-fluid px-0" id="Home" style={{paddingTop:'69px', marginBottom:'50px'}}>
         <div className="row">
 
           {/* Hero */}
