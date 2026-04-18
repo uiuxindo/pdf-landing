@@ -42,13 +42,13 @@ const pricingData = {
     group: { price: "Rp95.000" },
   },
   normal: {
-    individu: { price: "Rp12?.000", date: "19 Apr 2026 - 1 Mei 2026" },
-    group: { price: "Rp11?.000" },
+    individu: { price: "Rp129.000", date: "19 Apr 2026 - 1 Mei 2026" },
+    group: { price: "Rp119.000" },
   },
 };
 
 const PricingSection = () => {
-  const [activeTab, setActiveTab] = useState("presale2");
+  const [activeTab, setActiveTab] = useState("normal");
   const data = pricingData[activeTab];
 
   const [show, setShow] = useState(false);
@@ -94,7 +94,7 @@ const PricingSection = () => {
           const showBestOptionBadge = 
             activeTab === "presale2" && isIndividu;
 
-          const isButtonDisabled = activeTab !== "presale2";
+          const isButtonDisabled = activeTab !== "normal";
 
           return (
             <div className="col-lg-5 card-price-container position-relative mb-3 mb-md-0 px-0" key={index}>
