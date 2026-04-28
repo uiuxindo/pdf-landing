@@ -6,21 +6,28 @@ import MainNavbar from "../../app/Navbar/navbar-lp";
 import Image from "next/image";
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import './updc-revamp.css';
+import { useState } from 'react';
 import Timeline from "../../app/UPDC-2026-Old/Timeline";
 import { Card, CardBody } from "react-bootstrap";
 import Footer from "../../app/Footer/Footer.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+import { briefCards } from '../Data_JSON/benefit_card_data';
+import BenefitCards from '../revamp/Component/BenefitCard';
+import SubmitModal from './Modal Component/submitModal';
 
 export default function Home() {
 
   const menuPageMenus = [
     { label: "Home", href: "#Hero" },
     { label: "Keterangan", href: "#Keterangan" },
+    { label: "Challenge", href: "#Challenge" },
     { label: "Timeline", href: "#Timeline" },
     { label: "Hadiah", href: "#Hadiah" },
     { label: "Juri", href: "#Juri" },
   ];
+
+  const [show, setShow] = useState(false)
 
   return (
     <>
@@ -37,16 +44,35 @@ export default function Home() {
 
           {/* Hero */}
           <div className="col-12 hero-updc text-center">
-            <div className='updc-heading-container text-center mx-auto'>
-              <h1 className="fw-700 mb-3 text-white updc-heading">UI PRODUCT DESIGN</h1>
-              <div className="bg-white py-2 text-center mb-4 heading-2">
-                <p className="text-pink fw-700 mb-0 updc-heading2">C H A L L E N G E</p>
+            <div className='updc-heading-container text-center mx-auto position-relative'>
+              <Image className="img-fluid tag-uiuxindo position-absolute" src="/Assets/Revamp/UPDC-Revamp/Tag-UIUXINDO.png" width={240} height={240} alt=""/>
+              <h1 className="fw-900 text-main updc-heading">UI Product Design</h1>
+              <div className='d-flex flex-row justify-content-center align-items-center'>
+                <h1 className="fw-700 mb-3 text-blue updc-heading-2">Challenge</h1>
+                <Image className="img-fluid tag-26" src="/Assets/Revamp/UPDC-Revamp/Tag-26.png" width={130} height={130} alt=""/>
               </div>
-              <p className='text-center updc-subheading'>Empowering Local, Competing Global: Designing Digital Bridges for Business</p>
+              <div className='updc-subheading mt-md-4 mt-0 py-2'>
+                <p className='text-center updc-subheading-text px-2 fw-600 mb-0' style={{color:'#B74A06'}}>"Empowering Local, Competing Global: Designing Digital Bridges for Business"</p>
+              </div>
+              <Image className="img-fluid tag-you position-absolute" src="/Assets/Revamp/UPDC-Revamp/Tag-You.png" width={120} height={120} alt=""/>
             </div>
-           <Link href="/payment" className="btn btn-updc bg-white rounded-pill mt-md-4 px-4 py-md-3 fw-700 " style={{background:'#FFB929'}}>
-              Register Now
-            </Link>
+            <div className='d-flex flex-row justify-content-center align-items-center button-hero'>
+              <Link href="" className="btn btn-download-cover rounded-pill mt-md-4 me-md-5 me-3 px-4 py-md-3 fw-700 mb-0">
+                Download Cover
+              </Link>
+              <Link href="" 
+                    onClick={(e) => {
+                      e.preventDefault()
+                      setShow(true)
+                    }}
+                    className="btn btn-updc bg-white rounded-pill mt-md-4 px-4 py-md-3 fw-700">
+                Submit Challenge
+              </Link>
+              <SubmitModal show={show} onHide={() => {setShow(false)}}/>
+            </div>
+          </div>
+          <div className='px-0'>
+            <Image className="tag-hero" src="/Assets/Revamp/UPDC-Revamp/Tag.png" width={1920} height={200} alt=""/>
           </div>
         </div>
       </div>
@@ -56,8 +82,9 @@ export default function Home() {
       {/* KETERANGAN */}
       <div id='Keterangan' className='row section-keterangan text-center'>
         <p className='fw-700 mb-3 keterangan-heading'>What is UPDC?</p>
-        <p className='text-grey keterangan'>UPDC (UIUXINDO Product Design Challenge) is a UI/UX design competition by UIUXINDO, created for students, fresh graduates, and career switchers. 
-          It&apos;s a space to sharpen your UI/UX and product design skills through real-world case studies, while gaining hands-on experience in building solutions and presenting ideas to stakeholders.
+        <p className='text-grey keterangan'>Product Design Challenge adalah ajang lomba UI/UX Design yang ditujukan untuk mahasiswa, 
+          PDC ini hadir sebagai solusi untuk mahasiswa yang ingin mengasah kemampuan UI/UX & product development serta memberikan pengalaman 
+          nyata dalam mengemukakan ide kepada stakeholder di dunia kerja.
         </p>
         <Card className='card-general radius-16'>
           <CardBody className='p-0'>
@@ -71,7 +98,7 @@ export default function Home() {
                   01
                   </div>
                 <p className='text-start mb-0'>
-                  Beli tiket PDF 2026 dan ikuti lomba UI/UX Design gratis, plus semua benefit tetap kamu dapatkan
+                  Peserta UPDC berhak mengikuti seluruh rangkaian workshop & benefit PDF 2026
                 </p>
               </div>
               <div className='me-md-4 pt-3 pb-4 px-3 card-metrics'> 
@@ -79,7 +106,7 @@ export default function Home() {
                   02
                   </div>
                 <p className='text-start mb-0'>
-                  Brief challenge akan tersedia di website pada Sabtu, 2 Mei 2026. Ikuti opening PDF 2026 untuk info lengkapnya
+                  Peserta dapat memilih salah satu brief yang tersedia
                 </p>
               </div>
               <div className='me-md-4 pt-3 pb-4 px-3 card-metrics'> 
@@ -87,7 +114,7 @@ export default function Home() {
                   03
                   </div>
                 <p className='text-start mb-0'>
-                  Lomba ini dilakukan oleh individu
+                  Peserta diperbolehkan mengerjakan dua brief, namun hanya satu project yang akan dinilai
                 </p>
               </div>
               <div className='pt-3 pb-4 px-3 card-metrics'> 
@@ -95,32 +122,26 @@ export default function Home() {
                   04
                 </div>
                 <p className='text-start mb-0'>
-                  Brief challenge dapat digunakan untuk portofolio dengan memberikan kredit UIUXINDO sebagai penyelenggara
+                  Peserta wajib mengisi formulir data yang terdapat dalam brief untuk keperluan penilaian
                 </p>
               </div>
             </div>
           </CardBody>
         </Card>
       </div>
+
+      {/* Brief */}
+      <div className="row" id='Challenge'>
+        <div className='col-12 text-center'>
+          <p className="heading-benefit-1 fw-700 mb-3">Choose Your Challenge!</p>
+          <p className="text-grey subheading-benefit-1" style={{marginBottom:'40px'}}>By participating in this event, you will get an exciting learning experience about product design and professional relationships that bring positive energy.</p>
+          <BenefitCards cardsData={briefCards}/>
+        </div>
+      </div>
+
     </div>
 
     <div className='container-fluid px-0'>
-
-      {/* Timeline */}
-      <div id='Timeline' className='row'>
-        <Image className="d-none d-md-block mb-md-0 img-fluid px-0 union" src="/Assets/Revamp/Union.png" width={1585} height={300} alt=""/>
-        <Image className="d-block d-md-none mb-md-0 img-fluid px-0 union" src="/Assets/Revamp/Union-1-Mobile.png" width={300} height={300} alt=""/>
-        <div id="Timeline" className="row section-timeline px-0">
-          <div className="col-12 px-0 text-center">
-            <h1 className="fw-700 timeline-heading">How the Challenge Works</h1>
-            <p className="text-grey">Simple steps to join and complete the challenge</p>
-            <Timeline />
-          </div>
-        </div>
-        <Image className="d-none d-md-block mb-md-0 img-fluid px-0 union" src="/Assets/Revamp/Union-2.png" width={1585} height={300} alt=""/>
-        <Image className="d-block d-md-none mb-md-0 img-fluid px-0 union" src="/Assets/Revamp/Union-2-Mobile.png" width={300} height={300} alt=""/>
-      </div>
-
       {/* REWARD */}
       <div id='Hadiah' className='row section-reward text-center'>
         <div className='col-12 px-0'>
@@ -188,7 +209,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <Image className="n" src="/Assets/Revamp/UPDC-Revamp/Tag-blue.png" width={1585} height={45} alt=""/>
+      <Image className="n" src="/Assets/Revamp/UPDC-Revamp/Tag-blue.png" width={1920} height={52} alt=""/>
     </div>
     
     {/* Juri */}
@@ -256,6 +277,23 @@ export default function Home() {
             
           </div>
         </div>
+      </div>
+    </div>
+
+    {/* Timeline */}
+    <div className='container-fluid'>
+      <div id='Timeline' className='row'>
+        <Image className="d-none d-md-block mb-md-0 img-fluid px-0 union" src="/Assets/Revamp/Union.png" width={1585} height={300} alt=""/>
+        <Image className="d-block d-md-none mb-md-0 img-fluid px-0 union" src="/Assets/Revamp/Union-1-Mobile.png" width={300} height={300} alt=""/>
+        <div id="Timeline" className="row section-timeline px-0">
+          <div className="col-12 px-0 text-center">
+            <h1 className="fw-700 timeline-heading">How the Challenge Works</h1>
+            <p className="text-grey">Simple steps to join and complete the challenge</p>
+            <Timeline />
+          </div>
+        </div>
+        {/* <Image className="d-none d-md-block mb-md-0 img-fluid px-0 union" src="/Assets/Revamp/Union-2.png" width={1585} height={300} alt=""/> */}
+        {/* <Image className="d-block d-md-none mb-md-0 img-fluid px-0 union" src="/Assets/Revamp/Union-2-Mobile.png" width={300} height={300} alt=""/> */}
       </div>
     </div>
 
