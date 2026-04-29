@@ -3,7 +3,7 @@
 import Modal from 'react-bootstrap/Modal'
 import Link from 'next/link'
 
-export default function SubmitModal({ show, onHide, modalColor, linkColor }) {
+export default function SubmitModal({ show, onHide, modalColor, linkColor = '#4DA2FF' }) {
 
 	  return (
     <Modal show={show} onHide={onHide} centered size="lg">
