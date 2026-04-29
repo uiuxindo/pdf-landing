@@ -101,7 +101,8 @@ export const briefCards = [
         ]
       },
       dateColor:'#4DA2FF',
-      modalColor:'#EEF7FF'
+      modalColor:'#EEF7FF',
+      stepperColor:'#1F67F1'
     }
   },
     {
@@ -171,7 +172,8 @@ export const briefCards = [
         ]
       },
       dateColor:'#FF4DA2',
-      modalColor:'#FEF1F8'
+      modalColor:'#FEF1F8',
+      stepperColor:'#D10557'
     }
   },
 ]

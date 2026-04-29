@@ -57,7 +57,10 @@ export default function Home() {
               <Image className="img-fluid tag-you position-absolute" src="/Assets/Revamp/UPDC-Revamp/Tag-You.png" width={120} height={120} alt=""/>
             </div>
             <div className='d-flex flex-row justify-content-center align-items-center button-hero'>
-              <Link href="" className="btn btn-download-cover rounded-pill mt-md-4 me-md-5 me-3 px-4 py-md-3 fw-700 mb-0">
+              <Link href="https://bit.ly/cover-uidc2026" 
+                    className="btn btn-download-cover rounded-pill mt-md-4 me-md-4 me-3 px-4 py-md-3 fw-700 mb-0"
+                    style={{border:'solid 1px #000000'}}
+              >
                 Download Cover
               </Link>
               <Link href="" 
@@ -65,7 +68,9 @@ export default function Home() {
                       e.preventDefault()
                       setShow(true)
                     }}
-                    className="btn btn-updc bg-white rounded-pill mt-md-4 px-4 py-md-3 fw-700">
+                    className="btn btn-updc rounded-pill mt-md-4 px-4 py-md-3 fw-700"
+                    style={{backgroundColor:'#FFFAEB'}}
+              >
                 Submit Challenge
               </Link>
               <SubmitModal show={show} onHide={() => {setShow(false)}}/>
@@ -90,7 +95,6 @@ export default function Home() {
           <CardBody className='p-0'>
             <div className='card-heading-container p-3'>
               <p className='fw-600 mb-0 card-heading'>General Terms</p>
-              <p className='mb-0'>Key things you should know before joining the UI Product Design Challenge</p>
             </div>
             <div className='d-flex flex-lg-row flex-column align-items-lg-center justify-content-md-center'>
               <div className='me-md-4 pt-3 pb-md-4 pb-3 px-3 card-metrics'> 

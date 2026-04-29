@@ -55,7 +55,7 @@ export default function BenefitCards({ cardsData = [] }) {
                       setSelectedCard(card)
                       setShow(true)
                     }}
-                    className="btn rounded-pill px-4 py-2 fw-600 mt-2"
+                    className="btn rounded-pill px-4 py-2 fw-600 mt-2 btn-brief"
                     style={{
                       backgroundColor: '#FFB929',
                       width: 'fit-content'
@@ -96,6 +96,7 @@ export default function BenefitCards({ cardsData = [] }) {
       <SubmitModal show={showSubmit} onHide={() => setShowSubmit(false)} 
                   modalColor={selectedCard?.modal?.modalColor}
                   linkColor={selectedCard?.modal?.dateColor}
+                  stepperColor={selectedCard?.modal?.stepperColor}
       />
 
     </div>

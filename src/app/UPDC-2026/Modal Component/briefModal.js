@@ -85,7 +85,7 @@ export default function BriefModal({ show, onHide, data, onSubmitClick }) {
 
       </Modal.Body>
 			<Modal.Footer className='justify-content-center' style={{backgroundColor:modalData.modalColor}}>
-        <Link href="" className="fw-600 px-4 py-3 me-md-5" style={{color:'#7A2F0D'}}>
+        <Link href="https://bit.ly/cover-uidc2026" className="rounded-pill fw-600 px-4 py-3 me-md-4" style={{color:'#7A2F0D', border:'solid 1px #7A2F0D'}}>
           Download Cover
         </Link>
         <Link href="" 

@@ -55,6 +55,7 @@
 
 .btn-download-cover:hover{
 	background: white;
+	border: none !important;
 }
 
 .btn-updc:hover{
@@ -213,6 +214,17 @@
 
 .link-submit{
 	font-size: 20px;
+}
+
+.text-step{
+	font-size: 20px;
+}
+
+.link-submit-container{
+	width: fit-content;
+	padding: 12px 240px;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
 }
 
 /* KETERANGAN */
@@ -413,6 +425,10 @@ footer{
 
 	.subheading-benefit-1{
 		margin-bottom: 20px !important;
+	}
+
+	.link-submit-container{
+		padding: 12px 100px;
 	}
 
 	/* HERO */
@@ -895,6 +911,18 @@ footer{
 
 	.content-title{
 		font-size: 18px;
+	}
+
+	.heading-submit{
+		font-size: 20px;
+	}
+
+	.text-step{
+		font-size: 20px;
+	}	
+
+	.link-submit-container{
+		padding: 12px 80px;
 	}
 
 	/* KETERANGAN */
