@@ -52,7 +52,7 @@ export default function Home() {
                 <Image className="img-fluid tag-26" src="/Assets/Revamp/UPDC-Revamp/Tag-26.png" width={130} height={130} alt=""/>
               </div>
               <div className='updc-subheading mt-md-4 mt-0 py-2'>
-                <p className='text-center updc-subheading-text px-2 fw-600 mb-0' style={{color:'#B74A06'}}>"Empowering Local, Competing Global: Designing Digital Bridges for Business"</p>
+                <p className='text-center updc-subheading-text px-2 fw-600 mb-0' style={{color:'#B74A06'}}>&ldquo;Empowering Local, Competing Global: Designing Digital Bridges for Business&rdquo;</p>
               </div>
               <Image className="img-fluid tag-you position-absolute" src="/Assets/Revamp/UPDC-Revamp/Tag-You.png" width={120} height={120} alt=""/>
             </div>
