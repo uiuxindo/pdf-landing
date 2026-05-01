@@ -126,15 +126,17 @@
 } */
 
 .bg-blue {
-  background-size: cover;
   background-image: url('../../../public/Assets/Revamp/BG-Blue.png');
+  background-size: 100% 100%;
+  /* background-repeat: no-repeat; */
   background-position: center;
   border-radius: 8px; 
 }
 
 .bg-pink {
-  background-size: cover;
   background-image: url('../../../public/Assets/Revamp/BG-Pink.png');
+  background-size: 100% 100%;
+  /* background-repeat: no-repeat; */
   background-position: center;
   border-radius: 8px;
 }
@@ -144,7 +146,7 @@
 }
 
 .card-body-benefit{
-  padding: 27px 32px;
+  padding: 24px 32px;
 }
 
 .card-heading-benefit{

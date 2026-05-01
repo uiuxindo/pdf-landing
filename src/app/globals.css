@@ -14,7 +14,7 @@
  .fw-300 {font-weight: 300;}
  .fw-400 {font-weight: 400;}
  .fw-500 {font-weight: 500;}
-  .fw-600 {font-weight: 600;}
+.fw-600 {font-weight: 600;}
  .fw-700 {font-weight: 700;}
  .fw-900 {font-weight: 900;}
 
@@ -58,6 +58,10 @@ body {
   color: #0A0A0A;
 }
 
+body.modal-open {
+  padding-right: 0 !important;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -75,6 +79,10 @@ a {
 .nav-link,
 .btn {
   font-family: 'Outfit', sans-serif !important;
+}
+
+.navbar{
+  padding-right: 0 !important;
 }
 
 /* NAVBAR */

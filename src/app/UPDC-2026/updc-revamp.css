@@ -2,13 +2,16 @@
 	max-width: 1140px;
 } */
 
+.container{
+  max-width: 1140px;
+}
 
 /* HERO */
 .hero-updc{
-	background-image: url("../../../public/Assets/Revamp/UPDC-Revamp/BG-Hero-UPDC.png");
+	background-image: url("../../../public/Assets/Revamp/UPDC-Revamp/BG-Hero-New.png");
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
-	height: 820px;
+	height: 720px;
 	padding: 170px 200px;
 }
 
@@ -17,8 +20,17 @@
 	justify-content: center;
 }
 
-.updc-heading, .updc-heading2{
-	font-size: 72px;
+.updc-heading{
+	font-size: 105px;
+	-webkit-text-stroke: 20px white;
+	margin-bottom: -36px;
+	paint-order: stroke fill;
+}
+
+.updc-heading-2{
+	font-size: 110px;
+	-webkit-text-stroke: 20px white;
+	paint-order: stroke fill;
 }
 
 .updc-heading2{
@@ -26,20 +38,198 @@
 }
 
 .updc-subheading{
-	font-size: 20px;
+	background-color: #FFF1C6;
+}
+
+.updc-subheading-text{
+	font-size: 24px;
+}
+
+.button-hero{
+	margin-top: 32px;
 }
 
 .btn-updc{
 	font-size: 16px;
 }
 
+.btn-download-cover:hover{
+	background: white;
+	border: none !important;
+}
+
 .btn-updc:hover{
 	color: #FFB929;
 }
 
+.tag-uiuxindo{
+	top: -60px;
+	left: 220px;
+}
+
+.tag-you{
+	top: 220px;
+	left: 1050px;
+}
+
+.tag-hero{
+	width: 1920px;
+	height: 60px;
+}
+
+/* Brief */
+.subheading-briefcard{
+  font-size: 24px;
+}
+
+.heading-benefit-1{
+	font-size: 32px !important;
+}
+
+.brief-heading{
+	margin-bottom: 32px;
+}
+
+.brief-heading .heading-benefit-1 {
+  line-height: 32px;
+}
+
+.bg-blue {
+  background-image: url('../../../public/Assets/Revamp/BG-Blue.png');
+  background-size: 100% 100%;
+  background-position: center;
+  border-radius: 8px; 
+}
+
+.bg-pink {
+  background-image: url('../../../public/Assets/Revamp/BG-Pink.png');
+  background-size: 100% 100%;
+  background-position: center;
+  border-radius: 8px;
+}
+
+.card-body-benefit{
+  padding: 24px 32px;
+}
+
+.btn-brief:hover{
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(255, 185, 41, 0.3);
+}
+
+/* Brief Modal */
+.modal-open {
+  overflow: auto !important;
+  padding-right: 0 !important;
+}
+
+.modal-brief-content {
+  height: 90vh;        
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-content{
+	border-radius: 16px;
+}
+
+.modal-header{
+	padding: 90px 32px 32px 32px;
+	border-top-left-radius: 16px;
+	border-top-right-radius: 16px;
+  	border-bottom: none;
+	position: sticky;
+	top: 0;
+	z-index: 10;
+}
+
+.modal-header-custom .btn-close {
+  position: absolute;
+  top: 40px;
+  right: 48px;
+}
+
+.modal-brief-content .modal-body{
+	padding-left: 32px;
+	padding-right: 32px;
+	padding-bottom: 0;
+	overflow-y: auto;
+	flex: 1;
+	min-height: 0;
+	scrollbar-width: thin;
+  	scrollbar-color: #D9D9D9 transparent;
+}
+
+/* .modal-brief-content .modal-header,
+.modal-brief-content .modal-footer {
+  flex-shrink: 0;
+} */
+
+.modal-footer{
+	border-top: none;
+	padding-top: 24px;
+	padding-bottom: 24px;
+	position: sticky;
+	bottom: 0;
+	z-index: 10;
+	border-bottom-left-radius: 16px;
+	border-bottom-right-radius: 16px;
+}
+
+.modal-maintitle{
+	font-size: 32px;
+}
+
+.date-brief{
+	padding: 12px;
+}
+
+.content-title{
+	font-size: 20px;
+}
+
+/* Submit Modal */
+.modal-header-submit{
+	padding: 60px 32px 20px 32px;
+}
+
+.modal-header-submit .btn-close {
+  position: absolute;
+  top: 40px;
+  right: 48px;
+}
+
+.modal-body-submit{
+	padding-left: 32px;
+	padding-right: 32px;
+	padding-bottom: 60px;
+	border-bottom-left-radius: 16px;
+	border-bottom-right-radius: 16px;
+}
+
+.heading-submit{
+	font-size: 24px;
+}
+
+.link-submit{
+	font-size: 20px;
+}
+
+.text-step{
+	font-size: 20px;
+}
+
+.link-submit-container{
+	width: fit-content;
+	padding: 12px 240px;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+}
+
 /* KETERANGAN */
 .section-keterangan{
-	margin: 50px 0;
+	margin: 100px 0;
 }
 
 .keterangan-heading{
@@ -53,7 +243,7 @@
 
 .card-heading-container{
 	background-image: url("../../../public/Assets/Revamp/UPDC-Revamp/BG-Heading-CardTerms.png");
-	background-size: cover;
+	background-size: 100% 100%;
 	margin-bottom: 32px;
 }
 
@@ -123,7 +313,7 @@
 	background-image: url("../../../public/Assets/Revamp/UPDC-Revamp/BG-Reward.png");
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
-	margin-top: 50px;
+	margin-top: 100px;
 }
 
 .reward-heading{
@@ -200,8 +390,8 @@
 	padding: 6px;
 	border: solid 1px #B74A06;
 	width: fit-content;
-  	top: 40%;
-  	left:15%;
+  	top: 160px;
+  	left: 30px;
   	transform: translate(-35%, -50%);
 }
 
@@ -225,24 +415,71 @@ footer{
 
 @media (min-width: 768px) and (max-width:1000px){
 
+	.container{
+    	padding: 0 40px;
+  	}
+
+	.card-benefit{
+    	margin-top: 40px !important;
+  	}
+
+	.subheading-benefit-1{
+		margin-bottom: 20px !important;
+	}
+
+	.link-submit-container{
+		padding: 12px 100px;
+	}
+
 	/* HERO */
 	.hero-updc{
-		background-image: url("../../../public/Assets/Revamp/UPDC-Revamp/BG-Hero-UPDC-Mobile.png");
+		background-image: url("../../../public/Assets/Revamp/UPDC-Revamp/BG-Hero-New-Mobile.png");
 		background-size: 100% 100%;
-		height: 1600px !important;
+		height: 1400px !important;
 		padding: 560px 40px 0 40px;
 	}
 
-	.updc-heading, .updc-heading2{
-		font-size: 64px;
+	.updc-heading, .updc-heading-2{
+		font-size: 70px;
 	}
 
-	.updc-subheading{
+	.updc-heading{
+		margin-bottom: -16px;
+	}
+
+	.updc-subheading-text{
+		font-size: 16px;
+	}
+
+	.button-hero{
+		margin-top: 120px;
+	}
+
+	.btn-updc, .btn-download-cover{
 		font-size: 18px;
 	}
 
-	.btn-updc{
-		font-size: 20px;
+	.tag-26{
+		width: 120px;
+		height: 90px;
+	}
+
+	.tag-uiuxindo{
+		left: 40px;
+	}
+
+	.tag-you{
+		left: 320px;
+		top: 240px;
+	}
+
+	.tag-hero{
+		width: 1920px;
+		height: 80px;
+	}
+
+	.date-brief{
+		width: fit-content;
 	}
 
 	/* KETERANGAN */
@@ -402,23 +639,52 @@ footer{
 
 	/* HERO */
 	.hero-updc{
-		background-image: url("../../../public/Assets/Revamp/UPDC-Revamp/BG-Hero-UPDC-Mobile.png");
-		background-size: cover;
-		height: 2150px !important;
-		padding: 800px 40px 0 40px;
+		background-image: url("../../../public/Assets/Revamp/UPDC-Revamp/BG-Hero-New.png");
+		/* background-size: cover; */
+		background-position: center;
+		height: 560px !important;
+		padding: 120px 40px 0 40px;
 	}
 
-	.updc-heading, .updc-heading2{
-		font-size: 84px;
+	.updc-heading, .updc-heading-2{
+		font-size: 70px;
 	}
 
-	.updc-subheading{
-		font-size: 24px;
+	.updc-heading{
+		margin-bottom: -20px;
 	}
 
-	.btn-updc{
-		margin-top: 80px !important;
-		font-size: 28px;
+	.updc-subheading-text{
+		font-size: 16px;
+	}
+
+	.button-hero{
+		margin-top: 16px;
+	}
+
+	.btn-updc, .btn-download-cover{
+		margin-top: 32px !important;
+		font-size: 20px;
+	}
+
+	.tag-26{
+		width: 110px !important;
+		height: 80px !important;
+	}
+	
+		.tag-uiuxindo{
+			top: -60px;
+			left: 380px;
+		}
+
+		.tag-you{
+			top: 220px;
+			left: 1220px;
+		}
+
+	.tag-hero{
+		width: 1920px;
+		height: 60px;
 	}
 
 	/* KETERANGAN */
@@ -532,7 +798,7 @@ footer{
 
 	/* HERO */
 	.hero-updc{
-		background-image: url("../../../public/Assets/Revamp/UPDC-Revamp/BG-Hero-UPDC-Mobile.png");
+		background-image: url("../../../public/Assets/Revamp/UPDC-Revamp/BG-Hero-New-Mobile.png");
 		background-size: 100% 100%;
 		height: 840px;
 		padding-left: 20px;
@@ -552,22 +818,111 @@ footer{
 		padding: 0 40px;
   }
 
-	.updc-heading, .updc-heading2{
-		font-size: 32px;
+	.updc-heading, .updc-heading-2{
+		font-size: 39px;
+		-webkit-text-stroke: 8px white;
+		paint-order: stroke fill;
+	}
+
+	.updc-heading{
+		margin-bottom: -10px;
 	}
 
 	.updc-heading2{
 		letter-spacing: 0px;
 	}
 
-	.updc-subheading{
-		font-size: 16px;
+	.updc-subheading-text{
+		font-size: 12px;
 	}
 
-	.btn-updc{
-		font-size: 14px;
+	.button-hero{
+		margin-top: 120px;
+	}
+
+	.btn-updc, .btn-download-cover{
+		font-size: 12px;
 		padding-top: 12px;
 		padding-bottom: 12px;
+	}
+
+	.tag-uiuxindo{
+		width: 170px;
+		height: 50px;
+		left: 0px;
+		top: -50px;
+	}
+
+	.tag-you{
+		width: 84px;
+		height: 56px;
+		left: 240px;
+		top: 160px;
+	}
+
+	.tag-26{
+		width: 60px !important;
+		height: 44px !important;
+	}
+
+	.tag-hero{
+		width: 1600px;
+		height: 50px;
+	}
+
+	/* Brief */
+
+	.subheading-benefit-1{
+		margin-bottom: 20px !important;
+	}
+
+	.heading-benefit-1{
+		font-size: 32px !important;
+	}
+
+	.card-benefit{
+    	margin-top: 24px !important;
+  	}
+
+	.card-body-benefit{
+		padding: 16px;
+	}
+
+	.subheading-briefcard{
+		font-size: 20px;
+	}
+
+	.modal-header{
+		padding: 80px 24px 24px 24px;
+	}
+
+	.modal-body{
+		padding-left: 24px !important;
+		padding-right: 24px !important;
+	}
+
+	.modal-maintitle{
+		font-size: 24px;
+	}
+	
+	.date-brief{
+		width: fit-content;
+	}
+
+	.content-title{
+		font-size: 18px;
+	}
+
+	.heading-submit{
+		font-size: 20px;
+	}
+
+	.text-step{
+		font-size: 20px;
+	}	
+
+	.link-submit-container{
+		padding: 12px 80px;
 	}
 
 	/* KETERANGAN */
@@ -585,7 +940,7 @@ footer{
 	}
 
 	.card-heading{
-		font-size: 20px;
+		font-size: 24px;
 	}
 
 	.card-metrics{
@@ -759,5 +1114,26 @@ footer{
   .copyright{
     padding: 24px 24px 24px 24px !important;
   }
-
 }
+
+	@media(min-width:1920px){
+
+		.btn-updc, .btn-download-cover{
+			font-size: 24px;
+		}
+
+		.tag-uiuxindo{
+			top: -60px;
+			left: 380px;
+		}
+
+		.tag-you{
+			top: 220px;
+			left: 1220px;
+		}
+
+		.tag-hero{
+			width: 1920px;
+			height: 60px;
+		}
+	}
