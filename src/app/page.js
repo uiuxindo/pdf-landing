@@ -21,6 +21,7 @@ import PartnerCarousel from "./revamp/Component/PartnerCarousel";
 import FAQ from "./revamp/Component/FAQ";
 import Footer from "./Footer/Footer";
 import FloatingWhatsapp from "./landing/WidgetWhatsapp";
+import { homeCards } from "./Data_JSON/benefit_card_data";
 
 export default function Home() {
 
@@ -109,7 +110,7 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <BenefitCards/>
+            <BenefitCards cardsData={homeCards}/>
           </div>
         </div>
 
