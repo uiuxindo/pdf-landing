@@ -95,7 +95,7 @@ export const briefCards = [
         title:'Ketentuan Upload',
         items:[
           'Upload hasil desain di feed akun masing-masing dan tag @uiuxindo dan membuat caption penjelasan desain disertai hashtag #uiuxindo #uiuxindodesignchallenge5 #updc5 #productdesignfestival #pdf2026',
-          'Menggunakan cover feed yang telah disediakan (akses: xxxxxx)',
+          'Menggunakan cover feed yang telah disediakan',
           'Feed dibagikan ke story, tag @uiuxindo & 3 orang teman',
           'Batas pengumpulan upload tanggal 17 Mei 2026, 24.00 WIB',
         ]
@@ -166,7 +166,7 @@ export const briefCards = [
         title:'Ketentuan Upload',
         items:[
           'Upload hasil desain di feed akun masing-masing dan tag @uiuxindo dan membuat caption penjelasan desain disertai hashtag #uiuxindo #uiuxindodesignchallenge5 #updc5 #productdesignfestival #pdf2026',
-          'Menggunakan cover feed yang telah disediakan (akses: xxxxxx)',
+          'Menggunakan cover feed yang telah disediakan',
           'Feed dibagikan ke story, tag @uiuxindo & 3 orang teman',
           'Batas pengumpulan upload tanggal 17 Mei 2026, 24.00 WIB',
         ]
