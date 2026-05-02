@@ -63,7 +63,7 @@ export default function SubmitModal({ show, onHide, modalColor, linkColor = '#4D
 							</div>
 
 							<div className='link-submit-container' style={{background: linkColor}}>
-								<Link href="https://docs.google.com/forms/..." className='mb-0 fw-600 text-white link-submit'>
+								<Link href="https://bit.ly/uidc-2026" target='_blank' className='mb-0 fw-600 text-white link-submit'>
 									bit.ly/uidc-2026
 								</Link>
 							</div>
