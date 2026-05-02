@@ -94,7 +94,7 @@ const PricingSection = () => {
           const showBestOptionBadge = 
             activeTab === "presale2" && isIndividu;
 
-          const isButtonDisabled = activeTab !== "normal";
+          const isButtonDisabled = activeTab !== "";
 
           return (
             <div className="col-lg-5 card-price-container position-relative mb-3 mb-md-0 px-0" key={index}>
@@ -196,7 +196,7 @@ const PricingSection = () => {
                         border: "none",
                       }}
                     >
-                      {activeTab === "presale1" ? "Terjual" : plan.textButton}
+                      {activeTab === "" ? "Terjual" : plan.textButton}
                     </button>
                   ) : (
                     <Link href={plan.link} className="btn btn-price rounded-pill w-100 fw-600">
