@@ -3,6 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import "bootstrap-icons/font/bootstrap-icons.css";
 
@@ -15,6 +16,8 @@ function MainNavbar({
 }) {
   const [scrolled, setScrolled] = useState(false);
   const [expanded, setExpanded] = useState(false);
+
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -47,15 +50,17 @@ function MainNavbar({
       onToggle={setExpanded}
       className={`border-bottom transition-all d-block pt-0 ${scrolled ? "glass-navbar" : "bg-body-tertiary"}`}
     >
-      <div className="py-1" style={{ backgroundColor: "#ffe5bd" }}>
-        <Container>
-          <div className="row">
-            <div className="col-12 text-center">
-              <Link href="#pricingSection" style={{ textDecoration: "underline" }}>Tiket on the spot sudah dibuka 🎉. Gunakan voucher <strong style={{color: "#e99a12"}}>PDFOTS</strong> untuk dapat potongan harga.</Link>
+      {pathname === "/" && (
+        <div className="py-1" style={{ backgroundColor: "#ffe5bd" }}>
+          <Container>
+            <div className="row">
+              <div className="col-12 text-center">
+                <Link href="#pricingSection" style={{ textDecoration: "underline" }}>Tiket on the spot sudah dibuka 🎉. Gunakan voucher <strong style={{color: "#e99a12"}}>PDFOTS</strong> untuk dapat potongan harga.</Link>
+              </div>
             </div>
-          </div>
-        </Container>
-      </div>
+          </Container>
+        </div>
+      )}
       <Container>
         <Navbar.Brand href="/">
           <Image src={logo} alt="Logo" width={120} height={50} className="me-2" />
