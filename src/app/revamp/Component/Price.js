@@ -47,7 +47,7 @@ const pricingData = {
   },
   ots: {
     individu: { price: "Rp159.000", date: "4 Mei 2026 - 6 Juni 2026" },
-    group: { price: "Rp149.000" },
+    group: { price: "Rp139.000" },
   },
 };
 

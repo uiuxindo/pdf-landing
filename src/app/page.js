@@ -50,7 +50,6 @@ export default function Home() {
 
       <div className="container-fluid px-0" id="Home" style={{paddingTop:'69px', marginBottom:'50px'}}>
         <div className="row">
-
           {/* Hero */}
           <div id="Home" className="col-12 hero-revamp">
             <div className="hero-content text-center">
