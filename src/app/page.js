@@ -48,9 +48,8 @@ export default function Home() {
         icon="palette2"
       />
 
-      <div className="container-fluid px-0" id="Home" style={{paddingTop:'69px', marginBottom:'50px'}}>
+      <div className="container-fluid px-0" id="Home" style={{paddingTop:'101px', marginBottom:'50px'}}>
         <div className="row">
-
           {/* Hero */}
           <div id="Home" className="col-12 hero-revamp">
             <div className="hero-content text-center">
@@ -164,6 +163,7 @@ export default function Home() {
 
       <div className="container">
 
+        {/* SYLABUS */}
         <div className="row sylabus">
           <p className="heading-schedule fw-700 mb-3 text-center">Workshop Syllabus</p>
           <p className="text-grey text-center mb-0">A series of structured materials designed to be interactive, applicable, and relevant to industry needs.</p>

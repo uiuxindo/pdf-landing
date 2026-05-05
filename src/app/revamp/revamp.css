@@ -366,7 +366,6 @@
 .tab-btn.active {
   background: #ffb929;
   color: #000;
-  font-weight: 600;
 }
 
 .syllabus-item {
@@ -466,6 +465,14 @@
     /* background-color: #FFB929 !important; */
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(255, 185, 41, 0.3);
+  }
+
+  .tab-scroll-wrapper{
+    overflow: visible;
+  }
+
+  .tab-scroll-inner{
+    flex-wrap: wrap;
   }
 
 /* Ornament Carousel */
@@ -1304,7 +1311,17 @@ footer{
     width: 100% !important;
   }
 
-  
+    .tab-scroll-wrapper {
+    overflow-x: auto;
+  }
+
+  .tab-scroll-inner {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+
   /* GALLERY */
   .gallery{
     padding: 0 12px;
