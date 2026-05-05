@@ -45,10 +45,14 @@ const pricingData = {
     individu: { price: "Rp129.000", date: "19 Apr 2026 - 1 Mei 2026" },
     group: { price: "Rp119.000" },
   },
+  ots: {
+    individu: { price: "Rp159.000", date: "4 Mei 2026 - 6 Juni 2026" },
+    group: { price: "Rp139.000" },
+  },
 };
 
 const PricingSection = () => {
-  const [activeTab, setActiveTab] = useState("normal");
+  const [activeTab, setActiveTab] = useState("ots");
   const data = pricingData[activeTab];
 
   const [show, setShow] = useState(false);
@@ -65,16 +69,35 @@ const PricingSection = () => {
           <p className="text-grey mb-0 subheading-price">No need to burn your wallet just to level up at this festival</p>
         </div>
         {/* Tab */}
-        <div className="d-flex justify-content-center my-lg-5 mt-4">
-          <div className="border p-2 rounded-pill">
-            {["presale1", "presale2", "normal"].map((tab, i) => (
+          {/* ===== TAB DESKTOP ===== */}
+          <div className="tab-wrapper d-none d-md-flex justify-content-center">
+            <div className="tab-container border">
+              {["presale1", "presale2", "normal", "ots"].map((tab) => (
+                <button
+                  key={tab}
+                  onClick={() => setActiveTab(tab)}
+                  className={`tab-btn ${
+                    activeTab === tab ? "active" : ""
+                  }`}
+                >
+                  {tab === "presale1" ? "Presale 1" : tab === "presale2" ? "Presale 2" : tab === "normal" ? "Normal" : "On The Spot"}
+                </button>
+              ))}
+            </div>
+          </div>
+
+        {/* ===== TAB MOBILE ===== */}
+        <div className="container d-md-none px-0">
+          <div className="tab-scroll-mobile d-md-none border rounded-pill d-flex p-2">
+            {["presale1", "presale2", "normal", "ots"].map((tab) => (
               <button
-                key={i}
+                key={tab}
                 onClick={() => setActiveTab(tab)}
-                className={`btn rounded-pill px-4 fw-500 ${
-                  activeTab === tab ? "tab-price-active" : "tab-price"} ${i < 2 ? "me-0" : ""}`}
+                className={`tab-btn ${
+                  activeTab === tab ? "active" : ""
+                }`}
               >
-                {tab === "presale1" ? "Presale 1" : tab === "presale2" ? "Presale 2" : "Normal"}
+                {tab === "presale1" ? "Presale 1" : tab === "presale2" ? "Presale 2" : tab === "normal" ? "Normal" : "On The Spot"}
               </button>
             ))}
           </div>
@@ -88,19 +111,19 @@ const PricingSection = () => {
 
           const isIndividu = plan.title === "Individu";
 
-          const isHighlightIndividuPresale2 =
-            activeTab === "presale2" && isIndividu;
+          // const isHighlightIndividuPresale2 =
+          //   activeTab === "presale2" && isIndividu;
 
           const showBestOptionBadge = 
-            activeTab === "presale2" && isIndividu;
+            activeTab === "ots" && isIndividu;
 
-          const isButtonDisabled = activeTab !== "";
+          const isButtonDisabled = activeTab !== "ots";
 
           return (
             <div className="col-lg-5 card-price-container position-relative mb-3 mb-md-0 px-0" key={index}>
               <div
                 className={`d-flex align-items-center justify-content-center ${
-                  showBestOptionBadge ? "mt-5 mt-md-0 mb-md-0" : ""
+                  showBestOptionBadge ? "mt-2 mt-md-0 mb-md-0" : ""
                 }`}
                 style={{ minHeight: "40px" }}
               >
