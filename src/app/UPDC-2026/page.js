@@ -57,13 +57,12 @@ export default function Home() {
               <Image className="img-fluid tag-you position-absolute" src="/Assets/Revamp/UPDC-Revamp/Tag-You.png" width={120} height={120} alt=""/>
             </div>
             <div className='d-flex flex-row justify-content-center align-items-center button-hero'>
-              <Link href="https://bit.ly/cover-uidc2026"
-                    target='_blank' 
+              <div
                     className="btn btn-download-cover rounded-pill mt-md-4 me-md-4 me-3 px-4 py-md-3 fw-700 mb-0"
                     style={{border:'solid 1px #000000'}}
               >
                 Download Cover
-              </Link>
+              </div>
               <Link href="" 
                     onClick={(e) => {
                       e.preventDefault()

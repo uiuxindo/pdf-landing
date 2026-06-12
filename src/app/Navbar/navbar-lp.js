@@ -50,7 +50,7 @@ function MainNavbar({
       onToggle={setExpanded}
       className={`border-bottom transition-all d-block pt-0 ${scrolled ? "glass-navbar" : "bg-body-tertiary"}`}
     >
-      {pathname === "/" && (
+      {/* {pathname === "/" && (
         <div className="py-1" style={{ backgroundColor: "#ffe5bd" }}>
           <Container>
             <div className="row">
@@ -60,7 +60,7 @@ function MainNavbar({
             </div>
           </Container>
         </div>
-      )}
+      )} */}
       <Container>
         <Navbar.Brand href="/">
           <Image src={logo} alt="Logo" width={120} height={50} className="me-2" />

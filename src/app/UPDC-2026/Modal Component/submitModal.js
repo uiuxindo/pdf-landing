@@ -63,9 +63,9 @@ export default function SubmitModal({ show, onHide, modalColor, linkColor = '#4D
 							</div>
 
 							<div className='link-submit-container' style={{background: linkColor}}>
-								<Link href="https://bit.ly/uidc-2026" target='_blank' className='mb-0 fw-600 text-white link-submit'>
-									bit.ly/uidc-2026
-								</Link>
+								<div className='mb-0 fw-600 text-white link-submit'>
+									Link tidak tersedia
+								</div>
 							</div>
 						</div>
 
@@ -85,11 +85,11 @@ export default function SubmitModal({ show, onHide, modalColor, linkColor = '#4D
 				{step === 2 && (
 					<div className='d-flex flex-column align-items-center' style={{background:modalColor}}>
 						<Image className="img-fluid" src="/Assets/Revamp/UPDC-Revamp/Banner Payment.png" width={420} height={420} alt=""/>
-						<Link href="https://www.instagram.com/" onClick={() => setStep(2)} className="fw-600 px-4 py-3 mt-4 rounded-pill"
+						{/* <Link href="https://www.instagram.com/" onClick={() => setStep(2)} className="fw-600 px-4 py-3 mt-4 rounded-pill"
 							style={{background:"#FFB929", color:'#7A2F0D'}}
 						>
 							Submit
-						</Link>
+						</Link> */}
 					</div>
 				)}
 
