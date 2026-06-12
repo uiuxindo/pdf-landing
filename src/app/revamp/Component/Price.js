@@ -52,7 +52,7 @@ const pricingData = {
 };
 
 const PricingSection = () => {
-  const [activeTab, setActiveTab] = useState("ots");
+  const [activeTab, setActiveTab] = useState("presale1");
   const data = pricingData[activeTab];
 
   const [show, setShow] = useState(false);
@@ -117,7 +117,7 @@ const PricingSection = () => {
           const showBestOptionBadge = 
             activeTab === "ots" && isIndividu;
 
-          const isButtonDisabled = activeTab !== "ots";
+          const isButtonDisabled = activeTab !== "";
 
           return (
             <div className="col-lg-5 card-price-container position-relative mb-3 mb-md-0 px-0" key={index}>
