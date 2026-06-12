@@ -48,7 +48,7 @@ export default function Home() {
         icon="palette2"
       />
 
-      <div className="container-fluid px-0" id="Home" style={{paddingTop:'101px', marginBottom:'50px'}}>
+      <div className="container-fluid px-0" id="Home" style={{paddingTop:'69px', marginBottom:'50px'}}>
         <div className="row">
           {/* Hero */}
           <div id="Home" className="col-12 hero-revamp">
@@ -72,9 +72,9 @@ export default function Home() {
                 </div>
                 <p className="desc-hero fs-xl mb-0 text-grey">Unlocking the Path to A Global Career from Wherever You Stand</p>
               </div>
-              <Link href="/payment" className="btn btn-main-hero rounded-pill py-3 px-4 fw-600">
+              <div className="btn btn-main-hero rounded-pill py-3 px-4 fw-600">
                 Register Now
-              </Link>
+              </div>
             </div>
             <Image className="d-none d-sm-none d-md-block position-absolute" src="/Assets/Revamp/Supergraphics-head-2.png" width={150} height={150} alt="" style={{ top: "116px", left: "31px", transform: "rotate(8deg)" }} />
             <Image className="d-none d-sm-none d-md-block position-absolute" src="/Assets/Revamp/figma-user-bubble.png" width={125} height={73} alt="" style={{ bottom: "182px", left: "50%", transform: "translateX(-100%)", marginLeft: "-81px" }} />
