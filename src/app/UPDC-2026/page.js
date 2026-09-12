@@ -163,7 +163,7 @@ export default function Home() {
                   <div className='bg-white text-center py-3 mb-4'><h5 className="fw-700 mb-0 position-title">Strong Performer</h5></div>
                   <p className='text-center'>Hampir jadi yang teratas, tapi performa kamu tetap luar biasa dan layak diapresiasi</p>
                   <ul className="ps-0" style={{listStyleType:'none'}}>
-                    <li className="mt-3"><i className="bi bi-check-circle-fill me-2" style={{color:'#FFB929'}}></i>Uang tunai Rp100.000</li>
+                    <li className="mt-3"><i className="bi bi-check-circle-fill me-2" style={{color:'#FFB929'}}></i>Uang tunai Rp ???.???</li>
                     <li className="mt-3"><i className="bi bi-check-circle-fill me-2" style={{color:'#FFB929'}}></i>Sertifikat UPDC</li>
                     <li className="mt-3"><i className="bi bi-check-circle-fill me-2" style={{color:'#FFB929'}}></i>Gratis Private Mentoring (1 jam)</li>
                   </ul>
@@ -184,7 +184,7 @@ export default function Home() {
                   <ul className="ps-0" style={{listStyleType:'none'}}>
                     <li className="mt-3">
                       <i className="bi bi-check me-2 bg-white rounded-circle" style={{color:'#FFB929', padding:'0 2px'}}></i>
-                      Uang Tunai Rp250.000
+                      Uang Tunai Rp ???.???
                     </li>
                     <li className="mt-3">
                       <i className="bi bi-check me-2 bg-white rounded-circle" style={{color:'#FFB929', padding:'0 2px'}}></i>
@@ -203,7 +203,7 @@ export default function Home() {
                   <div className='bg-white text-center py-3 mb-4'><h5 className="fw-700 mb-0 position-title">Rising Star</h5></div>
                   <p className='text-center'>Langkah awal yang solid buat perjalanan kamu selanjutnya. Keep going, you&apos;re on the right track!</p>
                   <ul className="ps-0" style={{listStyleType:'none'}}>
-                    <li className="mt-3"><i className="bi bi-check-circle-fill me-2" style={{color:'#FFB929'}}></i>Uang Tunai Rp75.000</li>
+                    <li className="mt-3"><i className="bi bi-check-circle-fill me-2" style={{color:'#FFB929'}}></i>Uang Tunai Rp ???.???</li>
                     <li className="mt-3"><i className="bi bi-check-circle-fill me-2" style={{color:'#FFB929'}}></i>Sertifikat UPDC</li>
                     <li className="mt-3"><i className="bi bi-check-circle-fill me-2" style={{color:'#FFB929'}}></i>Gratis Private Mentoring (1 jam)</li>
                   </ul>
