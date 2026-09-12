@@ -34,20 +34,20 @@ const commonData = {
 
 const pricingData = {
   presale1: {
-    individu: { price: "Rp69.000", date: "1 Sept 2025 - 31 Des 2025" },
-    group: { price: "Rp65.000" },
+    individu: { price: "Rp ??.???", date: "1 Sept 2025 - 31 Des 2025" },
+    group: { price: "Rp ??.???" },
   },
   presale2: {
-    individu: { price: "Rp99.000", date: "1 Jan 2026 - 18 Apr 2026" },
-    group: { price: "Rp95.000" },
+    individu: { price: "Rp ??.???", date: "1 Jan 2026 - 18 Apr 2026" },
+    group: { price: "Rp ??.???" },
   },
   normal: {
-    individu: { price: "Rp129.000", date: "19 Apr 2026 - 1 Mei 2026" },
-    group: { price: "Rp119.000" },
+    individu: { price: "Rp ??.???", date: "19 Apr 2026 - 1 Mei 2026" },
+    group: { price: "Rp ??.???" },
   },
   ots: {
-    individu: { price: "Rp159.000", date: "4 Mei 2026 - 6 Juni 2026" },
-    group: { price: "Rp139.000" },
+    individu: { price: "Rp ??.???", date: "4 Mei 2026 - 6 Juni 2026" },
+    group: { price: "Rp ??.???" },
   },
 };
 
@@ -115,7 +115,7 @@ const PricingSection = () => {
           //   activeTab === "presale2" && isIndividu;
 
           const showBestOptionBadge = 
-            activeTab === "ots" && isIndividu;
+            activeTab === "none" && isIndividu;
 
           const isButtonDisabled = activeTab !== "";
 
